@@ -29,6 +29,7 @@ namespace HikaruOff
             5: Customer
             6: Dashboard
             7: Setting
+            8: Login
              */
 
             if (idForm == 2)
@@ -154,5 +155,10 @@ namespace HikaruOff
         }
 
         //Hàm chức năng khác.
+            //Ẩn form vào taskbar.
+        private void pic_Hide_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

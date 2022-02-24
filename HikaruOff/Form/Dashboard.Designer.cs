@@ -105,6 +105,7 @@ namespace HikaruOff
             this.pic_Hide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Hide.TabIndex = 84;
             this.pic_Hide.TabStop = false;
+            this.pic_Hide.Click += new System.EventHandler(this.pic_Hide_Click);
             // 
             // lbl_Account
             // 
@@ -366,6 +367,7 @@ namespace HikaruOff
             this.Controls.Add(this.pic_LogoShop);
             this.Controls.Add(this.pnl_Dashboard);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DashBoard";

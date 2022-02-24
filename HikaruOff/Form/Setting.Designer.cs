@@ -31,7 +31,7 @@ namespace HikaruOff
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Setting));
             this.lbl_Items = new System.Windows.Forms.Label();
-            this.btn_Delete = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Default = new Guna.UI2.WinForms.Guna2Button();
             this.pic_Hide = new System.Windows.Forms.PictureBox();
             this.btn_Save = new Guna.UI2.WinForms.Guna2Button();
             this.lbl_Account = new System.Windows.Forms.Label();
@@ -56,8 +56,13 @@ namespace HikaruOff
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.pic_Dashboard = new System.Windows.Forms.PictureBox();
             this.pnl_ManageItems = new System.Windows.Forms.Panel();
-            this.rdo_English = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.txt_URLTheme2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_URLTheme1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btn_ChooseTheme2 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_ChooseTheme1 = new Guna.UI2.WinForms.Guna2Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.rdo_VietNamese = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rdo_English = new Guna.UI2.WinForms.Guna2RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Hide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Account)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Exit)).BeginInit();
@@ -82,24 +87,25 @@ namespace HikaruOff
             this.lbl_Items.Size = new System.Drawing.Size(100, 40);
             this.lbl_Items.TabIndex = 110;
             this.lbl_Items.Text = "Items";
+            this.lbl_Items.Click += new System.EventHandler(this.lbl_Items_Click);
             // 
-            // btn_Delete
+            // btn_Default
             // 
-            this.btn_Delete.AutoRoundedCorners = true;
-            this.btn_Delete.BorderRadius = 25;
-            this.btn_Delete.DefaultAutoSize = true;
-            this.btn_Delete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Delete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Delete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Delete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Delete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btn_Delete.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Delete.ForeColor = System.Drawing.Color.White;
-            this.btn_Delete.Location = new System.Drawing.Point(860, 959);
-            this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(151, 53);
-            this.btn_Delete.TabIndex = 95;
-            this.btn_Delete.Text = "Default";
+            this.btn_Default.AutoRoundedCorners = true;
+            this.btn_Default.BorderRadius = 25;
+            this.btn_Default.DefaultAutoSize = true;
+            this.btn_Default.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Default.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Default.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Default.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Default.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_Default.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Default.ForeColor = System.Drawing.Color.White;
+            this.btn_Default.Location = new System.Drawing.Point(860, 959);
+            this.btn_Default.Name = "btn_Default";
+            this.btn_Default.Size = new System.Drawing.Size(151, 53);
+            this.btn_Default.TabIndex = 95;
+            this.btn_Default.Text = "Default";
             // 
             // pic_Hide
             // 
@@ -110,6 +116,7 @@ namespace HikaruOff
             this.pic_Hide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Hide.TabIndex = 90;
             this.pic_Hide.TabStop = false;
+            this.pic_Hide.Click += new System.EventHandler(this.pic_Hide_Click);
             // 
             // btn_Save
             // 
@@ -160,6 +167,7 @@ namespace HikaruOff
             this.pic_Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Exit.TabIndex = 105;
             this.pic_Exit.TabStop = false;
+            this.pic_Exit.Click += new System.EventHandler(this.pic_Exit_Click);
             // 
             // lbl_Customer
             // 
@@ -171,6 +179,7 @@ namespace HikaruOff
             this.lbl_Customer.Size = new System.Drawing.Size(164, 40);
             this.lbl_Customer.TabIndex = 106;
             this.lbl_Customer.Text = "Customer";
+            this.lbl_Customer.Click += new System.EventHandler(this.lbl_Customer_Click);
             // 
             // pic_Billing
             // 
@@ -181,6 +190,7 @@ namespace HikaruOff
             this.pic_Billing.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Billing.TabIndex = 99;
             this.pic_Billing.TabStop = false;
+            this.pic_Billing.Click += new System.EventHandler(this.pic_Billing_Click);
             // 
             // lbl_Category
             // 
@@ -192,6 +202,7 @@ namespace HikaruOff
             this.lbl_Category.Size = new System.Drawing.Size(157, 40);
             this.lbl_Category.TabIndex = 109;
             this.lbl_Category.Text = "Category";
+            this.lbl_Category.Click += new System.EventHandler(this.lbl_Category_Click);
             // 
             // pic_Category
             // 
@@ -202,6 +213,7 @@ namespace HikaruOff
             this.pic_Category.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Category.TabIndex = 100;
             this.pic_Category.TabStop = false;
+            this.pic_Category.Click += new System.EventHandler(this.pic_Category_Click);
             // 
             // lbl_Staff
             // 
@@ -213,6 +225,7 @@ namespace HikaruOff
             this.lbl_Staff.Size = new System.Drawing.Size(88, 40);
             this.lbl_Staff.TabIndex = 111;
             this.lbl_Staff.Text = "Staff";
+            this.lbl_Staff.Click += new System.EventHandler(this.lbl_Staff_Click);
             // 
             // pic_Staff
             // 
@@ -223,6 +236,7 @@ namespace HikaruOff
             this.pic_Staff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Staff.TabIndex = 102;
             this.pic_Staff.TabStop = false;
+            this.pic_Staff.Click += new System.EventHandler(this.pic_Staff_Click);
             // 
             // lbl_Billing
             // 
@@ -234,6 +248,7 @@ namespace HikaruOff
             this.lbl_Billing.Size = new System.Drawing.Size(114, 40);
             this.lbl_Billing.TabIndex = 107;
             this.lbl_Billing.Text = "Billing";
+            this.lbl_Billing.Click += new System.EventHandler(this.lbl_Billing_Click);
             // 
             // lbl_Dashboard
             // 
@@ -245,6 +260,7 @@ namespace HikaruOff
             this.lbl_Dashboard.Size = new System.Drawing.Size(183, 40);
             this.lbl_Dashboard.TabIndex = 108;
             this.lbl_Dashboard.Text = "Dashboard";
+            this.lbl_Dashboard.Click += new System.EventHandler(this.lbl_Dashboard_Click);
             // 
             // pic_Setting
             // 
@@ -255,6 +271,7 @@ namespace HikaruOff
             this.pic_Setting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Setting.TabIndex = 113;
             this.pic_Setting.TabStop = false;
+            this.pic_Setting.Click += new System.EventHandler(this.pic_Setting_Click);
             // 
             // lbl_Setting
             // 
@@ -266,6 +283,7 @@ namespace HikaruOff
             this.lbl_Setting.Size = new System.Drawing.Size(122, 40);
             this.lbl_Setting.TabIndex = 114;
             this.lbl_Setting.Text = "Setting";
+            this.lbl_Setting.Click += new System.EventHandler(this.lbl_Setting_Click);
             // 
             // lbl_Exit
             // 
@@ -277,6 +295,7 @@ namespace HikaruOff
             this.lbl_Exit.Size = new System.Drawing.Size(79, 40);
             this.lbl_Exit.TabIndex = 112;
             this.lbl_Exit.Text = "Exit";
+            this.lbl_Exit.Click += new System.EventHandler(this.lbl_Exit_Click);
             // 
             // pic_Customer
             // 
@@ -287,6 +306,7 @@ namespace HikaruOff
             this.pic_Customer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Customer.TabIndex = 103;
             this.pic_Customer.TabStop = false;
+            this.pic_Customer.Click += new System.EventHandler(this.pic_Customer_Click);
             // 
             // pic_Items
             // 
@@ -297,6 +317,7 @@ namespace HikaruOff
             this.pic_Items.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Items.TabIndex = 101;
             this.pic_Items.TabStop = false;
+            this.pic_Items.Click += new System.EventHandler(this.pic_Items_Click);
             // 
             // pic_LogoShop
             // 
@@ -354,13 +375,19 @@ namespace HikaruOff
             this.pic_Dashboard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Dashboard.TabIndex = 104;
             this.pic_Dashboard.TabStop = false;
+            this.pic_Dashboard.Click += new System.EventHandler(this.pic_Dashboard_Click);
             // 
             // pnl_ManageItems
             // 
             this.pnl_ManageItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.pnl_ManageItems.Controls.Add(this.txt_URLTheme2);
+            this.pnl_ManageItems.Controls.Add(this.txt_URLTheme1);
+            this.pnl_ManageItems.Controls.Add(this.btn_ChooseTheme2);
+            this.pnl_ManageItems.Controls.Add(this.btn_ChooseTheme1);
+            this.pnl_ManageItems.Controls.Add(this.label1);
             this.pnl_ManageItems.Controls.Add(this.rdo_VietNamese);
             this.pnl_ManageItems.Controls.Add(this.rdo_English);
-            this.pnl_ManageItems.Controls.Add(this.btn_Delete);
+            this.pnl_ManageItems.Controls.Add(this.btn_Default);
             this.pnl_ManageItems.Controls.Add(this.pic_Hide);
             this.pnl_ManageItems.Controls.Add(this.btn_Save);
             this.pnl_ManageItems.Controls.Add(this.lbl_Account);
@@ -373,6 +400,118 @@ namespace HikaruOff
             this.pnl_ManageItems.Name = "pnl_ManageItems";
             this.pnl_ManageItems.Size = new System.Drawing.Size(1023, 1024);
             this.pnl_ManageItems.TabIndex = 97;
+            // 
+            // txt_URLTheme2
+            // 
+            this.txt_URLTheme2.AutoRoundedCorners = true;
+            this.txt_URLTheme2.BorderColor = System.Drawing.Color.Black;
+            this.txt_URLTheme2.BorderRadius = 25;
+            this.txt_URLTheme2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_URLTheme2.DefaultText = "";
+            this.txt_URLTheme2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_URLTheme2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_URLTheme2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_URLTheme2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_URLTheme2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_URLTheme2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.txt_URLTheme2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_URLTheme2.Location = new System.Drawing.Point(179, 474);
+            this.txt_URLTheme2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txt_URLTheme2.Name = "txt_URLTheme2";
+            this.txt_URLTheme2.PasswordChar = '\0';
+            this.txt_URLTheme2.PlaceholderText = "URL";
+            this.txt_URLTheme2.SelectedText = "";
+            this.txt_URLTheme2.Size = new System.Drawing.Size(272, 53);
+            this.txt_URLTheme2.TabIndex = 102;
+            // 
+            // txt_URLTheme1
+            // 
+            this.txt_URLTheme1.AutoRoundedCorners = true;
+            this.txt_URLTheme1.BorderColor = System.Drawing.Color.Black;
+            this.txt_URLTheme1.BorderRadius = 25;
+            this.txt_URLTheme1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_URLTheme1.DefaultText = "";
+            this.txt_URLTheme1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_URLTheme1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_URLTheme1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_URLTheme1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_URLTheme1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_URLTheme1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.txt_URLTheme1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_URLTheme1.Location = new System.Drawing.Point(179, 411);
+            this.txt_URLTheme1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txt_URLTheme1.Name = "txt_URLTheme1";
+            this.txt_URLTheme1.PasswordChar = '\0';
+            this.txt_URLTheme1.PlaceholderText = "URL";
+            this.txt_URLTheme1.SelectedText = "";
+            this.txt_URLTheme1.Size = new System.Drawing.Size(272, 53);
+            this.txt_URLTheme1.TabIndex = 101;
+            // 
+            // btn_ChooseTheme2
+            // 
+            this.btn_ChooseTheme2.AutoRoundedCorners = true;
+            this.btn_ChooseTheme2.BorderRadius = 25;
+            this.btn_ChooseTheme2.DefaultAutoSize = true;
+            this.btn_ChooseTheme2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_ChooseTheme2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_ChooseTheme2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_ChooseTheme2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_ChooseTheme2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_ChooseTheme2.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
+            this.btn_ChooseTheme2.ForeColor = System.Drawing.Color.White;
+            this.btn_ChooseTheme2.Location = new System.Drawing.Point(22, 474);
+            this.btn_ChooseTheme2.Name = "btn_ChooseTheme2";
+            this.btn_ChooseTheme2.Size = new System.Drawing.Size(149, 53);
+            this.btn_ChooseTheme2.TabIndex = 100;
+            this.btn_ChooseTheme2.Text = "Choose";
+            // 
+            // btn_ChooseTheme1
+            // 
+            this.btn_ChooseTheme1.AutoRoundedCorners = true;
+            this.btn_ChooseTheme1.BorderRadius = 25;
+            this.btn_ChooseTheme1.DefaultAutoSize = true;
+            this.btn_ChooseTheme1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_ChooseTheme1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_ChooseTheme1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_ChooseTheme1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_ChooseTheme1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_ChooseTheme1.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
+            this.btn_ChooseTheme1.ForeColor = System.Drawing.Color.White;
+            this.btn_ChooseTheme1.Location = new System.Drawing.Point(22, 411);
+            this.btn_ChooseTheme1.Name = "btn_ChooseTheme1";
+            this.btn_ChooseTheme1.Size = new System.Drawing.Size(149, 53);
+            this.btn_ChooseTheme1.TabIndex = 99;
+            this.btn_ChooseTheme1.Text = "Choose";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(15, 366);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(242, 40);
+            this.label1.TabIndex = 98;
+            this.label1.Text = "Change Theme";
+            // 
+            // rdo_VietNamese
+            // 
+            this.rdo_VietNamese.AutoSize = true;
+            this.rdo_VietNamese.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdo_VietNamese.CheckedState.BorderThickness = 0;
+            this.rdo_VietNamese.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdo_VietNamese.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdo_VietNamese.CheckedState.InnerOffset = -4;
+            this.rdo_VietNamese.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdo_VietNamese.Location = new System.Drawing.Point(22, 319);
+            this.rdo_VietNamese.Name = "rdo_VietNamese";
+            this.rdo_VietNamese.Size = new System.Drawing.Size(176, 44);
+            this.rdo_VietNamese.TabIndex = 97;
+            this.rdo_VietNamese.Text = "Việt Nam";
+            this.rdo_VietNamese.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdo_VietNamese.UncheckedState.BorderThickness = 2;
+            this.rdo_VietNamese.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdo_VietNamese.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             // 
             // rdo_English
             // 
@@ -394,25 +533,6 @@ namespace HikaruOff
             this.rdo_English.UncheckedState.BorderThickness = 2;
             this.rdo_English.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.rdo_English.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            // 
-            // rdo_VietNamese
-            // 
-            this.rdo_VietNamese.AutoSize = true;
-            this.rdo_VietNamese.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdo_VietNamese.CheckedState.BorderThickness = 0;
-            this.rdo_VietNamese.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdo_VietNamese.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rdo_VietNamese.CheckedState.InnerOffset = -4;
-            this.rdo_VietNamese.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdo_VietNamese.Location = new System.Drawing.Point(22, 319);
-            this.rdo_VietNamese.Name = "rdo_VietNamese";
-            this.rdo_VietNamese.Size = new System.Drawing.Size(176, 44);
-            this.rdo_VietNamese.TabIndex = 97;
-            this.rdo_VietNamese.Text = "Việt Nam";
-            this.rdo_VietNamese.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rdo_VietNamese.UncheckedState.BorderThickness = 2;
-            this.rdo_VietNamese.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rdo_VietNamese.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             // 
             // frm_Setting
             // 
@@ -440,6 +560,7 @@ namespace HikaruOff
             this.Controls.Add(this.pic_Dashboard);
             this.Controls.Add(this.pnl_ManageItems);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_Setting";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Setting";
@@ -464,7 +585,7 @@ namespace HikaruOff
         #endregion
 
         private System.Windows.Forms.Label lbl_Items;
-        private Guna.UI2.WinForms.Guna2Button btn_Delete;
+        private Guna.UI2.WinForms.Guna2Button btn_Default;
         private System.Windows.Forms.PictureBox pic_Hide;
         private Guna.UI2.WinForms.Guna2Button btn_Save;
         private System.Windows.Forms.Label lbl_Account;
@@ -491,5 +612,10 @@ namespace HikaruOff
         private System.Windows.Forms.Panel pnl_ManageItems;
         private Guna.UI2.WinForms.Guna2RadioButton rdo_VietNamese;
         private Guna.UI2.WinForms.Guna2RadioButton rdo_English;
+        private Guna.UI2.WinForms.Guna2Button btn_ChooseTheme2;
+        private Guna.UI2.WinForms.Guna2Button btn_ChooseTheme1;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2TextBox txt_URLTheme2;
+        private Guna.UI2.WinForms.Guna2TextBox txt_URLTheme1;
     }
 }

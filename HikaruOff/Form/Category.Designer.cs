@@ -40,14 +40,14 @@ namespace HikaruOff
             this.lbl_NameCategory = new System.Windows.Forms.Label();
             this.dgv_Category = new Guna.UI2.WinForms.Guna2DataGridView();
             this.lbl_ListCategory = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.pic_Hide = new System.Windows.Forms.PictureBox();
+            this.btn_Add = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Edit = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Delete = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_LogoShop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Category)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Hide)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_Category
@@ -80,6 +80,7 @@ namespace HikaruOff
             this.pic_Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Exit.TabIndex = 33;
             this.pic_Exit.TabStop = false;
+            this.pic_Exit.Click += new System.EventHandler(this.pic_Exit_Click);
             // 
             // txt_NameCategory
             // 
@@ -182,69 +183,70 @@ namespace HikaruOff
             this.lbl_ListCategory.TabIndex = 40;
             this.lbl_ListCategory.Text = "List Category";
             // 
-            // pictureBox9
+            // pic_Hide
             // 
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(682, 12);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 86;
-            this.pictureBox9.TabStop = false;
+            this.pic_Hide.Image = ((System.Drawing.Image)(resources.GetObject("pic_Hide.Image")));
+            this.pic_Hide.Location = new System.Drawing.Point(682, 12);
+            this.pic_Hide.Name = "pic_Hide";
+            this.pic_Hide.Size = new System.Drawing.Size(50, 50);
+            this.pic_Hide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_Hide.TabIndex = 86;
+            this.pic_Hide.TabStop = false;
+            this.pic_Hide.Click += new System.EventHandler(this.pic_Hide_Click);
             // 
-            // guna2Button1
+            // btn_Add
             // 
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BorderRadius = 25;
-            this.guna2Button1.DefaultAutoSize = true;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(437, 535);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(103, 53);
-            this.guna2Button1.TabIndex = 87;
-            this.guna2Button1.Text = "Add";
+            this.btn_Add.AutoRoundedCorners = true;
+            this.btn_Add.BorderRadius = 25;
+            this.btn_Add.DefaultAutoSize = true;
+            this.btn_Add.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Add.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Add.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Add.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Add.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_Add.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Add.ForeColor = System.Drawing.Color.White;
+            this.btn_Add.Location = new System.Drawing.Point(437, 535);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.Size = new System.Drawing.Size(103, 53);
+            this.btn_Add.TabIndex = 87;
+            this.btn_Add.Text = "Add";
             // 
-            // guna2Button2
+            // btn_Edit
             // 
-            this.guna2Button2.AutoRoundedCorners = true;
-            this.guna2Button2.BorderRadius = 25;
-            this.guna2Button2.DefaultAutoSize = true;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(546, 535);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(103, 53);
-            this.guna2Button2.TabIndex = 88;
-            this.guna2Button2.Text = "Edit";
+            this.btn_Edit.AutoRoundedCorners = true;
+            this.btn_Edit.BorderRadius = 25;
+            this.btn_Edit.DefaultAutoSize = true;
+            this.btn_Edit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Edit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Edit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Edit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Edit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_Edit.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Edit.ForeColor = System.Drawing.Color.White;
+            this.btn_Edit.Location = new System.Drawing.Point(546, 535);
+            this.btn_Edit.Name = "btn_Edit";
+            this.btn_Edit.Size = new System.Drawing.Size(103, 53);
+            this.btn_Edit.TabIndex = 88;
+            this.btn_Edit.Text = "Edit";
             // 
-            // guna2Button3
+            // btn_Delete
             // 
-            this.guna2Button3.AutoRoundedCorners = true;
-            this.guna2Button3.BorderRadius = 25;
-            this.guna2Button3.DefaultAutoSize = true;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(655, 535);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(133, 53);
-            this.guna2Button3.TabIndex = 89;
-            this.guna2Button3.Text = "Delete";
+            this.btn_Delete.AutoRoundedCorners = true;
+            this.btn_Delete.BorderRadius = 25;
+            this.btn_Delete.DefaultAutoSize = true;
+            this.btn_Delete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Delete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Delete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Delete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Delete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_Delete.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Delete.ForeColor = System.Drawing.Color.White;
+            this.btn_Delete.Location = new System.Drawing.Point(655, 535);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(133, 53);
+            this.btn_Delete.TabIndex = 89;
+            this.btn_Delete.Text = "Delete";
             // 
             // frm_Category
             // 
@@ -252,10 +254,10 @@ namespace HikaruOff
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(800, 600);
-            this.Controls.Add(this.guna2Button3);
-            this.Controls.Add(this.guna2Button2);
-            this.Controls.Add(this.guna2Button1);
-            this.Controls.Add(this.pictureBox9);
+            this.Controls.Add(this.btn_Delete);
+            this.Controls.Add(this.btn_Edit);
+            this.Controls.Add(this.btn_Add);
+            this.Controls.Add(this.pic_Hide);
             this.Controls.Add(this.lbl_ListCategory);
             this.Controls.Add(this.dgv_Category);
             this.Controls.Add(this.txt_NameCategory);
@@ -264,13 +266,14 @@ namespace HikaruOff
             this.Controls.Add(this.lbl_Category);
             this.Controls.Add(this.pic_LogoShop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_Category";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Category";
             ((System.ComponentModel.ISupportInitialize)(this.pic_LogoShop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Exit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Category)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Hide)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,9 +288,9 @@ namespace HikaruOff
         private System.Windows.Forms.Label lbl_NameCategory;
         private Guna.UI2.WinForms.Guna2DataGridView dgv_Category;
         private System.Windows.Forms.Label lbl_ListCategory;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private System.Windows.Forms.PictureBox pic_Hide;
+        private Guna.UI2.WinForms.Guna2Button btn_Add;
+        private Guna.UI2.WinForms.Guna2Button btn_Edit;
+        private Guna.UI2.WinForms.Guna2Button btn_Delete;
     }
 }

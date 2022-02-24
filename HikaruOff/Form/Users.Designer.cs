@@ -48,6 +48,8 @@ namespace HikaruOff
             this.lbl_ManageUsers = new System.Windows.Forms.Label();
             this.lbl_Email = new System.Windows.Forms.Label();
             this.pnl_ManageUsers = new System.Windows.Forms.Panel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.btn_Delete = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Edit = new Guna.UI2.WinForms.Guna2Button();
@@ -74,8 +76,6 @@ namespace HikaruOff
             this.lbl_Staff = new System.Windows.Forms.Label();
             this.lbl_Items = new System.Windows.Forms.Label();
             this.lbl_Dashboard = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DataList)).BeginInit();
             this.pnl_ManageUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Hide)).BeginInit();
@@ -134,7 +134,7 @@ namespace HikaruOff
             this.dgv_DataList.Name = "dgv_DataList";
             this.dgv_DataList.RowHeadersVisible = false;
             this.dgv_DataList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_DataList.Size = new System.Drawing.Size(471, 579);
+            this.dgv_DataList.Size = new System.Drawing.Size(471, 373);
             this.dgv_DataList.TabIndex = 31;
             this.dgv_DataList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv_DataList.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -383,6 +383,47 @@ namespace HikaruOff
             this.pnl_ManageUsers.Size = new System.Drawing.Size(1023, 1024);
             this.pnl_ManageUsers.TabIndex = 23;
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.AutoRoundedCorners = true;
+            this.guna2Button1.BorderRadius = 25;
+            this.guna2Button1.DefaultAutoSize = true;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(899, 274);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(109, 53);
+            this.guna2Button1.TabIndex = 99;
+            this.guna2Button1.Text = "Find";
+            // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.AutoRoundedCorners = true;
+            this.guna2TextBox1.BorderColor = System.Drawing.Color.Black;
+            this.guna2TextBox1.BorderRadius = 25;
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Location = new System.Drawing.Point(540, 274);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PasswordChar = '\0';
+            this.guna2TextBox1.PlaceholderText = "Enter Name / Email";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.Size = new System.Drawing.Size(347, 53);
+            this.guna2TextBox1.TabIndex = 98;
+            // 
             // guna2DateTimePicker1
             // 
             this.guna2DateTimePicker1.AutoRoundedCorners = true;
@@ -457,18 +498,19 @@ namespace HikaruOff
             // pic_Hide
             // 
             this.pic_Hide.Image = ((System.Drawing.Image)(resources.GetObject("pic_Hide.Image")));
-            this.pic_Hide.Location = new System.Drawing.Point(947, 12);
+            this.pic_Hide.Location = new System.Drawing.Point(961, 12);
             this.pic_Hide.Name = "pic_Hide";
             this.pic_Hide.Size = new System.Drawing.Size(50, 50);
             this.pic_Hide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Hide.TabIndex = 91;
             this.pic_Hide.TabStop = false;
+            this.pic_Hide.Click += new System.EventHandler(this.pic_Hide_Click);
             // 
             // lbl_Account
             // 
             this.lbl_Account.AutoSize = true;
             this.lbl_Account.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Account.Location = new System.Drawing.Point(653, 22);
+            this.lbl_Account.Location = new System.Drawing.Point(667, 22);
             this.lbl_Account.Name = "lbl_Account";
             this.lbl_Account.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lbl_Account.Size = new System.Drawing.Size(232, 40);
@@ -479,7 +521,7 @@ namespace HikaruOff
             // pic_Account
             // 
             this.pic_Account.Image = ((System.Drawing.Image)(resources.GetObject("pic_Account.Image")));
-            this.pic_Account.Location = new System.Drawing.Point(891, 12);
+            this.pic_Account.Location = new System.Drawing.Point(905, 12);
             this.pic_Account.Name = "pic_Account";
             this.pic_Account.Size = new System.Drawing.Size(50, 50);
             this.pic_Account.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -713,47 +755,6 @@ namespace HikaruOff
             this.lbl_Dashboard.Text = "Dashboard";
             this.lbl_Dashboard.Click += new System.EventHandler(this.lbl_Dashboard_Click);
             // 
-            // guna2Button1
-            // 
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BorderRadius = 25;
-            this.guna2Button1.DefaultAutoSize = true;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(899, 274);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(109, 53);
-            this.guna2Button1.TabIndex = 99;
-            this.guna2Button1.Text = "Find";
-            // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.AutoRoundedCorners = true;
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.BorderRadius = 25;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(540, 274);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "Enter Name / Email";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(347, 53);
-            this.guna2TextBox1.TabIndex = 98;
-            // 
             // frm_ManageUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -779,6 +780,7 @@ namespace HikaruOff
             this.Controls.Add(this.pic_Exit);
             this.Controls.Add(this.lbl_Customer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_ManageUsers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage Users";

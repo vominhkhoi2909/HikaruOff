@@ -29,23 +29,13 @@ namespace HikaruOff
             5: Customer
             6: Dashboard
             7: Setting
+            8: Login
              */
 
             if (idForm == 2)
             {
                 frm_Category frm = new frm_Category();
                 frm.Show();
-            }
-            else if (idForm == 4)
-            {
-                frm_ManageUsers frm = new frm_ManageUsers();
-                frm.Show();
-            }
-            else if (idForm == 5)
-            {
-                /*frm_Customer frm = new frm_Customer();
-                frm.Show();*/
-                MessageBox.Show("Chua lam form");
             }
             else if (idForm == 0)
             {
@@ -70,7 +60,16 @@ namespace HikaruOff
                     frm_ManageItems frm = new frm_ManageItems();
                     frm.Show();
                 }
-
+                else if (idForm == 4)
+                {
+                    frm_ManageUsers frm = new frm_ManageUsers();
+                    frm.Show();
+                }
+                else if (idForm == 5)
+                {
+                    frm_Customer frm = new frm_Customer();
+                    frm.Show();
+                }
                 else if (idForm == 6)
                 {
                     frm_Dashboard frm = new frm_Dashboard();
@@ -78,9 +77,8 @@ namespace HikaruOff
                 }
                 else if (idForm == 7)
                 {
-                    /*frm_Setting frm = new frm_Setting();
-                    frm.Show();*/
-                    MessageBox.Show("Chua lam form");
+                    frm_Setting frm = new frm_Setting();
+                    frm.Show();
                 }
             }
         }
@@ -163,6 +161,13 @@ namespace HikaruOff
         private void lbl_Exit_Click(object sender, EventArgs e)
         {
             changeForm(0);
+        }
+
+        //Hàm chức năng khác.
+            //Ẩn form vào taskbar.
+        private void pic_Hide_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

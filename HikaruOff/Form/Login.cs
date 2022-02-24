@@ -17,19 +17,69 @@ namespace HikaruOff
             InitializeComponent();
         }
 
+        //Hàm truyền id form để chuyển form.
         void changeForm(int idForm)
         {
-            if(idForm == 1)
+            /*IdForm (id tự quy định.)
+            0: X (Close form).
+            1: Billing
+            2: Cetegory
+            3: Items
+            4: Staff
+            5: Customer
+            6: Dashboard
+            7: Setting
+            8: Login
+             */
+
+            if (idForm == 8)
             {
                 this.Hide();
-                frm_Billing frm = new frm_Billing();
+                frm_Index frm = new frm_Index();
                 frm.Show();
             }
+            else if (idForm == 0)
+            {
+                var res = MessageBox.Show("Are you sure you want to exit?", "Application Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (res == DialogResult.Yes)
+                {
+                    Application.Exit();
+                }
+            }
+                
         }
 
-        private void btn_Save_Click(object sender, EventArgs e)
+        //Chuyển form.
+        private void btn_Login_Click(object sender, EventArgs e)
         {
-            changeForm(1);
+            if(login(txt_Email.Text, txt_Password.Text) == true)
+                changeForm(8);
+        }
+
+        private void pic_Exit_Click(object sender, EventArgs e)
+        {
+            changeForm(0);
+        }
+
+        //Hàm chức năng khác.
+            //Hàm check thông tin login.
+        bool login(string user, string pass)
+        {
+            string cmt;
+
+            if (user == "" || pass == "")
+            {
+                cmt = "Please, Don't leave email or password blank.";
+            }
+            else
+            {
+                return true;
+            }
+
+            MessageBox.Show(cmt, "Login Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            return false;
         }
     }
 }
