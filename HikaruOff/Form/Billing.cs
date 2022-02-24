@@ -36,17 +36,6 @@ namespace HikaruOff
                 frm_Category frm = new frm_Category();
                 frm.Show();
             }
-            else if (idForm == 4)
-            {
-                frm_ManageUsers frm = new frm_ManageUsers();
-                frm.Show();
-            }
-            else if (idForm == 5)
-            {
-                /*frm_Customer frm = new frm_Customer();
-                frm.Show();*/
-                MessageBox.Show("Chua lam form");
-            }
             else if (idForm == 0)
             {
                 var res = MessageBox.Show("Are you sure you want to exit?", "Application Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -70,7 +59,16 @@ namespace HikaruOff
                     frm_ManageItems frm = new frm_ManageItems();
                     frm.Show();
                 }
-
+                else if (idForm == 4)
+                {
+                    frm_ManageUsers frm = new frm_ManageUsers();
+                    frm.Show();
+                }
+                else if (idForm == 5)
+                {
+                    frm_Customer frm = new frm_Customer();
+                    frm.Show();
+                }
                 else if (idForm == 6)
                 {
                     frm_Dashboard frm = new frm_Dashboard();
@@ -78,9 +76,8 @@ namespace HikaruOff
                 }
                 else if (idForm == 7)
                 {
-                    /*frm_Setting frm = new frm_Setting();
-                    frm.Show();*/
-                    MessageBox.Show("Chua lam form");
+                    frm_Setting frm = new frm_Setting();
+                    frm.Show();
                 }
             }
         }
