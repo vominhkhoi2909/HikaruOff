@@ -38,11 +38,9 @@ namespace HikaruOff.Class
 
         public int CapNhatDL(SqlCommand sqlcmd)
         {
-            SqlCommand cmd = sqlcmd;
-            cmd.Connection = conn;
-            int kq = cmd.ExecuteNonQuery();
+            sqlcmd.Connection = conn;
 
-            return kq;
+            return sqlcmd.ExecuteNonQuery();
         }
 
         public int GetID(SqlCommand sqlcmd)

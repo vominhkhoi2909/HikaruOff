@@ -41,9 +41,9 @@ namespace HikaruOff.Controller
         }
 
         //Hàm xử lý thêm mới.
-        public int Add(Category category)
+        public int Add(string cName)
         {
-            return categoryData.AddCategory(category);
+            return categoryData.AddCategory(cName);
         }
 
         //Hàm xử lý xóa.
@@ -53,13 +53,13 @@ namespace HikaruOff.Controller
         }
 
         //Hàm xử lý cập nhật.
-        public int Update(Category category)
+        public int Update(int cId, string cName)
         {
-            return categoryData.UpdateCategory(category);
+            return categoryData.UpdateCategory(cId, cName);
         }
 
         //Hàm xử lý tìm kiếm.
-        public void TimKiem(DataGridView dgv, string key)
+        public void Search(DataGridView dgv, string key)
         {
             dgv.DataSource = categoryData.SearchCategory(key).Tables[0];
         }

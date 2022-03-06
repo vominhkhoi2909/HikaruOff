@@ -31,19 +31,24 @@ namespace HikaruOff
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Category));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pic_Exit = new System.Windows.Forms.PictureBox();
             this.txt_NameCategory = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbl_NameCategory = new System.Windows.Forms.Label();
             this.dgv_Category = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.CategoryId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbl_ListCategory = new System.Windows.Forms.Label();
             this.pic_Hide = new System.Windows.Forms.PictureBox();
             this.btn_Add = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_Edit = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Save = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Delete = new Guna.UI2.WinForms.Guna2Button();
             this.ele_Frm_Category = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btn_Renew = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Search = new Guna.UI2.WinForms.Guna2Button();
+            this.txt_Search = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Category)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Hide)).BeginInit();
@@ -76,6 +81,7 @@ namespace HikaruOff
             this.txt_NameCategory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_NameCategory.Location = new System.Drawing.Point(19, 70);
             this.txt_NameCategory.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_NameCategory.MaxLength = 50;
             this.txt_NameCategory.Name = "txt_NameCategory";
             this.txt_NameCategory.PasswordChar = '\0';
             this.txt_NameCategory.PlaceholderText = "Enter Text";
@@ -96,37 +102,44 @@ namespace HikaruOff
             // 
             // dgv_Category
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgv_Category.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_Category.AllowUserToAddRows = false;
+            this.dgv_Category.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgv_Category.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_Category.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Category.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Category.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_Category.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_Category.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Category.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_Category.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Category.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Category.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgv_Category.ColumnHeadersHeight = 50;
+            this.dgv_Category.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CategoryId,
+            this.CategoryName});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Category.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_Category.EnableHeadersVisualStyles = false;
             this.dgv_Category.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_Category.Location = new System.Drawing.Point(19, 178);
+            this.dgv_Category.Location = new System.Drawing.Point(19, 203);
             this.dgv_Category.Name = "dgv_Category";
+            this.dgv_Category.ReadOnly = true;
             this.dgv_Category.RowHeadersVisible = false;
+            this.dgv_Category.RowTemplate.Height = 45;
             this.dgv_Category.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Category.Size = new System.Drawing.Size(769, 311);
+            this.dgv_Category.Size = new System.Drawing.Size(769, 326);
             this.dgv_Category.TabIndex = 36;
             this.dgv_Category.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv_Category.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -137,25 +150,40 @@ namespace HikaruOff
             this.dgv_Category.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_Category.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dgv_Category.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgv_Category.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_Category.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgv_Category.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgv_Category.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgv_Category.ThemeStyle.HeaderStyle.Height = 4;
-            this.dgv_Category.ThemeStyle.ReadOnly = false;
+            this.dgv_Category.ThemeStyle.HeaderStyle.Height = 50;
+            this.dgv_Category.ThemeStyle.ReadOnly = true;
             this.dgv_Category.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv_Category.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgv_Category.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_Category.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgv_Category.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgv_Category.ThemeStyle.RowsStyle.Height = 22;
+            this.dgv_Category.ThemeStyle.RowsStyle.Height = 45;
             this.dgv_Category.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_Category.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgv_Category.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Category_CellContentClick);
+            // 
+            // CategoryId
+            // 
+            this.CategoryId.DataPropertyName = "CategoryId";
+            this.CategoryId.HeaderText = "ID";
+            this.CategoryId.Name = "CategoryId";
+            this.CategoryId.ReadOnly = true;
+            // 
+            // CategoryName
+            // 
+            this.CategoryName.DataPropertyName = "CategoryName";
+            this.CategoryName.HeaderText = "Category Name";
+            this.CategoryName.Name = "CategoryName";
+            this.CategoryName.ReadOnly = true;
             // 
             // lbl_ListCategory
             // 
             this.lbl_ListCategory.AutoSize = true;
             this.lbl_ListCategory.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_ListCategory.ForeColor = System.Drawing.Color.Black;
-            this.lbl_ListCategory.Location = new System.Drawing.Point(12, 135);
+            this.lbl_ListCategory.Location = new System.Drawing.Point(12, 153);
             this.lbl_ListCategory.Name = "lbl_ListCategory";
             this.lbl_ListCategory.Size = new System.Drawing.Size(224, 40);
             this.lbl_ListCategory.TabIndex = 40;
@@ -185,30 +213,32 @@ namespace HikaruOff
             this.btn_Add.FillColor = System.Drawing.Color.White;
             this.btn_Add.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
             this.btn_Add.ForeColor = System.Drawing.Color.Black;
-            this.btn_Add.Location = new System.Drawing.Point(437, 535);
+            this.btn_Add.Location = new System.Drawing.Point(284, 535);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(103, 53);
             this.btn_Add.TabIndex = 87;
             this.btn_Add.Text = "Add";
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
-            // btn_Edit
+            // btn_Save
             // 
-            this.btn_Edit.AutoRoundedCorners = true;
-            this.btn_Edit.BorderRadius = 25;
-            this.btn_Edit.BorderThickness = 1;
-            this.btn_Edit.DefaultAutoSize = true;
-            this.btn_Edit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Edit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Edit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Edit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Edit.FillColor = System.Drawing.Color.White;
-            this.btn_Edit.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Edit.ForeColor = System.Drawing.Color.Black;
-            this.btn_Edit.Location = new System.Drawing.Point(546, 535);
-            this.btn_Edit.Name = "btn_Edit";
-            this.btn_Edit.Size = new System.Drawing.Size(103, 53);
-            this.btn_Edit.TabIndex = 88;
-            this.btn_Edit.Text = "Edit";
+            this.btn_Save.AutoRoundedCorners = true;
+            this.btn_Save.BorderRadius = 25;
+            this.btn_Save.BorderThickness = 1;
+            this.btn_Save.DefaultAutoSize = true;
+            this.btn_Save.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Save.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Save.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Save.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Save.FillColor = System.Drawing.Color.White;
+            this.btn_Save.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Save.ForeColor = System.Drawing.Color.Black;
+            this.btn_Save.Location = new System.Drawing.Point(393, 535);
+            this.btn_Save.Name = "btn_Save";
+            this.btn_Save.Size = new System.Drawing.Size(109, 53);
+            this.btn_Save.TabIndex = 88;
+            this.btn_Save.Text = "Save";
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // btn_Delete
             // 
@@ -223,16 +253,79 @@ namespace HikaruOff
             this.btn_Delete.FillColor = System.Drawing.Color.White;
             this.btn_Delete.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
             this.btn_Delete.ForeColor = System.Drawing.Color.Black;
-            this.btn_Delete.Location = new System.Drawing.Point(655, 535);
+            this.btn_Delete.Location = new System.Drawing.Point(508, 535);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(133, 53);
             this.btn_Delete.TabIndex = 89;
             this.btn_Delete.Text = "Delete";
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // ele_Frm_Category
             // 
             this.ele_Frm_Category.BorderRadius = 30;
             this.ele_Frm_Category.TargetControl = this;
+            // 
+            // btn_Renew
+            // 
+            this.btn_Renew.AutoRoundedCorners = true;
+            this.btn_Renew.BorderRadius = 25;
+            this.btn_Renew.BorderThickness = 1;
+            this.btn_Renew.DefaultAutoSize = true;
+            this.btn_Renew.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Renew.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Renew.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Renew.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Renew.FillColor = System.Drawing.Color.White;
+            this.btn_Renew.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Renew.ForeColor = System.Drawing.Color.Black;
+            this.btn_Renew.Location = new System.Drawing.Point(647, 535);
+            this.btn_Renew.Name = "btn_Renew";
+            this.btn_Renew.Size = new System.Drawing.Size(141, 53);
+            this.btn_Renew.TabIndex = 90;
+            this.btn_Renew.Text = "Renew";
+            this.btn_Renew.Click += new System.EventHandler(this.btn_Renew_Click);
+            // 
+            // btn_Search
+            // 
+            this.btn_Search.BorderRadius = 26;
+            this.btn_Search.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Search.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Search.FillColor = System.Drawing.Color.White;
+            this.btn_Search.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Search.ForeColor = System.Drawing.Color.White;
+            this.btn_Search.Image = ((System.Drawing.Image)(resources.GetObject("btn_Search.Image")));
+            this.btn_Search.ImageSize = new System.Drawing.Size(50, 50);
+            this.btn_Search.Location = new System.Drawing.Point(734, 138);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(54, 55);
+            this.btn_Search.TabIndex = 99;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
+            // 
+            // txt_Search
+            // 
+            this.txt_Search.AutoRoundedCorners = true;
+            this.txt_Search.BorderColor = System.Drawing.Color.Black;
+            this.txt_Search.BorderRadius = 26;
+            this.txt_Search.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Search.DefaultText = "";
+            this.txt_Search.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_Search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_Search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Search.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Search.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
+            this.txt_Search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Search.Location = new System.Drawing.Point(435, 138);
+            this.txt_Search.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_Search.MaxLength = 50;
+            this.txt_Search.Name = "txt_Search";
+            this.txt_Search.PasswordChar = '\0';
+            this.txt_Search.PlaceholderText = "Enter Text";
+            this.txt_Search.SelectedText = "";
+            this.txt_Search.Size = new System.Drawing.Size(291, 55);
+            this.txt_Search.TabIndex = 98;
             // 
             // frm_Category
             // 
@@ -240,8 +333,11 @@ namespace HikaruOff
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.btn_Search);
+            this.Controls.Add(this.txt_Search);
+            this.Controls.Add(this.btn_Renew);
             this.Controls.Add(this.btn_Delete);
-            this.Controls.Add(this.btn_Edit);
+            this.Controls.Add(this.btn_Save);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.pic_Hide);
             this.Controls.Add(this.lbl_ListCategory);
@@ -270,8 +366,13 @@ namespace HikaruOff
         private System.Windows.Forms.Label lbl_ListCategory;
         private System.Windows.Forms.PictureBox pic_Hide;
         private Guna.UI2.WinForms.Guna2Button btn_Add;
-        private Guna.UI2.WinForms.Guna2Button btn_Edit;
+        private Guna.UI2.WinForms.Guna2Button btn_Save;
         private Guna.UI2.WinForms.Guna2Button btn_Delete;
         private Guna.UI2.WinForms.Guna2Elipse ele_Frm_Category;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CategoryId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CategoryName;
+        private Guna.UI2.WinForms.Guna2Button btn_Renew;
+        private Guna.UI2.WinForms.Guna2Button btn_Search;
+        private Guna.UI2.WinForms.Guna2TextBox txt_Search;
     }
 }
