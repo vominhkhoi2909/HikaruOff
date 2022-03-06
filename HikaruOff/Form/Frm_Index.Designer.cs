@@ -34,7 +34,7 @@ namespace HikaruOff
             this.pnl_Index = new System.Windows.Forms.Panel();
             this.pic_LogoShop = new System.Windows.Forms.PictureBox();
             this.btn_Billing = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_Staff = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_User = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Item = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Category = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Customer = new Guna.UI2.WinForms.Guna2Button();
@@ -44,15 +44,12 @@ namespace HikaruOff
             this.ele_Frm_Index = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btn_Account = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Minimize = new Guna.UI2.WinForms.Guna2Button();
-            this.uC_Billing1 = new HikaruOff.UC_Billing();
-            this.pnl_Index.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_LogoShop)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_Index
             // 
             this.pnl_Index.BackColor = System.Drawing.Color.Transparent;
-            this.pnl_Index.Controls.Add(this.uC_Billing1);
             this.pnl_Index.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnl_Index.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnl_Index.Location = new System.Drawing.Point(257, 0);
@@ -77,7 +74,7 @@ namespace HikaruOff
             this.btn_Billing.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btn_Billing.Checked = true;
             this.btn_Billing.CheckedState.BorderColor = System.Drawing.Color.Black;
-            this.btn_Billing.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_Billing.CheckedState.FillColor = System.Drawing.Color.PaleTurquoise;
             this.btn_Billing.CheckedState.ForeColor = System.Drawing.Color.Black;
             this.btn_Billing.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.btn_Billing.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -99,33 +96,33 @@ namespace HikaruOff
             this.btn_Billing.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_Billing.CheckedChanged += new System.EventHandler(this.btn_CheckedChanged);
             // 
-            // btn_Staff
+            // btn_User
             // 
-            this.btn_Staff.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Staff.BorderRadius = 22;
-            this.btn_Staff.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btn_Staff.CheckedState.BorderColor = System.Drawing.Color.Black;
-            this.btn_Staff.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btn_Staff.CheckedState.ForeColor = System.Drawing.Color.Black;
-            this.btn_Staff.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            this.btn_Staff.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Staff.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Staff.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Staff.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Staff.FillColor = System.Drawing.Color.SeaShell;
-            this.btn_Staff.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Staff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btn_Staff.Image = ((System.Drawing.Image)(resources.GetObject("btn_Staff.Image")));
-            this.btn_Staff.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_Staff.ImageOffset = new System.Drawing.Point(5, 0);
-            this.btn_Staff.ImageSize = new System.Drawing.Size(50, 50);
-            this.btn_Staff.Location = new System.Drawing.Point(12, 394);
-            this.btn_Staff.Name = "btn_Staff";
-            this.btn_Staff.Size = new System.Drawing.Size(239, 50);
-            this.btn_Staff.TabIndex = 115;
-            this.btn_Staff.Text = "Staff";
-            this.btn_Staff.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_Staff.CheckedChanged += new System.EventHandler(this.btn_CheckedChanged);
+            this.btn_User.BackColor = System.Drawing.Color.Transparent;
+            this.btn_User.BorderRadius = 22;
+            this.btn_User.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btn_User.CheckedState.BorderColor = System.Drawing.Color.Black;
+            this.btn_User.CheckedState.FillColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_User.CheckedState.ForeColor = System.Drawing.Color.Black;
+            this.btn_User.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.btn_User.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_User.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_User.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_User.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_User.FillColor = System.Drawing.Color.SeaShell;
+            this.btn_User.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
+            this.btn_User.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_User.Image = ((System.Drawing.Image)(resources.GetObject("btn_User.Image")));
+            this.btn_User.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_User.ImageOffset = new System.Drawing.Point(5, 0);
+            this.btn_User.ImageSize = new System.Drawing.Size(50, 50);
+            this.btn_User.Location = new System.Drawing.Point(12, 394);
+            this.btn_User.Name = "btn_User";
+            this.btn_User.Size = new System.Drawing.Size(239, 50);
+            this.btn_User.TabIndex = 115;
+            this.btn_User.Text = "User";
+            this.btn_User.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_User.CheckedChanged += new System.EventHandler(this.btn_CheckedChanged);
             // 
             // btn_Item
             // 
@@ -133,7 +130,7 @@ namespace HikaruOff
             this.btn_Item.BorderRadius = 22;
             this.btn_Item.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btn_Item.CheckedState.BorderColor = System.Drawing.Color.Black;
-            this.btn_Item.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_Item.CheckedState.FillColor = System.Drawing.Color.PaleTurquoise;
             this.btn_Item.CheckedState.ForeColor = System.Drawing.Color.Black;
             this.btn_Item.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
             this.btn_Item.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -188,7 +185,7 @@ namespace HikaruOff
             this.btn_Customer.BorderRadius = 22;
             this.btn_Customer.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btn_Customer.CheckedState.BorderColor = System.Drawing.Color.Black;
-            this.btn_Customer.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_Customer.CheckedState.FillColor = System.Drawing.Color.PaleTurquoise;
             this.btn_Customer.CheckedState.ForeColor = System.Drawing.Color.Black;
             this.btn_Customer.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
             this.btn_Customer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -216,7 +213,7 @@ namespace HikaruOff
             this.btn_Dashboard.BorderRadius = 22;
             this.btn_Dashboard.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btn_Dashboard.CheckedState.BorderColor = System.Drawing.Color.Black;
-            this.btn_Dashboard.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_Dashboard.CheckedState.FillColor = System.Drawing.Color.PaleTurquoise;
             this.btn_Dashboard.CheckedState.ForeColor = System.Drawing.Color.Black;
             this.btn_Dashboard.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
             this.btn_Dashboard.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -244,7 +241,7 @@ namespace HikaruOff
             this.btn_Setting.BorderRadius = 22;
             this.btn_Setting.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btn_Setting.CheckedState.BorderColor = System.Drawing.Color.Black;
-            this.btn_Setting.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_Setting.CheckedState.FillColor = System.Drawing.Color.PaleTurquoise;
             this.btn_Setting.CheckedState.ForeColor = System.Drawing.Color.Black;
             this.btn_Setting.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
             this.btn_Setting.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -351,21 +348,11 @@ namespace HikaruOff
             this.btn_Minimize.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_Minimize.Click += new System.EventHandler(this.btn_Minimize_Click);
             // 
-            // uC_Billing1
-            // 
-            this.uC_Billing1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.uC_Billing1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_Billing1.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uC_Billing1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Billing1.Name = "uC_Billing1";
-            this.uC_Billing1.Size = new System.Drawing.Size(1023, 1024);
-            this.uC_Billing1.TabIndex = 0;
-            // 
             // frm_Index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SeaShell;
+            this.BackColor = System.Drawing.Color.LightGreen;
             this.ClientSize = new System.Drawing.Size(1280, 1024);
             this.Controls.Add(this.btn_Minimize);
             this.Controls.Add(this.btn_Account);
@@ -375,7 +362,7 @@ namespace HikaruOff
             this.Controls.Add(this.btn_Dashboard);
             this.Controls.Add(this.btn_Category);
             this.Controls.Add(this.btn_Item);
-            this.Controls.Add(this.btn_Staff);
+            this.Controls.Add(this.btn_User);
             this.Controls.Add(this.btn_Billing);
             this.Controls.Add(this.pnl_Index);
             this.Controls.Add(this.pic_LogoShop);
@@ -384,7 +371,6 @@ namespace HikaruOff
             this.Name = "frm_Index";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Index";
-            this.pnl_Index.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_LogoShop)).EndInit();
             this.ResumeLayout(false);
 
@@ -394,7 +380,7 @@ namespace HikaruOff
         private System.Windows.Forms.Panel pnl_Index;
         private System.Windows.Forms.PictureBox pic_LogoShop;
         private Guna.UI2.WinForms.Guna2Button btn_Billing;
-        private Guna.UI2.WinForms.Guna2Button btn_Staff;
+        private Guna.UI2.WinForms.Guna2Button btn_User;
         private Guna.UI2.WinForms.Guna2Button btn_Item;
         private Guna.UI2.WinForms.Guna2Button btn_Category;
         private Guna.UI2.WinForms.Guna2Button btn_Customer;
@@ -404,7 +390,6 @@ namespace HikaruOff
         private Guna.UI2.WinForms.Guna2Elipse ele_Frm_Index;
         private Guna.UI2.WinForms.Guna2Button btn_Minimize;
         private Guna.UI2.WinForms.Guna2Button btn_Account;
-        private UC_Billing uC_Billing1;
     }
 }
 

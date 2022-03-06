@@ -463,7 +463,7 @@ namespace HikaruOff
             // UC_Customer
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.Controls.Add(this.pnl_Customer);
             this.Controls.Add(this.pnl_Data);
             this.Controls.Add(this.pnl_ButtonList);

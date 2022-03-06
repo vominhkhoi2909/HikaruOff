@@ -501,7 +501,7 @@ namespace HikaruOff
             // UC_Item
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.Controls.Add(this.pnl_Data);
             this.Controls.Add(this.pnl_Item);
             this.Controls.Add(this.pnl_ButtonList);

@@ -1,7 +1,7 @@
 ﻿
 namespace HikaruOff
 {
-    partial class UC_Staff
+    partial class UC_User
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace HikaruOff
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Staff));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_User));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -43,7 +43,11 @@ namespace HikaruOff
             this.btn_Search = new Guna.UI2.WinForms.Guna2Button();
             this.txt_Search = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgv_DataList = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.pnl_Staff = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnl_User = new Guna.UI2.WinForms.Guna2Panel();
+            this.cbo_Office = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txt_Office = new System.Windows.Forms.Label();
+            this.txt_Password = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lbl_Password = new System.Windows.Forms.Label();
             this.rtb_Nơtes = new System.Windows.Forms.RichTextBox();
             this.txt_Phone = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_Email = new Guna.UI2.WinForms.Guna2TextBox();
@@ -56,15 +60,11 @@ namespace HikaruOff
             this.lbl_Phone = new System.Windows.Forms.Label();
             this.lbl_Email = new System.Windows.Forms.Label();
             this.lbl_Name = new System.Windows.Forms.Label();
-            this.txt_Password = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lbl_Password = new System.Windows.Forms.Label();
-            this.cbo_Office = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.txt_Office = new System.Windows.Forms.Label();
             this.ele_UC_Staff = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnl_ButtonList.SuspendLayout();
             this.pnl_Data.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DataList)).BeginInit();
-            this.pnl_Staff.SuspendLayout();
+            this.pnl_User.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_ButtonList
@@ -262,29 +262,92 @@ namespace HikaruOff
             this.dgv_DataList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_DataList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // pnl_Staff
+            // pnl_User
             // 
-            this.pnl_Staff.Controls.Add(this.cbo_Office);
-            this.pnl_Staff.Controls.Add(this.txt_Office);
-            this.pnl_Staff.Controls.Add(this.txt_Password);
-            this.pnl_Staff.Controls.Add(this.lbl_Password);
-            this.pnl_Staff.Controls.Add(this.rtb_Nơtes);
-            this.pnl_Staff.Controls.Add(this.txt_Phone);
-            this.pnl_Staff.Controls.Add(this.txt_Email);
-            this.pnl_Staff.Controls.Add(this.txt_Name);
-            this.pnl_Staff.Controls.Add(this.lbl_Notes);
-            this.pnl_Staff.Controls.Add(this.dtm_BirthDay);
-            this.pnl_Staff.Controls.Add(this.cbo_Gender);
-            this.pnl_Staff.Controls.Add(this.lbl_Gender);
-            this.pnl_Staff.Controls.Add(this.lbl_BirthDay);
-            this.pnl_Staff.Controls.Add(this.lbl_Phone);
-            this.pnl_Staff.Controls.Add(this.lbl_Email);
-            this.pnl_Staff.Controls.Add(this.lbl_Name);
-            this.pnl_Staff.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnl_Staff.Location = new System.Drawing.Point(0, 0);
-            this.pnl_Staff.Name = "pnl_Staff";
-            this.pnl_Staff.Size = new System.Drawing.Size(508, 959);
-            this.pnl_Staff.TabIndex = 5;
+            this.pnl_User.Controls.Add(this.cbo_Office);
+            this.pnl_User.Controls.Add(this.txt_Office);
+            this.pnl_User.Controls.Add(this.txt_Password);
+            this.pnl_User.Controls.Add(this.lbl_Password);
+            this.pnl_User.Controls.Add(this.rtb_Nơtes);
+            this.pnl_User.Controls.Add(this.txt_Phone);
+            this.pnl_User.Controls.Add(this.txt_Email);
+            this.pnl_User.Controls.Add(this.txt_Name);
+            this.pnl_User.Controls.Add(this.lbl_Notes);
+            this.pnl_User.Controls.Add(this.dtm_BirthDay);
+            this.pnl_User.Controls.Add(this.cbo_Gender);
+            this.pnl_User.Controls.Add(this.lbl_Gender);
+            this.pnl_User.Controls.Add(this.lbl_BirthDay);
+            this.pnl_User.Controls.Add(this.lbl_Phone);
+            this.pnl_User.Controls.Add(this.lbl_Email);
+            this.pnl_User.Controls.Add(this.lbl_Name);
+            this.pnl_User.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_User.Location = new System.Drawing.Point(0, 0);
+            this.pnl_User.Name = "pnl_User";
+            this.pnl_User.Size = new System.Drawing.Size(508, 959);
+            this.pnl_User.TabIndex = 5;
+            // 
+            // cbo_Office
+            // 
+            this.cbo_Office.AutoRoundedCorners = true;
+            this.cbo_Office.BackColor = System.Drawing.Color.Transparent;
+            this.cbo_Office.BorderColor = System.Drawing.Color.Black;
+            this.cbo_Office.BorderRadius = 17;
+            this.cbo_Office.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbo_Office.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_Office.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbo_Office.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbo_Office.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
+            this.cbo_Office.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.cbo_Office.ItemHeight = 30;
+            this.cbo_Office.Location = new System.Drawing.Point(10, 664);
+            this.cbo_Office.Name = "cbo_Office";
+            this.cbo_Office.Size = new System.Drawing.Size(493, 36);
+            this.cbo_Office.TabIndex = 146;
+            // 
+            // txt_Office
+            // 
+            this.txt_Office.AutoSize = true;
+            this.txt_Office.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Office.ForeColor = System.Drawing.Color.Black;
+            this.txt_Office.Location = new System.Drawing.Point(3, 621);
+            this.txt_Office.Name = "txt_Office";
+            this.txt_Office.Size = new System.Drawing.Size(107, 40);
+            this.txt_Office.TabIndex = 145;
+            this.txt_Office.Text = "Office";
+            // 
+            // txt_Password
+            // 
+            this.txt_Password.AutoRoundedCorners = true;
+            this.txt_Password.BorderColor = System.Drawing.Color.Black;
+            this.txt_Password.BorderRadius = 26;
+            this.txt_Password.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Password.DefaultText = "";
+            this.txt_Password.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_Password.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_Password.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Password.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Password.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Password.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
+            this.txt_Password.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Password.Location = new System.Drawing.Point(10, 270);
+            this.txt_Password.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_Password.Name = "txt_Password";
+            this.txt_Password.PasswordChar = '\0';
+            this.txt_Password.PlaceholderText = "*************";
+            this.txt_Password.SelectedText = "";
+            this.txt_Password.Size = new System.Drawing.Size(493, 55);
+            this.txt_Password.TabIndex = 144;
+            // 
+            // lbl_Password
+            // 
+            this.lbl_Password.AutoSize = true;
+            this.lbl_Password.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Password.ForeColor = System.Drawing.Color.Black;
+            this.lbl_Password.Location = new System.Drawing.Point(3, 225);
+            this.lbl_Password.Name = "lbl_Password";
+            this.lbl_Password.Size = new System.Drawing.Size(162, 40);
+            this.lbl_Password.TabIndex = 143;
+            this.lbl_Password.Text = "Password";
             // 
             // rtb_Nơtes
             // 
@@ -463,89 +526,26 @@ namespace HikaruOff
             this.lbl_Name.TabIndex = 125;
             this.lbl_Name.Text = "Name";
             // 
-            // txt_Password
-            // 
-            this.txt_Password.AutoRoundedCorners = true;
-            this.txt_Password.BorderColor = System.Drawing.Color.Black;
-            this.txt_Password.BorderRadius = 26;
-            this.txt_Password.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Password.DefaultText = "";
-            this.txt_Password.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_Password.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_Password.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Password.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Password.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Password.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
-            this.txt_Password.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Password.Location = new System.Drawing.Point(10, 270);
-            this.txt_Password.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_Password.Name = "txt_Password";
-            this.txt_Password.PasswordChar = '\0';
-            this.txt_Password.PlaceholderText = "*************";
-            this.txt_Password.SelectedText = "";
-            this.txt_Password.Size = new System.Drawing.Size(493, 55);
-            this.txt_Password.TabIndex = 144;
-            // 
-            // lbl_Password
-            // 
-            this.lbl_Password.AutoSize = true;
-            this.lbl_Password.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Password.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Password.Location = new System.Drawing.Point(3, 225);
-            this.lbl_Password.Name = "lbl_Password";
-            this.lbl_Password.Size = new System.Drawing.Size(162, 40);
-            this.lbl_Password.TabIndex = 143;
-            this.lbl_Password.Text = "Password";
-            // 
-            // cbo_Office
-            // 
-            this.cbo_Office.AutoRoundedCorners = true;
-            this.cbo_Office.BackColor = System.Drawing.Color.Transparent;
-            this.cbo_Office.BorderColor = System.Drawing.Color.Black;
-            this.cbo_Office.BorderRadius = 17;
-            this.cbo_Office.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbo_Office.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_Office.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbo_Office.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbo_Office.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
-            this.cbo_Office.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cbo_Office.ItemHeight = 30;
-            this.cbo_Office.Location = new System.Drawing.Point(10, 664);
-            this.cbo_Office.Name = "cbo_Office";
-            this.cbo_Office.Size = new System.Drawing.Size(493, 36);
-            this.cbo_Office.TabIndex = 146;
-            // 
-            // txt_Office
-            // 
-            this.txt_Office.AutoSize = true;
-            this.txt_Office.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Office.ForeColor = System.Drawing.Color.Black;
-            this.txt_Office.Location = new System.Drawing.Point(3, 621);
-            this.txt_Office.Name = "txt_Office";
-            this.txt_Office.Size = new System.Drawing.Size(107, 40);
-            this.txt_Office.TabIndex = 145;
-            this.txt_Office.Text = "Office";
-            // 
             // ele_UC_Staff
             // 
             this.ele_UC_Staff.BorderRadius = 26;
             this.ele_UC_Staff.TargetControl = this;
             // 
-            // UC_Staff
+            // UC_User
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Controls.Add(this.pnl_Staff);
+            this.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.Controls.Add(this.pnl_User);
             this.Controls.Add(this.pnl_Data);
             this.Controls.Add(this.pnl_ButtonList);
-            this.Name = "UC_Staff";
+            this.Name = "UC_User";
             this.Size = new System.Drawing.Size(1023, 1024);
             this.pnl_ButtonList.ResumeLayout(false);
             this.pnl_ButtonList.PerformLayout();
             this.pnl_Data.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DataList)).EndInit();
-            this.pnl_Staff.ResumeLayout(false);
-            this.pnl_Staff.PerformLayout();
+            this.pnl_User.ResumeLayout(false);
+            this.pnl_User.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -561,7 +561,7 @@ namespace HikaruOff
         private Guna.UI2.WinForms.Guna2Button btn_Search;
         private Guna.UI2.WinForms.Guna2TextBox txt_Search;
         private Guna.UI2.WinForms.Guna2DataGridView dgv_DataList;
-        private Guna.UI2.WinForms.Guna2Panel pnl_Staff;
+        private Guna.UI2.WinForms.Guna2Panel pnl_User;
         private System.Windows.Forms.RichTextBox rtb_Nơtes;
         private Guna.UI2.WinForms.Guna2TextBox txt_Phone;
         private Guna.UI2.WinForms.Guna2TextBox txt_Email;

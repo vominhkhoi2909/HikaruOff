@@ -15,6 +15,8 @@ namespace HikaruOff
         public frm_Index()
         {
             InitializeComponent();
+            UC_Billing uC = new UC_Billing();
+            changeuUC(uC);
         }
 
         private void changeuUC(UserControl uC)
@@ -37,9 +39,9 @@ namespace HikaruOff
                 UC_Item uC = new UC_Item();
                 changeuUC(uC);
             }
-            else if (btn_Staff.Checked == true)
+            else if (btn_User.Checked == true)
             {
-                UC_Staff uC = new UC_Staff();
+                UC_User uC = new UC_User();
                 changeuUC(uC);
             }
             else if (btn_Customer.Checked == true)

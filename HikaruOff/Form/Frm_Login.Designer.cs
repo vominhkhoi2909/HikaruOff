@@ -41,14 +41,16 @@ namespace HikaruOff
             this.lbl_Email = new System.Windows.Forms.Label();
             this.lbl_NameShop = new System.Windows.Forms.Label();
             this.pic_Exit = new System.Windows.Forms.PictureBox();
+            this.pic_Hide = new System.Windows.Forms.PictureBox();
             this.pnl__Login.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_LogoShop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Exit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Hide)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl__Login
             // 
-            this.pnl__Login.BackColor = System.Drawing.Color.SeaShell;
+            this.pnl__Login.BackColor = System.Drawing.Color.PaleTurquoise;
             this.pnl__Login.Controls.Add(this.pic_LogoShop);
             this.pnl__Login.Controls.Add(this.lbl_ForgotPassword);
             this.pnl__Login.Controls.Add(this.lbl_ContinueAsAdmin);
@@ -78,7 +80,7 @@ namespace HikaruOff
             // 
             this.lbl_ForgotPassword.AutoSize = true;
             this.lbl_ForgotPassword.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ForgotPassword.ForeColor = System.Drawing.Color.Lime;
+            this.lbl_ForgotPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lbl_ForgotPassword.Location = new System.Drawing.Point(460, 342);
             this.lbl_ForgotPassword.Name = "lbl_ForgotPassword";
             this.lbl_ForgotPassword.Size = new System.Drawing.Size(171, 24);
@@ -89,7 +91,7 @@ namespace HikaruOff
             // 
             this.lbl_ContinueAsAdmin.AutoSize = true;
             this.lbl_ContinueAsAdmin.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ContinueAsAdmin.ForeColor = System.Drawing.Color.Lime;
+            this.lbl_ContinueAsAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lbl_ContinueAsAdmin.Location = new System.Drawing.Point(117, 342);
             this.lbl_ContinueAsAdmin.Name = "lbl_ContinueAsAdmin";
             this.lbl_ContinueAsAdmin.Size = new System.Drawing.Size(188, 24);
@@ -100,6 +102,7 @@ namespace HikaruOff
             // 
             this.btn_Login.AutoRoundedCorners = true;
             this.btn_Login.BorderRadius = 25;
+            this.btn_Login.BorderThickness = 1;
             this.btn_Login.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_Login.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_Login.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -166,7 +169,7 @@ namespace HikaruOff
             // 
             this.lbl_Password.AutoSize = true;
             this.lbl_Password.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Password.ForeColor = System.Drawing.Color.Lime;
+            this.lbl_Password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lbl_Password.Location = new System.Drawing.Point(114, 185);
             this.lbl_Password.Name = "lbl_Password";
             this.lbl_Password.Size = new System.Drawing.Size(162, 40);
@@ -177,7 +180,7 @@ namespace HikaruOff
             // 
             this.lbl_Email.AutoSize = true;
             this.lbl_Email.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Email.ForeColor = System.Drawing.Color.Lime;
+            this.lbl_Email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lbl_Email.Location = new System.Drawing.Point(114, 87);
             this.lbl_Email.Name = "lbl_Email";
             this.lbl_Email.Size = new System.Drawing.Size(103, 40);
@@ -207,12 +210,24 @@ namespace HikaruOff
             this.pic_Exit.TabStop = false;
             this.pic_Exit.Click += new System.EventHandler(this.pic_Exit_Click);
             // 
+            // pic_Hide
+            // 
+            this.pic_Hide.Image = ((System.Drawing.Image)(resources.GetObject("pic_Hide.Image")));
+            this.pic_Hide.Location = new System.Drawing.Point(12, 282);
+            this.pic_Hide.Name = "pic_Hide";
+            this.pic_Hide.Size = new System.Drawing.Size(50, 50);
+            this.pic_Hide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_Hide.TabIndex = 99;
+            this.pic_Hide.TabStop = false;
+            this.pic_Hide.Click += new System.EventHandler(this.pic_Hide_Click);
+            // 
             // frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.LightGreen;
             this.ClientSize = new System.Drawing.Size(800, 400);
+            this.Controls.Add(this.pic_Hide);
             this.Controls.Add(this.pic_Exit);
             this.Controls.Add(this.pnl__Login);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -224,6 +239,7 @@ namespace HikaruOff
             this.pnl__Login.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_LogoShop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Exit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Hide)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -241,5 +257,6 @@ namespace HikaruOff
         private Guna.UI2.WinForms.Guna2Button btn_Login;
         private System.Windows.Forms.PictureBox pic_LogoShop;
         private System.Windows.Forms.PictureBox pic_Exit;
+        private System.Windows.Forms.PictureBox pic_Hide;
     }
 }

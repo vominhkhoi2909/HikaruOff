@@ -152,6 +152,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\Category.cs" />
+    <Compile Include="BUS\Customer.cs" />
+    <Compile Include="BUS\Item.cs" />
+    <Compile Include="BUS\LoginBUS.cs" />
+    <Compile Include="BUS\Sale.cs" />
+    <Compile Include="BUS\User.cs" />
+    <Compile Include="Class\DataProvider.cs" />
+    <Compile Include="Class\Login.cs" />
+    <Compile Include="Controller\CategoryCtrl.cs" />
+    <Compile Include="DataLayer\CategoryData.cs" />
     <Compile Include="Form\Frm_Customer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,11 +242,11 @@
     <Compile Include="Form\UC_Item.Designer.cs">
       <DependentUpon>UC_Item.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\UC_Staff.cs">
+    <Compile Include="Form\UC_User.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Form\UC_Staff.Designer.cs">
-      <DependentUpon>UC_Staff.cs</DependentUpon>
+    <Compile Include="Form\UC_User.Designer.cs">
+      <DependentUpon>UC_User.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\UC_Setting.cs">
       <SubType>UserControl</SubType>
@@ -292,8 +302,8 @@
     <EmbeddedResource Include="Form\UC_Item.resx">
       <DependentUpon>UC_Item.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\UC_Staff.resx">
-      <DependentUpon>UC_Staff.cs</DependentUpon>
+    <EmbeddedResource Include="Form\UC_User.resx">
+      <DependentUpon>UC_User.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\UC_Setting.resx">
       <DependentUpon>UC_Setting.cs</DependentUpon>
@@ -312,5 +322,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

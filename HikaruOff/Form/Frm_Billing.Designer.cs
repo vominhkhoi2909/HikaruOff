@@ -149,7 +149,7 @@ namespace HikaruOff
             // pic_Hide
             // 
             this.pic_Hide.Image = ((System.Drawing.Image)(resources.GetObject("pic_Hide.Image")));
-            this.pic_Hide.Location = new System.Drawing.Point(947, 12);
+            this.pic_Hide.Location = new System.Drawing.Point(961, 12);
             this.pic_Hide.Name = "pic_Hide";
             this.pic_Hide.Size = new System.Drawing.Size(50, 50);
             this.pic_Hide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -161,7 +161,7 @@ namespace HikaruOff
             // 
             this.lbl_Account.AutoSize = true;
             this.lbl_Account.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Account.Location = new System.Drawing.Point(653, 22);
+            this.lbl_Account.Location = new System.Drawing.Point(667, 22);
             this.lbl_Account.Name = "lbl_Account";
             this.lbl_Account.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lbl_Account.Size = new System.Drawing.Size(232, 40);
@@ -172,7 +172,7 @@ namespace HikaruOff
             // pic_Account
             // 
             this.pic_Account.Image = ((System.Drawing.Image)(resources.GetObject("pic_Account.Image")));
-            this.pic_Account.Location = new System.Drawing.Point(891, 12);
+            this.pic_Account.Location = new System.Drawing.Point(905, 12);
             this.pic_Account.Name = "pic_Account";
             this.pic_Account.Size = new System.Drawing.Size(50, 50);
             this.pic_Account.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

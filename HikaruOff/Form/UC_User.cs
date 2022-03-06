@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HikaruOff
 {
-    public partial class UC_Staff : UserControl
+    public partial class UC_User : UserControl
     {
-        public UC_Staff()
+        public UC_User()
         {
             InitializeComponent();
         }

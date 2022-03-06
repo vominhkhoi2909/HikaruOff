@@ -34,12 +34,12 @@ namespace HikaruOff
             this.btn_Default = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Save = new Guna.UI2.WinForms.Guna2Button();
             this.pnl_Setting = new Guna.UI2.WinForms.Guna2Panel();
-            this.lbl_Language = new System.Windows.Forms.Label();
-            this.txt_Upload = new Guna.UI2.WinForms.Guna2TextBox();
-            this.rdb_English = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.rdb_Vietnamese = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.lbl_LogoShop = new System.Windows.Forms.Label();
             this.btn_Upload = new Guna.UI2.WinForms.Guna2Button();
+            this.lbl_LogoShop = new System.Windows.Forms.Label();
+            this.rdb_Vietnamese = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rdb_English = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.txt_Upload = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lbl_Language = new System.Windows.Forms.Label();
             this.ele_UC_Setting = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnl_ButtonList.SuspendLayout();
             this.pnl_Setting.SuspendLayout();
@@ -107,16 +107,73 @@ namespace HikaruOff
             this.pnl_Setting.Size = new System.Drawing.Size(556, 959);
             this.pnl_Setting.TabIndex = 6;
             // 
-            // lbl_Language
+            // btn_Upload
             // 
-            this.lbl_Language.AutoSize = true;
-            this.lbl_Language.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Language.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Language.Location = new System.Drawing.Point(3, 15);
-            this.lbl_Language.Name = "lbl_Language";
-            this.lbl_Language.Size = new System.Drawing.Size(166, 40);
-            this.lbl_Language.TabIndex = 125;
-            this.lbl_Language.Text = "Language";
+            this.btn_Upload.AutoRoundedCorners = true;
+            this.btn_Upload.BorderRadius = 25;
+            this.btn_Upload.BorderThickness = 1;
+            this.btn_Upload.DefaultAutoSize = true;
+            this.btn_Upload.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Upload.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Upload.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Upload.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Upload.FillColor = System.Drawing.Color.White;
+            this.btn_Upload.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Upload.ForeColor = System.Drawing.Color.Black;
+            this.btn_Upload.Location = new System.Drawing.Point(404, 202);
+            this.btn_Upload.Name = "btn_Upload";
+            this.btn_Upload.Size = new System.Drawing.Size(149, 53);
+            this.btn_Upload.TabIndex = 135;
+            this.btn_Upload.Text = "Upload";
+            // 
+            // lbl_LogoShop
+            // 
+            this.lbl_LogoShop.AutoSize = true;
+            this.lbl_LogoShop.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_LogoShop.ForeColor = System.Drawing.Color.Black;
+            this.lbl_LogoShop.Location = new System.Drawing.Point(3, 155);
+            this.lbl_LogoShop.Name = "lbl_LogoShop";
+            this.lbl_LogoShop.Size = new System.Drawing.Size(178, 40);
+            this.lbl_LogoShop.TabIndex = 134;
+            this.lbl_LogoShop.Text = "Logo Shop";
+            // 
+            // rdb_Vietnamese
+            // 
+            this.rdb_Vietnamese.AutoSize = true;
+            this.rdb_Vietnamese.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdb_Vietnamese.CheckedState.BorderThickness = 0;
+            this.rdb_Vietnamese.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdb_Vietnamese.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdb_Vietnamese.CheckedState.InnerOffset = -4;
+            this.rdb_Vietnamese.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
+            this.rdb_Vietnamese.Location = new System.Drawing.Point(10, 108);
+            this.rdb_Vietnamese.Name = "rdb_Vietnamese";
+            this.rdb_Vietnamese.Size = new System.Drawing.Size(279, 44);
+            this.rdb_Vietnamese.TabIndex = 133;
+            this.rdb_Vietnamese.Text = "Vietnamese (VI)";
+            this.rdb_Vietnamese.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdb_Vietnamese.UncheckedState.BorderThickness = 2;
+            this.rdb_Vietnamese.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdb_Vietnamese.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // rdb_English
+            // 
+            this.rdb_English.AutoSize = true;
+            this.rdb_English.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdb_English.CheckedState.BorderThickness = 0;
+            this.rdb_English.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdb_English.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdb_English.CheckedState.InnerOffset = -4;
+            this.rdb_English.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
+            this.rdb_English.Location = new System.Drawing.Point(10, 58);
+            this.rdb_English.Name = "rdb_English";
+            this.rdb_English.Size = new System.Drawing.Size(227, 44);
+            this.rdb_English.TabIndex = 132;
+            this.rdb_English.Text = "English (EN)";
+            this.rdb_English.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdb_English.UncheckedState.BorderThickness = 2;
+            this.rdb_English.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdb_English.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             // 
             // txt_Upload
             // 
@@ -141,73 +198,16 @@ namespace HikaruOff
             this.txt_Upload.Size = new System.Drawing.Size(386, 55);
             this.txt_Upload.TabIndex = 131;
             // 
-            // rdb_English
+            // lbl_Language
             // 
-            this.rdb_English.AutoSize = true;
-            this.rdb_English.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdb_English.CheckedState.BorderThickness = 0;
-            this.rdb_English.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdb_English.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rdb_English.CheckedState.InnerOffset = -4;
-            this.rdb_English.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
-            this.rdb_English.Location = new System.Drawing.Point(10, 58);
-            this.rdb_English.Name = "rdb_English";
-            this.rdb_English.Size = new System.Drawing.Size(227, 44);
-            this.rdb_English.TabIndex = 132;
-            this.rdb_English.Text = "English (EN)";
-            this.rdb_English.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rdb_English.UncheckedState.BorderThickness = 2;
-            this.rdb_English.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rdb_English.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            // 
-            // rdb_Vietnamese
-            // 
-            this.rdb_Vietnamese.AutoSize = true;
-            this.rdb_Vietnamese.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdb_Vietnamese.CheckedState.BorderThickness = 0;
-            this.rdb_Vietnamese.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdb_Vietnamese.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rdb_Vietnamese.CheckedState.InnerOffset = -4;
-            this.rdb_Vietnamese.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
-            this.rdb_Vietnamese.Location = new System.Drawing.Point(10, 108);
-            this.rdb_Vietnamese.Name = "rdb_Vietnamese";
-            this.rdb_Vietnamese.Size = new System.Drawing.Size(279, 44);
-            this.rdb_Vietnamese.TabIndex = 133;
-            this.rdb_Vietnamese.Text = "Vietnamese (VI)";
-            this.rdb_Vietnamese.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rdb_Vietnamese.UncheckedState.BorderThickness = 2;
-            this.rdb_Vietnamese.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rdb_Vietnamese.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            // 
-            // lbl_LogoShop
-            // 
-            this.lbl_LogoShop.AutoSize = true;
-            this.lbl_LogoShop.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_LogoShop.ForeColor = System.Drawing.Color.Black;
-            this.lbl_LogoShop.Location = new System.Drawing.Point(3, 155);
-            this.lbl_LogoShop.Name = "lbl_LogoShop";
-            this.lbl_LogoShop.Size = new System.Drawing.Size(178, 40);
-            this.lbl_LogoShop.TabIndex = 134;
-            this.lbl_LogoShop.Text = "Logo Shop";
-            // 
-            // btn_Upload
-            // 
-            this.btn_Upload.AutoRoundedCorners = true;
-            this.btn_Upload.BorderRadius = 25;
-            this.btn_Upload.BorderThickness = 1;
-            this.btn_Upload.DefaultAutoSize = true;
-            this.btn_Upload.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Upload.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Upload.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Upload.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Upload.FillColor = System.Drawing.Color.White;
-            this.btn_Upload.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Upload.ForeColor = System.Drawing.Color.Black;
-            this.btn_Upload.Location = new System.Drawing.Point(404, 202);
-            this.btn_Upload.Name = "btn_Upload";
-            this.btn_Upload.Size = new System.Drawing.Size(149, 53);
-            this.btn_Upload.TabIndex = 135;
-            this.btn_Upload.Text = "Upload";
+            this.lbl_Language.AutoSize = true;
+            this.lbl_Language.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Language.ForeColor = System.Drawing.Color.Black;
+            this.lbl_Language.Location = new System.Drawing.Point(3, 15);
+            this.lbl_Language.Name = "lbl_Language";
+            this.lbl_Language.Size = new System.Drawing.Size(166, 40);
+            this.lbl_Language.TabIndex = 125;
+            this.lbl_Language.Text = "Language";
             // 
             // ele_UC_Setting
             // 
@@ -217,7 +217,7 @@ namespace HikaruOff
             // UC_Setting
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.Controls.Add(this.pnl_Setting);
             this.Controls.Add(this.pnl_ButtonList);
             this.Name = "UC_Setting";

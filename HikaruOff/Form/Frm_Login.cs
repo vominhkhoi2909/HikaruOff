@@ -81,5 +81,10 @@ namespace HikaruOff
 
             return false;
         }
+
+        private void pic_Hide_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
