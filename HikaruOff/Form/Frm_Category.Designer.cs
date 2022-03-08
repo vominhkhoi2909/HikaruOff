@@ -31,11 +31,11 @@ namespace HikaruOff
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Category));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pic_Exit = new System.Windows.Forms.PictureBox();
-            this.txt_NameCategory = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_Name = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbl_NameCategory = new System.Windows.Forms.Label();
             this.dgv_Category = new Guna.UI2.WinForms.Guna2DataGridView();
             this.CategoryId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,29 +65,29 @@ namespace HikaruOff
             this.pic_Exit.TabStop = false;
             this.pic_Exit.Click += new System.EventHandler(this.pic_Exit_Click);
             // 
-            // txt_NameCategory
+            // txt_Name
             // 
-            this.txt_NameCategory.AutoRoundedCorners = true;
-            this.txt_NameCategory.BorderColor = System.Drawing.Color.Black;
-            this.txt_NameCategory.BorderRadius = 29;
-            this.txt_NameCategory.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_NameCategory.DefaultText = "";
-            this.txt_NameCategory.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_NameCategory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_NameCategory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_NameCategory.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_NameCategory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_NameCategory.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
-            this.txt_NameCategory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_NameCategory.Location = new System.Drawing.Point(19, 70);
-            this.txt_NameCategory.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_NameCategory.MaxLength = 50;
-            this.txt_NameCategory.Name = "txt_NameCategory";
-            this.txt_NameCategory.PasswordChar = '\0';
-            this.txt_NameCategory.PlaceholderText = "Enter Text";
-            this.txt_NameCategory.SelectedText = "";
-            this.txt_NameCategory.Size = new System.Drawing.Size(769, 60);
-            this.txt_NameCategory.TabIndex = 35;
+            this.txt_Name.AutoRoundedCorners = true;
+            this.txt_Name.BorderColor = System.Drawing.Color.Black;
+            this.txt_Name.BorderRadius = 29;
+            this.txt_Name.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Name.DefaultText = "";
+            this.txt_Name.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_Name.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_Name.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Name.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Name.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Name.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
+            this.txt_Name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Name.Location = new System.Drawing.Point(19, 70);
+            this.txt_Name.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_Name.MaxLength = 50;
+            this.txt_Name.Name = "txt_Name";
+            this.txt_Name.PasswordChar = '\0';
+            this.txt_Name.PlaceholderText = "Enter Text";
+            this.txt_Name.SelectedText = "";
+            this.txt_Name.Size = new System.Drawing.Size(769, 60);
+            this.txt_Name.TabIndex = 35;
             // 
             // lbl_NameCategory
             // 
@@ -104,33 +104,33 @@ namespace HikaruOff
             // 
             this.dgv_Category.AllowUserToAddRows = false;
             this.dgv_Category.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgv_Category.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgv_Category.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Category.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Category.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Category.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_Category.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgv_Category.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Category.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgv_Category.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Category.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Category.ColumnHeadersHeight = 50;
             this.dgv_Category.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CategoryId,
             this.CategoryName});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Category.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Category.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Category.EnableHeadersVisualStyles = false;
             this.dgv_Category.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_Category.Location = new System.Drawing.Point(19, 203);
@@ -149,15 +149,15 @@ namespace HikaruOff
             this.dgv_Category.ThemeStyle.BackColor = System.Drawing.Color.White;
             this.dgv_Category.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_Category.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dgv_Category.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgv_Category.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_Category.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgv_Category.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgv_Category.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgv_Category.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgv_Category.ThemeStyle.HeaderStyle.Height = 50;
             this.dgv_Category.ThemeStyle.ReadOnly = true;
             this.dgv_Category.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv_Category.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgv_Category.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_Category.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgv_Category.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgv_Category.ThemeStyle.RowsStyle.Height = 45;
             this.dgv_Category.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -342,7 +342,7 @@ namespace HikaruOff
             this.Controls.Add(this.pic_Hide);
             this.Controls.Add(this.lbl_ListCategory);
             this.Controls.Add(this.dgv_Category);
-            this.Controls.Add(this.txt_NameCategory);
+            this.Controls.Add(this.txt_Name);
             this.Controls.Add(this.lbl_NameCategory);
             this.Controls.Add(this.pic_Exit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -360,7 +360,7 @@ namespace HikaruOff
 
         #endregion
         private System.Windows.Forms.PictureBox pic_Exit;
-        private Guna.UI2.WinForms.Guna2TextBox txt_NameCategory;
+        private Guna.UI2.WinForms.Guna2TextBox txt_Name;
         private System.Windows.Forms.Label lbl_NameCategory;
         private Guna.UI2.WinForms.Guna2DataGridView dgv_Category;
         private System.Windows.Forms.Label lbl_ListCategory;

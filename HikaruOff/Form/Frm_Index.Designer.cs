@@ -44,6 +44,7 @@ namespace HikaruOff
             this.ele_Frm_Index = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btn_Account = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Minimize = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Information = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_LogoShop)).BeginInit();
             this.SuspendLayout();
             // 
@@ -302,7 +303,7 @@ namespace HikaruOff
             this.btn_Account.CheckedState.BorderColor = System.Drawing.Color.Black;
             this.btn_Account.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_Account.CheckedState.ForeColor = System.Drawing.Color.Black;
-            this.btn_Account.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image9")));
+            this.btn_Account.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image10")));
             this.btn_Account.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_Account.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_Account.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -314,7 +315,7 @@ namespace HikaruOff
             this.btn_Account.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_Account.ImageOffset = new System.Drawing.Point(5, 0);
             this.btn_Account.ImageSize = new System.Drawing.Size(50, 50);
-            this.btn_Account.Location = new System.Drawing.Point(12, 850);
+            this.btn_Account.Location = new System.Drawing.Point(12, 794);
             this.btn_Account.Name = "btn_Account";
             this.btn_Account.Size = new System.Drawing.Size(239, 50);
             this.btn_Account.TabIndex = 124;
@@ -328,7 +329,7 @@ namespace HikaruOff
             this.btn_Minimize.CheckedState.BorderColor = System.Drawing.Color.Black;
             this.btn_Minimize.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btn_Minimize.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btn_Minimize.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image8")));
+            this.btn_Minimize.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image9")));
             this.btn_Minimize.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_Minimize.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_Minimize.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -348,12 +349,39 @@ namespace HikaruOff
             this.btn_Minimize.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_Minimize.Click += new System.EventHandler(this.btn_Minimize_Click);
             // 
+            // btn_Information
+            // 
+            this.btn_Information.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Information.BorderRadius = 22;
+            this.btn_Information.CheckedState.BorderColor = System.Drawing.Color.Black;
+            this.btn_Information.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_Information.CheckedState.ForeColor = System.Drawing.Color.Black;
+            this.btn_Information.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image8")));
+            this.btn_Information.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Information.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Information.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Information.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Information.FillColor = System.Drawing.Color.SeaShell;
+            this.btn_Information.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Information.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_Information.Image = ((System.Drawing.Image)(resources.GetObject("btn_Information.Image")));
+            this.btn_Information.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_Information.ImageOffset = new System.Drawing.Point(5, 0);
+            this.btn_Information.ImageSize = new System.Drawing.Size(50, 40);
+            this.btn_Information.Location = new System.Drawing.Point(12, 850);
+            this.btn_Information.Name = "btn_Information";
+            this.btn_Information.Size = new System.Drawing.Size(239, 50);
+            this.btn_Information.TabIndex = 126;
+            this.btn_Information.Text = "Information";
+            this.btn_Information.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // frm_Index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGreen;
             this.ClientSize = new System.Drawing.Size(1280, 1024);
+            this.Controls.Add(this.btn_Information);
             this.Controls.Add(this.btn_Minimize);
             this.Controls.Add(this.btn_Account);
             this.Controls.Add(this.btn_Exit);
@@ -390,6 +418,7 @@ namespace HikaruOff
         private Guna.UI2.WinForms.Guna2Elipse ele_Frm_Index;
         private Guna.UI2.WinForms.Guna2Button btn_Minimize;
         private Guna.UI2.WinForms.Guna2Button btn_Account;
+        private Guna.UI2.WinForms.Guna2Button btn_Information;
     }
 }
 

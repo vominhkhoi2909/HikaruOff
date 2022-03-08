@@ -161,7 +161,9 @@
     <Compile Include="Class\DataProvider.cs" />
     <Compile Include="Class\Login.cs" />
     <Compile Include="Controller\CategoryCtrl.cs" />
+    <Compile Include="Controller\ItemCtrl.cs" />
     <Compile Include="DataLayer\CategoryData.cs" />
+    <Compile Include="DataLayer\ItemData.cs" />
     <Compile Include="Form\Frm_Customer.cs">
       <SubType>Form</SubType>
     </Compile>
