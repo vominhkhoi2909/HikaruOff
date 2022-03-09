@@ -31,21 +31,21 @@ namespace HikaruOff
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Item));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnl_ButtonList = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_Renew = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Delete = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Add = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Save = new Guna.UI2.WinForms.Guna2Button();
             this.pnl_Item = new Guna.UI2.WinForms.Guna2Panel();
-            this.rtb_Notes = new System.Windows.Forms.RichTextBox();
+            this.rtb_Details = new System.Windows.Forms.RichTextBox();
             this.txt_SellPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_BuyPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_Quantily = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_Name = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lbl_Notes = new System.Windows.Forms.Label();
+            this.lbl_Details = new System.Windows.Forms.Label();
             this.dtm_AddDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.cbo_Category = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lbl_Catelory = new System.Windows.Forms.Label();
@@ -101,7 +101,7 @@ namespace HikaruOff
             this.btn_Renew.FillColor = System.Drawing.Color.White;
             this.btn_Renew.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
             this.btn_Renew.ForeColor = System.Drawing.Color.Black;
-            this.btn_Renew.Location = new System.Drawing.Point(879, 9);
+            this.btn_Renew.Location = new System.Drawing.Point(870, 6);
             this.btn_Renew.Name = "btn_Renew";
             this.btn_Renew.Size = new System.Drawing.Size(141, 53);
             this.btn_Renew.TabIndex = 101;
@@ -121,7 +121,7 @@ namespace HikaruOff
             this.btn_Delete.FillColor = System.Drawing.Color.White;
             this.btn_Delete.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
             this.btn_Delete.ForeColor = System.Drawing.Color.Black;
-            this.btn_Delete.Location = new System.Drawing.Point(740, 9);
+            this.btn_Delete.Location = new System.Drawing.Point(731, 6);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(133, 53);
             this.btn_Delete.TabIndex = 100;
@@ -141,7 +141,7 @@ namespace HikaruOff
             this.btn_Add.FillColor = System.Drawing.Color.White;
             this.btn_Add.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
             this.btn_Add.ForeColor = System.Drawing.Color.Black;
-            this.btn_Add.Location = new System.Drawing.Point(516, 9);
+            this.btn_Add.Location = new System.Drawing.Point(507, 6);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(103, 53);
             this.btn_Add.TabIndex = 99;
@@ -161,7 +161,7 @@ namespace HikaruOff
             this.btn_Save.FillColor = System.Drawing.Color.White;
             this.btn_Save.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
             this.btn_Save.ForeColor = System.Drawing.Color.Black;
-            this.btn_Save.Location = new System.Drawing.Point(625, 9);
+            this.btn_Save.Location = new System.Drawing.Point(616, 6);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(109, 53);
             this.btn_Save.TabIndex = 98;
@@ -170,12 +170,12 @@ namespace HikaruOff
             // 
             // pnl_Item
             // 
-            this.pnl_Item.Controls.Add(this.rtb_Notes);
+            this.pnl_Item.Controls.Add(this.rtb_Details);
             this.pnl_Item.Controls.Add(this.txt_SellPrice);
             this.pnl_Item.Controls.Add(this.txt_BuyPrice);
             this.pnl_Item.Controls.Add(this.txt_Quantily);
             this.pnl_Item.Controls.Add(this.txt_Name);
-            this.pnl_Item.Controls.Add(this.lbl_Notes);
+            this.pnl_Item.Controls.Add(this.lbl_Details);
             this.pnl_Item.Controls.Add(this.dtm_AddDate);
             this.pnl_Item.Controls.Add(this.cbo_Category);
             this.pnl_Item.Controls.Add(this.lbl_Catelory);
@@ -190,13 +190,13 @@ namespace HikaruOff
             this.pnl_Item.Size = new System.Drawing.Size(1023, 438);
             this.pnl_Item.TabIndex = 1;
             // 
-            // rtb_Notes
+            // rtb_Details
             // 
-            this.rtb_Notes.Location = new System.Drawing.Point(518, 268);
-            this.rtb_Notes.Name = "rtb_Notes";
-            this.rtb_Notes.Size = new System.Drawing.Size(493, 137);
-            this.rtb_Notes.TabIndex = 142;
-            this.rtb_Notes.Text = "";
+            this.rtb_Details.Location = new System.Drawing.Point(518, 268);
+            this.rtb_Details.Name = "rtb_Details";
+            this.rtb_Details.Size = new System.Drawing.Size(493, 137);
+            this.rtb_Details.TabIndex = 142;
+            this.rtb_Details.Text = "";
             // 
             // txt_SellPrice
             // 
@@ -216,10 +216,11 @@ namespace HikaruOff
             this.txt_SellPrice.Margin = new System.Windows.Forms.Padding(5);
             this.txt_SellPrice.Name = "txt_SellPrice";
             this.txt_SellPrice.PasswordChar = '\0';
-            this.txt_SellPrice.PlaceholderText = "Enter Text";
+            this.txt_SellPrice.PlaceholderText = "Enter Number";
             this.txt_SellPrice.SelectedText = "";
             this.txt_SellPrice.Size = new System.Drawing.Size(493, 55);
             this.txt_SellPrice.TabIndex = 141;
+            this.txt_SellPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_SellPrice_KeyPress);
             // 
             // txt_BuyPrice
             // 
@@ -239,10 +240,11 @@ namespace HikaruOff
             this.txt_BuyPrice.Margin = new System.Windows.Forms.Padding(5);
             this.txt_BuyPrice.Name = "txt_BuyPrice";
             this.txt_BuyPrice.PasswordChar = '\0';
-            this.txt_BuyPrice.PlaceholderText = "Enter Text";
+            this.txt_BuyPrice.PlaceholderText = "Enter Number";
             this.txt_BuyPrice.SelectedText = "";
             this.txt_BuyPrice.Size = new System.Drawing.Size(493, 55);
             this.txt_BuyPrice.TabIndex = 140;
+            this.txt_BuyPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_BuyPrice_KeyPress);
             // 
             // txt_Quantily
             // 
@@ -262,10 +264,11 @@ namespace HikaruOff
             this.txt_Quantily.Margin = new System.Windows.Forms.Padding(5);
             this.txt_Quantily.Name = "txt_Quantily";
             this.txt_Quantily.PasswordChar = '\0';
-            this.txt_Quantily.PlaceholderText = "Enter Text";
+            this.txt_Quantily.PlaceholderText = "Enter Number";
             this.txt_Quantily.SelectedText = "";
             this.txt_Quantily.Size = new System.Drawing.Size(493, 55);
             this.txt_Quantily.TabIndex = 139;
+            this.txt_Quantily.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Quantily_KeyPress);
             // 
             // txt_Name
             // 
@@ -283,6 +286,7 @@ namespace HikaruOff
             this.txt_Name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Name.Location = new System.Drawing.Point(10, 60);
             this.txt_Name.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_Name.MaxLength = 50;
             this.txt_Name.Name = "txt_Name";
             this.txt_Name.PasswordChar = '\0';
             this.txt_Name.PlaceholderText = "Enter Text";
@@ -290,16 +294,16 @@ namespace HikaruOff
             this.txt_Name.Size = new System.Drawing.Size(493, 55);
             this.txt_Name.TabIndex = 131;
             // 
-            // lbl_Notes
+            // lbl_Details
             // 
-            this.lbl_Notes.AutoSize = true;
-            this.lbl_Notes.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Notes.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Notes.Location = new System.Drawing.Point(511, 225);
-            this.lbl_Notes.Name = "lbl_Notes";
-            this.lbl_Notes.Size = new System.Drawing.Size(102, 40);
-            this.lbl_Notes.TabIndex = 138;
-            this.lbl_Notes.Text = "Notes";
+            this.lbl_Details.AutoSize = true;
+            this.lbl_Details.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Details.ForeColor = System.Drawing.Color.Black;
+            this.lbl_Details.Location = new System.Drawing.Point(511, 225);
+            this.lbl_Details.Name = "lbl_Details";
+            this.lbl_Details.Size = new System.Drawing.Size(102, 40);
+            this.lbl_Details.TabIndex = 138;
+            this.lbl_Details.Text = "Notes";
             // 
             // dtm_AddDate
             // 
@@ -406,8 +410,8 @@ namespace HikaruOff
             this.pnl_Data.Controls.Add(this.btn_Search);
             this.pnl_Data.Controls.Add(this.txt_Search);
             this.pnl_Data.Controls.Add(this.dgv_Item);
-            this.pnl_Data.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_Data.Location = new System.Drawing.Point(0, 438);
+            this.pnl_Data.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnl_Data.Location = new System.Drawing.Point(0, 444);
             this.pnl_Data.Name = "pnl_Data";
             this.pnl_Data.Size = new System.Drawing.Size(1023, 515);
             this.pnl_Data.TabIndex = 2;
@@ -446,6 +450,7 @@ namespace HikaruOff
             this.txt_Search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Search.Location = new System.Drawing.Point(511, 8);
             this.txt_Search.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_Search.MaxLength = 50;
             this.txt_Search.Name = "txt_Search";
             this.txt_Search.PasswordChar = '\0';
             this.txt_Search.PlaceholderText = "Enter Text";
@@ -457,21 +462,21 @@ namespace HikaruOff
             // 
             this.dgv_Item.AllowUserToAddRows = false;
             this.dgv_Item.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgv_Item.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.dgv_Item.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgv_Item.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgv_Item.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Item.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_Item.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_Item.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Item.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Item.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgv_Item.ColumnHeadersHeight = 50;
             this.dgv_Item.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ItemId,
@@ -485,14 +490,14 @@ namespace HikaruOff
             this.ItemAddDate,
             this.CategoryId,
             this.ItemCategory});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Item.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Item.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgv_Item.EnableHeadersVisualStyles = false;
             this.dgv_Item.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_Item.Location = new System.Drawing.Point(10, 71);
@@ -652,7 +657,7 @@ namespace HikaruOff
         private Guna.UI2.WinForms.Guna2Button btn_Delete;
         private Guna.UI2.WinForms.Guna2Button btn_Add;
         private Guna.UI2.WinForms.Guna2Button btn_Save;
-        private System.Windows.Forms.Label lbl_Notes;
+        private System.Windows.Forms.Label lbl_Details;
         private Guna.UI2.WinForms.Guna2ComboBox cbo_Category;
         private System.Windows.Forms.Label lbl_Catelory;
         private System.Windows.Forms.Label lbl_AddedOn;
@@ -669,7 +674,7 @@ namespace HikaruOff
         private Guna.UI2.WinForms.Guna2TextBox txt_BuyPrice;
         private Guna.UI2.WinForms.Guna2TextBox txt_Quantily;
         private Guna.UI2.WinForms.Guna2TextBox txt_Name;
-        private System.Windows.Forms.RichTextBox rtb_Notes;
+        private System.Windows.Forms.RichTextBox rtb_Details;
         private Guna.UI2.WinForms.Guna2Button btn_Renew;
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;

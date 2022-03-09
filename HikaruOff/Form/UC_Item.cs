@@ -26,7 +26,7 @@ namespace HikaruOff
             txt_Name.Text = "";
             txt_Quantily.Text = "";
             txt_SellPrice.Text = "";
-            rtb_Notes.Text = "";
+            rtb_Details.Text = "";
             txt_Search.Text = "";
             btn_Save.Enabled = false;
             btn_Delete.Enabled = false;
@@ -62,7 +62,7 @@ namespace HikaruOff
             if (checkAction())
             {
                 iProfit = Convert.ToInt32(txt_SellPrice.Text) - Convert.ToInt32(txt_BuyPrice.Text);
-                item.Add(txt_Name.Text, rtb_Notes.Text, Convert.ToInt32(cbo_Category.SelectedValue), Convert.ToInt32(txt_Quantily.Text), Convert.ToInt32(txt_BuyPrice.Text), Convert.ToInt32(txt_SellPrice.Text), iProfit, DateTime.Now);
+                item.Add(txt_Name.Text, rtb_Details.Text, Convert.ToInt32(cbo_Category.SelectedValue), Convert.ToInt32(txt_Quantily.Text), Convert.ToInt32(txt_BuyPrice.Text), Convert.ToInt32(txt_SellPrice.Text), iProfit, DateTime.Now);
 
                 MessageBox.Show("Item added!!!", "Add Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 refresh();
@@ -75,7 +75,7 @@ namespace HikaruOff
             if (checkAction())
             {
                 iProfit = Convert.ToInt32(txt_SellPrice.Text) - Convert.ToInt32(txt_BuyPrice.Text);
-                item.Update(id, txt_Name.Text, rtb_Notes.Text, Convert.ToInt32(cbo_Category.SelectedValue), Convert.ToInt32(txt_Quantily.Text), Convert.ToInt32(txt_BuyPrice.Text), Convert.ToInt32(txt_SellPrice.Text), iProfit);
+                item.Update(id, txt_Name.Text, rtb_Details.Text, Convert.ToInt32(cbo_Category.SelectedValue), Convert.ToInt32(txt_Quantily.Text), Convert.ToInt32(txt_BuyPrice.Text), Convert.ToInt32(txt_SellPrice.Text), iProfit);
                 
                 MessageBox.Show("Item Updated!!!", "Update Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 refresh();
@@ -85,7 +85,7 @@ namespace HikaruOff
         //Delete item.
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-            var res = MessageBox.Show("Are you sure you want to delete item?", "Delete Category", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var res = MessageBox.Show("Are you sure you want to delete item?", "Delete Item", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (res == DialogResult.Yes)
             {
@@ -113,13 +113,13 @@ namespace HikaruOff
         //Check click trên dgv.
         private void dgv_Item_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //Lưu thông tin category của dòng đã chọn trên dgv.
+            //Lưu thông tin item của dòng đã chọn trên dgv.
             id = Convert.ToInt32(dgv_Item.SelectedRows[0].Cells["ItemId"].Value);
             txt_Name.Text = dgv_Item.SelectedRows[0].Cells["ItemName"].Value.ToString();
             txt_Quantily.Text = dgv_Item.SelectedRows[0].Cells["ItemQuantily"].Value.ToString();
             txt_BuyPrice.Text = dgv_Item.SelectedRows[0].Cells["ItemBuyPrice"].Value.ToString();
             txt_SellPrice.Text = dgv_Item.SelectedRows[0].Cells["ItemSellPrice"].Value.ToString();
-            rtb_Notes.Text = dgv_Item.SelectedRows[0].Cells["ItemDetails"].Value.ToString();
+            rtb_Details.Text = dgv_Item.SelectedRows[0].Cells["ItemDetails"].Value.ToString();
             dtm_AddDate.Value = Convert.ToDateTime(dgv_Item.SelectedRows[0].Cells["ItemAddDate"].Value);
             cbo_Category.SelectedValue = dgv_Item.SelectedRows[0].Cells["ItemCategory"].Value.ToString();
 
@@ -127,6 +127,27 @@ namespace HikaruOff
             btn_Save.Enabled = true;
             btn_Delete.Enabled = true;
             btn_Add.Enabled = false;
+        }
+
+        //Chỉ cho phép nhập chữ số vào ô ton kho.
+        private void txt_Quantily_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        //Chỉ cho phép nhập chữ số vào ô gia ban.
+        private void txt_SellPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        //Chỉ cho phép nhập chữ số vào ô gia mua.
+        private void txt_BuyPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

@@ -121,11 +121,18 @@ namespace HikaruOff
         //Tắt form.
         private void pic_Exit_Click(object sender, EventArgs e)
         {
-            var res = MessageBox.Show("Are you sure you want to close form?", "Form Close", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (res == DialogResult.Yes)
+            if(txt_Name.Text != "")
             {
                 this.Hide();
+            }
+            else
+            {
+                var res = MessageBox.Show("Are you sure you want to close form?", "Form Close", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (res == DialogResult.Yes)
+                {
+                    this.Hide();
+                }
             }
         }
     }

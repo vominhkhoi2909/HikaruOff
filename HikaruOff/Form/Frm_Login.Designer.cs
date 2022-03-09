@@ -29,6 +29,7 @@ namespace HikaruOff
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Login));
             this.pnl__Login = new Guna.UI2.WinForms.Guna2Panel();
             this.pic_LogoShop = new System.Windows.Forms.PictureBox();
@@ -42,10 +43,13 @@ namespace HikaruOff
             this.lbl_NameShop = new System.Windows.Forms.Label();
             this.pic_Exit = new System.Windows.Forms.PictureBox();
             this.pic_Hide = new System.Windows.Forms.PictureBox();
+            this.ele_Frm_Login = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.pic_Information = new System.Windows.Forms.PictureBox();
             this.pnl__Login.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_LogoShop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Hide)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Information)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl__Login
@@ -221,12 +225,29 @@ namespace HikaruOff
             this.pic_Hide.TabStop = false;
             this.pic_Hide.Click += new System.EventHandler(this.pic_Hide_Click);
             // 
+            // ele_Frm_Login
+            // 
+            this.ele_Frm_Login.BorderRadius = 25;
+            this.ele_Frm_Login.TargetControl = this;
+            // 
+            // pic_Information
+            // 
+            this.pic_Information.Image = ((System.Drawing.Image)(resources.GetObject("pic_Information.Image")));
+            this.pic_Information.Location = new System.Drawing.Point(12, 226);
+            this.pic_Information.Name = "pic_Information";
+            this.pic_Information.Size = new System.Drawing.Size(50, 50);
+            this.pic_Information.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_Information.TabIndex = 100;
+            this.pic_Information.TabStop = false;
+            this.pic_Information.Click += new System.EventHandler(this.pic_Information_Click);
+            // 
             // frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGreen;
             this.ClientSize = new System.Drawing.Size(800, 400);
+            this.Controls.Add(this.pic_Information);
             this.Controls.Add(this.pic_Hide);
             this.Controls.Add(this.pic_Exit);
             this.Controls.Add(this.pnl__Login);
@@ -240,6 +261,7 @@ namespace HikaruOff
             ((System.ComponentModel.ISupportInitialize)(this.pic_LogoShop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Exit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Hide)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Information)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -258,5 +280,7 @@ namespace HikaruOff
         private System.Windows.Forms.PictureBox pic_LogoShop;
         private System.Windows.Forms.PictureBox pic_Exit;
         private System.Windows.Forms.PictureBox pic_Hide;
+        private Guna.UI2.WinForms.Guna2Elipse ele_Frm_Login;
+        private System.Windows.Forms.PictureBox pic_Information;
     }
 }

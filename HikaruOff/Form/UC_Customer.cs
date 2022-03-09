@@ -48,6 +48,10 @@ namespace HikaruOff
                 MessageBox.Show("Customer Email Already Exists.", "Action Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+            else if (txt_Phone.TextLength != 10)
+            {
+                MessageBox.Show("Invalid phone number.", "Action Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else if(customer.CheckPhone(txt_Phone.Text) == true && btn_Add.Checked == true)
             {
                 MessageBox.Show("Customer Phone Already Exists.", "Action Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -63,29 +67,29 @@ namespace HikaruOff
         {
             if (checkAction())
             {
-                if(txt_Phone.Text != "")
-                    customer.Add(txt_Name.Text, txt_Email.Text, dtm_BirthDay.Value, cbo_Gender.Text, txt_Phone.Text, rtb_Notes.Text);
+                customer.Add(txt_Name.Text, txt_Email.Text, dtm_BirthDay.Value, cbo_Gender.Text, txt_Phone.Text, rtb_Notes.Text);
 
                 MessageBox.Show("Customer added!!!", "Add Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 refresh();
             }
         }
 
-        //Update item.
+        //Update customer.
         private void btn_Save_Click(object sender, EventArgs e)
         {
             if (checkAction())
             {
                 customer.Update(id, txt_Name.Text, txt_Email.Text, dtm_BirthDay.Value, cbo_Gender.Text, txt_Phone.Text, rtb_Notes.Text);
+
                 MessageBox.Show("Customer Updated!!!", "Update Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 refresh();
             }
         }
 
-        //Delete item.
+        //Delete customer.
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-            var res = MessageBox.Show("Are you sure you want to delete customer?", "Delete Category", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var res = MessageBox.Show("Are you sure you want to delete customer?", "Delete Customer", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (res == DialogResult.Yes)
             {
@@ -95,7 +99,7 @@ namespace HikaruOff
             }
         }
         
-        //Search item.
+        //Search customer.
         private void btn_Search_Click(object sender, EventArgs e)
         {
             if (txt_Search.Text != "")
@@ -113,7 +117,7 @@ namespace HikaruOff
         //Check click trên dgv.
         private void dgv_Customer_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //Lưu thông tin category của dòng đã chọn trên dgv.
+            //Lưu thông tin customer của dòng đã chọn trên dgv.
             id = Convert.ToInt32(dgv_Customer.SelectedRows[0].Cells["CustomerId"].Value);
             txt_Name.Text = dgv_Customer.SelectedRows[0].Cells["CustomerName"].Value.ToString();
             txt_Email.Text = dgv_Customer.SelectedRows[0].Cells["CustomerEmail"].Value.ToString();
@@ -126,6 +130,13 @@ namespace HikaruOff
             btn_Save.Enabled = true;
             btn_Delete.Enabled = true;
             btn_Add.Enabled = false;
+        }
+
+        //Chỉ cho phép nhập chữ số vào ô phone.
+        private void txt_Phone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

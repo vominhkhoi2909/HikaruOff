@@ -54,9 +54,9 @@ namespace HikaruOff.Controller
         }
 
         //Hàm xử lý xóa.
-        public int Delete(int iId)
+        public int Delete(int cusId)
         {
-            return customerData.DeleteCustomer(iId);
+            return customerData.DeleteCustomer(cusId);
         }
 
         //Hàm xử lý cập nhật.

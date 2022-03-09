@@ -63,7 +63,7 @@ namespace HikaruOff
         }
 
         //Hàm chức năng khác.
-            //Hàm check thông tin login.
+        //Hàm check thông tin login.
         bool login(string user, string pass)
         {
             string cmt;
@@ -85,6 +85,11 @@ namespace HikaruOff
         private void pic_Hide_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pic_Information_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Version 1.0 \n Update date: 10/03/2022 \n Creater/Editer by V.M.K", "Information App", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

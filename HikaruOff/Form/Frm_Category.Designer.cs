@@ -317,14 +317,14 @@ namespace HikaruOff
             this.txt_Search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Search.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
             this.txt_Search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Search.Location = new System.Drawing.Point(435, 138);
+            this.txt_Search.Location = new System.Drawing.Point(393, 138);
             this.txt_Search.Margin = new System.Windows.Forms.Padding(5);
             this.txt_Search.MaxLength = 50;
             this.txt_Search.Name = "txt_Search";
             this.txt_Search.PasswordChar = '\0';
             this.txt_Search.PlaceholderText = "Enter Text";
             this.txt_Search.SelectedText = "";
-            this.txt_Search.Size = new System.Drawing.Size(291, 55);
+            this.txt_Search.Size = new System.Drawing.Size(333, 55);
             this.txt_Search.TabIndex = 98;
             // 
             // frm_Category

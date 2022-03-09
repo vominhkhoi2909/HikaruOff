@@ -15,8 +15,6 @@ namespace HikaruOff
         public frm_Index()
         {
             InitializeComponent();
-            UC_Billing uC = new UC_Billing();
-            changeuUC(uC);
         }
 
         private void changeuUC(UserControl uC)
@@ -84,7 +82,7 @@ namespace HikaruOff
 
         private void btn_Information_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Version 1.0 \n Update date: 03/10/2022 \n Creater/Editer by V.M.K", "Information App", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Version 1.0 \n Update date: 10/03/2022 \n Creater/Editer by V.M.K", "Information App", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

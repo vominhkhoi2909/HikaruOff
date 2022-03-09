@@ -95,7 +95,7 @@ namespace HikaruOff
             this.btn_Add.FillColor = System.Drawing.Color.White;
             this.btn_Add.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
             this.btn_Add.ForeColor = System.Drawing.Color.Black;
-            this.btn_Add.Location = new System.Drawing.Point(516, 9);
+            this.btn_Add.Location = new System.Drawing.Point(507, 6);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(103, 53);
             this.btn_Add.TabIndex = 102;
@@ -115,7 +115,7 @@ namespace HikaruOff
             this.btn_Renew.FillColor = System.Drawing.Color.White;
             this.btn_Renew.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
             this.btn_Renew.ForeColor = System.Drawing.Color.Black;
-            this.btn_Renew.Location = new System.Drawing.Point(879, 9);
+            this.btn_Renew.Location = new System.Drawing.Point(870, 6);
             this.btn_Renew.Name = "btn_Renew";
             this.btn_Renew.Size = new System.Drawing.Size(141, 53);
             this.btn_Renew.TabIndex = 101;
@@ -135,7 +135,7 @@ namespace HikaruOff
             this.btn_Delete.FillColor = System.Drawing.Color.White;
             this.btn_Delete.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
             this.btn_Delete.ForeColor = System.Drawing.Color.Black;
-            this.btn_Delete.Location = new System.Drawing.Point(740, 9);
+            this.btn_Delete.Location = new System.Drawing.Point(731, 6);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(133, 53);
             this.btn_Delete.TabIndex = 100;
@@ -155,7 +155,7 @@ namespace HikaruOff
             this.btn_Save.FillColor = System.Drawing.Color.White;
             this.btn_Save.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
             this.btn_Save.ForeColor = System.Drawing.Color.Black;
-            this.btn_Save.Location = new System.Drawing.Point(625, 9);
+            this.btn_Save.Location = new System.Drawing.Point(616, 6);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(109, 53);
             this.btn_Save.TabIndex = 98;
@@ -207,6 +207,7 @@ namespace HikaruOff
             this.txt_Search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Search.Location = new System.Drawing.Point(518, 5);
             this.txt_Search.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_Search.MaxLength = 50;
             this.txt_Search.Name = "txt_Search";
             this.txt_Search.PasswordChar = '\0';
             this.txt_Search.PlaceholderText = "Enter Text";
@@ -383,12 +384,14 @@ namespace HikaruOff
             this.txt_Phone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Phone.Location = new System.Drawing.Point(10, 165);
             this.txt_Phone.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_Phone.MaxLength = 11;
             this.txt_Phone.Name = "txt_Phone";
             this.txt_Phone.PasswordChar = '\0';
             this.txt_Phone.PlaceholderText = "Enter Number";
             this.txt_Phone.SelectedText = "";
             this.txt_Phone.Size = new System.Drawing.Size(493, 55);
             this.txt_Phone.TabIndex = 141;
+            this.txt_Phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Phone_KeyPress);
             // 
             // txt_Email
             // 
@@ -406,6 +409,7 @@ namespace HikaruOff
             this.txt_Email.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Email.Location = new System.Drawing.Point(518, 60);
             this.txt_Email.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_Email.MaxLength = 50;
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.PasswordChar = '\0';
             this.txt_Email.PlaceholderText = "Enter Text";
@@ -429,6 +433,7 @@ namespace HikaruOff
             this.txt_Name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Name.Location = new System.Drawing.Point(10, 60);
             this.txt_Name.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_Name.MaxLength = 50;
             this.txt_Name.Name = "txt_Name";
             this.txt_Name.PasswordChar = '\0';
             this.txt_Name.PlaceholderText = "Enter Text";

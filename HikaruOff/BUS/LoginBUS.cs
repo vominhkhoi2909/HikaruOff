@@ -18,7 +18,7 @@ namespace HikaruOff.BUS
             this.UserId = 0;
             this.UserEmail = "vmkhoi@gmail.com";
             this.UserName = "Vo Minh Khoi";
-            this.UserOffice = "Master";
+            this.UserOffice = "Staff";
         }
 
         public LoginBUS(LoginBUS log)
