@@ -2,6 +2,7 @@
 using HikaruOff.Controller;
 using HikaruOff.BUS;
 using System.Windows.Forms;
+using System.Linq;
 
 namespace HikaruOff
 {
@@ -61,9 +62,15 @@ namespace HikaruOff
                 MessageBox.Show("User Email Already Exists.", "Action Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+            if (!this.txt_Email.Text.Contains('@') || !this.txt_Email.Text.Contains('.'))
+            {
+                MessageBox.Show("Invalid phone email.", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
             else if(txt_Phone.TextLength != 10)
             {
                 MessageBox.Show("Invalid phone number.", "Action Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
             else if (user.CheckPhone(txt_Phone.Text) == true && btn_Add.Checked == true)
             {

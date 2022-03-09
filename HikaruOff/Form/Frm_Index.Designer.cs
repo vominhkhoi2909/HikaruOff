@@ -73,7 +73,6 @@ namespace HikaruOff
             this.btn_Billing.BackColor = System.Drawing.Color.Transparent;
             this.btn_Billing.BorderRadius = 22;
             this.btn_Billing.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btn_Billing.Checked = true;
             this.btn_Billing.CheckedState.BorderColor = System.Drawing.Color.Black;
             this.btn_Billing.CheckedState.FillColor = System.Drawing.Color.PaleTurquoise;
             this.btn_Billing.CheckedState.ForeColor = System.Drawing.Color.Black;

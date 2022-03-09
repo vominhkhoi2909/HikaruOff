@@ -159,6 +159,7 @@ namespace HikaruOff
             // rdb_English
             // 
             this.rdb_English.AutoSize = true;
+            this.rdb_English.Checked = true;
             this.rdb_English.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rdb_English.CheckedState.BorderThickness = 0;
             this.rdb_English.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -169,6 +170,7 @@ namespace HikaruOff
             this.rdb_English.Name = "rdb_English";
             this.rdb_English.Size = new System.Drawing.Size(227, 44);
             this.rdb_English.TabIndex = 132;
+            this.rdb_English.TabStop = true;
             this.rdb_English.Text = "English (EN)";
             this.rdb_English.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.rdb_English.UncheckedState.BorderThickness = 2;

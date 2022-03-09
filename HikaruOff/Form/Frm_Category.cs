@@ -121,7 +121,7 @@ namespace HikaruOff
         //Tắt form.
         private void pic_Exit_Click(object sender, EventArgs e)
         {
-            if(txt_Name.Text != "")
+            if(txt_Name.Text == "")
             {
                 this.Hide();
             }
