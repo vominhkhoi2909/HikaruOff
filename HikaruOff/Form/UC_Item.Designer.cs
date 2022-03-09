@@ -31,22 +31,22 @@ namespace HikaruOff
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Item));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnl_ButtonList = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_Renew = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Delete = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Add = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Save = new Guna.UI2.WinForms.Guna2Button();
             this.pnl_Item = new Guna.UI2.WinForms.Guna2Panel();
-            this.rtb_Nơtes = new System.Windows.Forms.RichTextBox();
+            this.rtb_Notes = new System.Windows.Forms.RichTextBox();
             this.txt_SellPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_BuyPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_Quantily = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_Name = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbl_Notes = new System.Windows.Forms.Label();
-            this.dtm_AddedOn = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtm_AddDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.cbo_Category = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lbl_Catelory = new System.Windows.Forms.Label();
             this.lbl_AddedOn = new System.Windows.Forms.Label();
@@ -170,13 +170,13 @@ namespace HikaruOff
             // 
             // pnl_Item
             // 
-            this.pnl_Item.Controls.Add(this.rtb_Nơtes);
+            this.pnl_Item.Controls.Add(this.rtb_Notes);
             this.pnl_Item.Controls.Add(this.txt_SellPrice);
             this.pnl_Item.Controls.Add(this.txt_BuyPrice);
             this.pnl_Item.Controls.Add(this.txt_Quantily);
             this.pnl_Item.Controls.Add(this.txt_Name);
             this.pnl_Item.Controls.Add(this.lbl_Notes);
-            this.pnl_Item.Controls.Add(this.dtm_AddedOn);
+            this.pnl_Item.Controls.Add(this.dtm_AddDate);
             this.pnl_Item.Controls.Add(this.cbo_Category);
             this.pnl_Item.Controls.Add(this.lbl_Catelory);
             this.pnl_Item.Controls.Add(this.lbl_AddedOn);
@@ -190,13 +190,13 @@ namespace HikaruOff
             this.pnl_Item.Size = new System.Drawing.Size(1023, 438);
             this.pnl_Item.TabIndex = 1;
             // 
-            // rtb_Nơtes
+            // rtb_Notes
             // 
-            this.rtb_Nơtes.Location = new System.Drawing.Point(518, 268);
-            this.rtb_Nơtes.Name = "rtb_Nơtes";
-            this.rtb_Nơtes.Size = new System.Drawing.Size(493, 137);
-            this.rtb_Nơtes.TabIndex = 142;
-            this.rtb_Nơtes.Text = "";
+            this.rtb_Notes.Location = new System.Drawing.Point(518, 268);
+            this.rtb_Notes.Name = "rtb_Notes";
+            this.rtb_Notes.Size = new System.Drawing.Size(493, 137);
+            this.rtb_Notes.TabIndex = 142;
+            this.rtb_Notes.Text = "";
             // 
             // txt_SellPrice
             // 
@@ -301,21 +301,21 @@ namespace HikaruOff
             this.lbl_Notes.TabIndex = 138;
             this.lbl_Notes.Text = "Notes";
             // 
-            // dtm_AddedOn
+            // dtm_AddDate
             // 
-            this.dtm_AddedOn.AutoRoundedCorners = true;
-            this.dtm_AddedOn.BorderRadius = 26;
-            this.dtm_AddedOn.Checked = true;
-            this.dtm_AddedOn.FillColor = System.Drawing.Color.White;
-            this.dtm_AddedOn.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
-            this.dtm_AddedOn.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtm_AddedOn.Location = new System.Drawing.Point(10, 268);
-            this.dtm_AddedOn.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
-            this.dtm_AddedOn.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            this.dtm_AddedOn.Name = "dtm_AddedOn";
-            this.dtm_AddedOn.Size = new System.Drawing.Size(493, 55);
-            this.dtm_AddedOn.TabIndex = 136;
-            this.dtm_AddedOn.Value = new System.DateTime(2022, 2, 22, 22, 31, 13, 10);
+            this.dtm_AddDate.AutoRoundedCorners = true;
+            this.dtm_AddDate.BorderRadius = 26;
+            this.dtm_AddDate.Checked = true;
+            this.dtm_AddDate.FillColor = System.Drawing.Color.White;
+            this.dtm_AddDate.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
+            this.dtm_AddDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtm_AddDate.Location = new System.Drawing.Point(10, 268);
+            this.dtm_AddDate.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
+            this.dtm_AddDate.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.dtm_AddDate.Name = "dtm_AddDate";
+            this.dtm_AddDate.Size = new System.Drawing.Size(493, 55);
+            this.dtm_AddDate.TabIndex = 136;
+            this.dtm_AddDate.Value = new System.DateTime(2022, 2, 22, 22, 31, 13, 10);
             // 
             // cbo_Category
             // 
@@ -457,21 +457,21 @@ namespace HikaruOff
             // 
             this.dgv_Item.AllowUserToAddRows = false;
             this.dgv_Item.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgv_Item.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgv_Item.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Item.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgv_Item.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Item.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_Item.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_Item.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Item.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Item.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Item.ColumnHeadersHeight = 50;
             this.dgv_Item.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ItemId,
@@ -485,17 +485,17 @@ namespace HikaruOff
             this.ItemAddDate,
             this.CategoryId,
             this.ItemCategory});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Item.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Item.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Item.EnableHeadersVisualStyles = false;
             this.dgv_Item.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_Item.Location = new System.Drawing.Point(5, 71);
+            this.dgv_Item.Location = new System.Drawing.Point(10, 71);
             this.dgv_Item.Name = "dgv_Item";
             this.dgv_Item.ReadOnly = true;
             this.dgv_Item.RowHeadersVisible = false;
@@ -503,7 +503,7 @@ namespace HikaruOff
             this.dgv_Item.RowTemplate.Height = 45;
             this.dgv_Item.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.dgv_Item.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Item.Size = new System.Drawing.Size(1006, 441);
+            this.dgv_Item.Size = new System.Drawing.Size(1001, 441);
             this.dgv_Item.TabIndex = 128;
             this.dgv_Item.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv_Item.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -664,12 +664,12 @@ namespace HikaruOff
         private Guna.UI2.WinForms.Guna2TextBox txt_Search;
         private Guna.UI2.WinForms.Guna2DataGridView dgv_Item;
         private Guna.UI2.WinForms.Guna2Elipse ele_UC_Item;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtm_AddedOn;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtm_AddDate;
         private Guna.UI2.WinForms.Guna2TextBox txt_SellPrice;
         private Guna.UI2.WinForms.Guna2TextBox txt_BuyPrice;
         private Guna.UI2.WinForms.Guna2TextBox txt_Quantily;
         private Guna.UI2.WinForms.Guna2TextBox txt_Name;
-        private System.Windows.Forms.RichTextBox rtb_Nơtes;
+        private System.Windows.Forms.RichTextBox rtb_Notes;
         private Guna.UI2.WinForms.Guna2Button btn_Renew;
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;

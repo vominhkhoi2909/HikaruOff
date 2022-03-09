@@ -16,15 +16,23 @@ namespace HikaruOff.Controller
         }
 
         //Hàm kiểm tra tên có bị trùng.
-        public bool checkName(string iName)
+        public bool CheckName(string iName)
         {
             return itemData.CheckItemName(iName);
         }
 
-        //Hàm xử lý hiển thị ds thiết bị lên datagridview.
-        public void HienThiDgv(DataGridView dgv)
+        //Hàm hiển thị datagridview.
+        public void ShowDgv(DataGridView dgv)
         {
             dgv.DataSource = itemData.PullListItem().Tables[0];
+        }
+
+        //Hàm hiển thị combobox.
+        public void ShowCbo(ComboBox cbo)
+        {
+            cbo.DataSource = itemData.PullListItem().Tables[0];
+            cbo.DisplayMember = "ItemName";
+            cbo.ValueMember = "ItemId";
         }
 
         //Hàm xử lý thêm mới.

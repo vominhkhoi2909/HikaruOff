@@ -26,7 +26,7 @@ namespace HikaruOff
             btn_Save.Enabled = false;
             btn_Delete.Enabled = false;
             btn_Add.Enabled = true;
-            category.HienThiDgv(dgv_Category);
+            category.ShowDgv(dgv_Category);
             dgv_Category.Update();
             dgv_Category.Refresh();
         }
@@ -39,7 +39,7 @@ namespace HikaruOff
                 MessageBox.Show("Category Name Missing.", "Action Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            if (category.checkName(txt_Name.Text) == true && btn_Add.Enabled == true)
+            if (category.CheckName(txt_Name.Text) == true && btn_Add.Enabled == true)
             {
                 MessageBox.Show("Category Name Already Exists.", "Action Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;

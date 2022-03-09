@@ -26,14 +26,14 @@ namespace HikaruOff
             txt_Name.Text = "";
             txt_Quantily.Text = "";
             txt_SellPrice.Text = "";
-            rtb_Nơtes.Text = "";
+            rtb_Notes.Text = "";
             txt_Search.Text = "";
             btn_Save.Enabled = false;
             btn_Delete.Enabled = false;
             btn_Add.Enabled = true;
-            item.HienThiDgv(dgv_Item);
-            category.HienThiCbo(cbo_Category);
-            dtm_AddedOn.Value = DateTime.Now;
+            item.ShowDgv(dgv_Item);
+            category.ShowCbo(cbo_Category);
+            dtm_AddDate.Value = DateTime.Now;
             dgv_Item.Update();
             dgv_Item.Refresh();
         }
@@ -46,7 +46,7 @@ namespace HikaruOff
                 MessageBox.Show("Infomation Missing.", "Action Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            if (item.checkName(txt_Name.Text) == true && btn_Add.Checked == true)
+            if (item.CheckName(txt_Name.Text) == true && btn_Add.Checked == true)
             {
                 MessageBox.Show("Item Name Already Exists.", "Action Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -62,11 +62,9 @@ namespace HikaruOff
             if (checkAction())
             {
                 iProfit = Convert.ToInt32(txt_SellPrice.Text) - Convert.ToInt32(txt_BuyPrice.Text);
+                item.Add(txt_Name.Text, rtb_Notes.Text, Convert.ToInt32(cbo_Category.SelectedValue), Convert.ToInt32(txt_Quantily.Text), Convert.ToInt32(txt_BuyPrice.Text), Convert.ToInt32(txt_SellPrice.Text), iProfit, DateTime.Now);
 
-                item.Add(txt_Name.Text, rtb_Nơtes.Text, Convert.ToInt32(cbo_Category.SelectedValue), Convert.ToInt32(txt_Quantily.Text),
-                    Convert.ToInt32(txt_BuyPrice.Text), Convert.ToInt32(txt_SellPrice.Text), iProfit, DateTime.Now);
-
-                MessageBox.Show("Category added!!!", "Add Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Item added!!!", "Add Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 refresh();
             }
         }
@@ -77,10 +75,9 @@ namespace HikaruOff
             if (checkAction())
             {
                 iProfit = Convert.ToInt32(txt_SellPrice.Text) - Convert.ToInt32(txt_BuyPrice.Text);
-
-                item.Update(id, txt_Name.Text, rtb_Nơtes.Text, Convert.ToInt32(cbo_Category.SelectedValue), Convert.ToInt32(txt_Quantily.Text),
-                    Convert.ToInt32(txt_BuyPrice.Text), Convert.ToInt32(txt_SellPrice.Text), iProfit);
-                MessageBox.Show("Category Updated!!!", "Update Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                item.Update(id, txt_Name.Text, rtb_Notes.Text, Convert.ToInt32(cbo_Category.SelectedValue), Convert.ToInt32(txt_Quantily.Text), Convert.ToInt32(txt_BuyPrice.Text), Convert.ToInt32(txt_SellPrice.Text), iProfit);
+                
+                MessageBox.Show("Item Updated!!!", "Update Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 refresh();
             }
         }
@@ -88,12 +85,12 @@ namespace HikaruOff
         //Delete item.
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-            var res = MessageBox.Show("Are you sure you want to delete category?", "Delete Category", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var res = MessageBox.Show("Are you sure you want to delete item?", "Delete Category", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (res == DialogResult.Yes)
             {
                 item.Delete(id);
-                MessageBox.Show("Category Deleted!!!", "Delete Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Item Deleted!!!", "Delete Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 refresh();
             }
         }
@@ -117,13 +114,13 @@ namespace HikaruOff
         private void dgv_Item_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //Lưu thông tin category của dòng đã chọn trên dgv.
-            id = Convert.ToInt32(dgv_Item.SelectedRows[0].Cells[0].Value);
-            txt_Name.Text = dgv_Item.SelectedRows[0].Cells[1].Value.ToString();
-            txt_Quantily.Text = dgv_Item.SelectedRows[0].Cells[3].Value.ToString();
-            txt_BuyPrice.Text = dgv_Item.SelectedRows[0].Cells[4].Value.ToString();
-            txt_SellPrice.Text = dgv_Item.SelectedRows[0].Cells[5].Value.ToString();
-            rtb_Nơtes.Text = dgv_Item.SelectedRows[0].Cells[7].Value.ToString();
-            dtm_AddedOn.Value = Convert.ToDateTime(dgv_Item.SelectedRows[0].Cells[8].Value);
+            id = Convert.ToInt32(dgv_Item.SelectedRows[0].Cells["ItemId"].Value);
+            txt_Name.Text = dgv_Item.SelectedRows[0].Cells["ItemName"].Value.ToString();
+            txt_Quantily.Text = dgv_Item.SelectedRows[0].Cells["ItemQuantily"].Value.ToString();
+            txt_BuyPrice.Text = dgv_Item.SelectedRows[0].Cells["ItemBuyPrice"].Value.ToString();
+            txt_SellPrice.Text = dgv_Item.SelectedRows[0].Cells["ItemSellPrice"].Value.ToString();
+            rtb_Notes.Text = dgv_Item.SelectedRows[0].Cells["ItemDetails"].Value.ToString();
+            dtm_AddDate.Value = Convert.ToDateTime(dgv_Item.SelectedRows[0].Cells["ItemAddDate"].Value);
             cbo_Category.SelectedValue = dgv_Item.SelectedRows[0].Cells["ItemCategory"].Value.ToString();
 
             //Cập nhật trạng thái button.

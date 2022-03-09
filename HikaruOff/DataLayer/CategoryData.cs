@@ -1,6 +1,7 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
 using HikaruOff.Class;
+using System;
 
 namespace HikaruOff.DataLayer
 {

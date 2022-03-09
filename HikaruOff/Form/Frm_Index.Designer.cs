@@ -374,6 +374,7 @@ namespace HikaruOff
             this.btn_Information.TabIndex = 126;
             this.btn_Information.Text = "Information";
             this.btn_Information.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_Information.Click += new System.EventHandler(this.btn_Information_Click);
             // 
             // frm_Index
             // 

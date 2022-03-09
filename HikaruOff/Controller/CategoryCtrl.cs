@@ -1,5 +1,6 @@
 ﻿using HikaruOff.DataLayer;
 using System.Windows.Forms;
+using System;
 
 namespace HikaruOff.Controller
 {
@@ -15,19 +16,19 @@ namespace HikaruOff.Controller
         }
 
         //Hàm kiểm tra tên có bị trùng.
-        public bool checkName(string cName)
+        public bool CheckName(string cName)
         {
             return categoryData.CheckCategoryName(cName);
         }
 
-        //Hàm xử lý hiển thị ds thiết bị lên datagridview.
-        public void HienThiDgv(DataGridView dgv)
+        //Hàm hiển thị datagridview.
+        public void ShowDgv(DataGridView dgv)
         {
             dgv.DataSource = categoryData.PullListCategory().Tables[0];
         }
 
-        //Hàm xử lý hiển thị thiết bị lên combox.
-        public void HienThiCbo(ComboBox cbo)
+        //Hàm hiển thị combobox.
+        public void ShowCbo(ComboBox cbo)
         {
             cbo.DataSource = categoryData.PullListCategory().Tables[0];
             cbo.DisplayMember = "CategoryName";
