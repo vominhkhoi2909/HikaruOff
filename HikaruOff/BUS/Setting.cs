@@ -11,9 +11,10 @@ namespace HikaruOff.BUS
         //Khởi tạo các biến giá trị.
         string _settingLogo, _settingLanguage, _settingIcon;
 
-        //Khởi tạo mặc định của class.
+        //Khởi tạo mặc định.
         public Setting() { }
 
+        //Hàm xử lý getter, setter.
         public string SettingIcon { get => _settingIcon; set => _settingIcon = value; }
         public string SettingLanguage { get => _settingLanguage; set => _settingLanguage = value; }
         public string SettingLogo { get => _settingLogo; set => _settingLogo = value; }

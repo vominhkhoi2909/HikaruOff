@@ -30,58 +30,75 @@ namespace HikaruOff
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Billing));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnl_Billing = new System.Windows.Forms.Panel();
-            this.dtm_Date = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.btn_AddToBill = new Guna.UI2.WinForms.Guna2Button();
+            this.pic_AddCustomer = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btn_Refresh = new Guna.UI2.WinForms.Guna2Button();
+            this.cbo_Customer = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txt_ProductName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txt_Quantily = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_Price = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_Customer = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lbl_Date = new System.Windows.Forms.Label();
             this.lbl_Price = new System.Windows.Forms.Label();
             this.lbl_Quantily = new System.Windows.Forms.Label();
             this.lbl_Customer2 = new System.Windows.Forms.Label();
             this.pnl_ClientBill = new Guna.UI2.WinForms.Guna2Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_GrdTotal = new System.Windows.Forms.Label();
+            this.dgv_ManageItems = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.ItemId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemQuantily = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemBuyPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemSellPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemProfit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemDetails = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemAddDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CategoryId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_Search = new Guna.UI2.WinForms.Guna2Button();
+            this.txt_Search = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbl_ClientBill = new System.Windows.Forms.Label();
             this.dgv_ClientBill = new Guna.UI2.WinForms.Guna2DataGridView();
             this.ele_UC_Billing = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btn_Search = new Guna.UI2.WinForms.Guna2Button();
-            this.txt_Search = new Guna.UI2.WinForms.Guna2TextBox();
-            this.dgv_DataList = new Guna.UI2.WinForms.Guna2DataGridView();
             this.pnl_ButtonList = new Guna.UI2.WinForms.Guna2Panel();
+            this.btn_SalesList = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Print = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Renew = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Complete = new Guna.UI2.WinForms.Guna2Button();
-            this.pnl_SalesList = new Guna.UI2.WinForms.Guna2Panel();
-            this.lbl_SalesList = new System.Windows.Forms.Label();
-            this.dgv_SalesList = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantily = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnl_Billing.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_AddCustomer)).BeginInit();
             this.pnl_ClientBill.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ManageItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ClientBill)).BeginInit();
-            this.guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_DataList)).BeginInit();
             this.pnl_ButtonList.SuspendLayout();
-            this.pnl_SalesList.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_SalesList)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_Billing
             // 
             this.pnl_Billing.BackColor = System.Drawing.Color.Transparent;
-            this.pnl_Billing.Controls.Add(this.dtm_Date);
+            this.pnl_Billing.Controls.Add(this.btn_AddToBill);
+            this.pnl_Billing.Controls.Add(this.pic_AddCustomer);
+            this.pnl_Billing.Controls.Add(this.btn_Refresh);
+            this.pnl_Billing.Controls.Add(this.cbo_Customer);
+            this.pnl_Billing.Controls.Add(this.txt_ProductName);
+            this.pnl_Billing.Controls.Add(this.label1);
             this.pnl_Billing.Controls.Add(this.txt_Quantily);
             this.pnl_Billing.Controls.Add(this.txt_Price);
-            this.pnl_Billing.Controls.Add(this.txt_Customer);
-            this.pnl_Billing.Controls.Add(this.lbl_Date);
             this.pnl_Billing.Controls.Add(this.lbl_Price);
             this.pnl_Billing.Controls.Add(this.lbl_Quantily);
             this.pnl_Billing.Controls.Add(this.lbl_Customer2);
@@ -89,31 +106,110 @@ namespace HikaruOff
             this.pnl_Billing.ForeColor = System.Drawing.Color.Black;
             this.pnl_Billing.Location = new System.Drawing.Point(0, 0);
             this.pnl_Billing.Name = "pnl_Billing";
-            this.pnl_Billing.Size = new System.Drawing.Size(1023, 244);
+            this.pnl_Billing.Size = new System.Drawing.Size(1023, 297);
             this.pnl_Billing.TabIndex = 0;
-            this.pnl_Billing.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // dtm_Date
+            // btn_AddToBill
             // 
-            this.dtm_Date.AutoRoundedCorners = true;
-            this.dtm_Date.BackColor = System.Drawing.Color.Transparent;
-            this.dtm_Date.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.dtm_Date.BorderRadius = 26;
-            this.dtm_Date.Checked = true;
-            this.dtm_Date.FillColor = System.Drawing.Color.White;
-            this.dtm_Date.FocusedColor = System.Drawing.Color.White;
-            this.dtm_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
-            this.dtm_Date.ForeColor = System.Drawing.Color.Black;
-            this.dtm_Date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtm_Date.Location = new System.Drawing.Point(5, 175);
-            this.dtm_Date.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtm_Date.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtm_Date.Name = "dtm_Date";
-            this.dtm_Date.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dtm_Date.Size = new System.Drawing.Size(500, 55);
-            this.dtm_Date.TabIndex = 92;
-            this.dtm_Date.Value = new System.DateTime(2022, 2, 22, 22, 11, 20, 116);
-            this.dtm_Date.ValueChanged += new System.EventHandler(this.dtm_Date_ValueChanged);
+            this.btn_AddToBill.AutoRoundedCorners = true;
+            this.btn_AddToBill.BorderRadius = 25;
+            this.btn_AddToBill.BorderThickness = 1;
+            this.btn_AddToBill.DefaultAutoSize = true;
+            this.btn_AddToBill.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_AddToBill.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_AddToBill.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_AddToBill.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_AddToBill.FillColor = System.Drawing.Color.White;
+            this.btn_AddToBill.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
+            this.btn_AddToBill.ForeColor = System.Drawing.Color.Black;
+            this.btn_AddToBill.Location = new System.Drawing.Point(631, 238);
+            this.btn_AddToBill.Name = "btn_AddToBill";
+            this.btn_AddToBill.Size = new System.Drawing.Size(217, 53);
+            this.btn_AddToBill.TabIndex = 99;
+            this.btn_AddToBill.Text = "Add To Bill";
+            this.btn_AddToBill.Click += new System.EventHandler(this.btn_AddToBill_Click);
+            // 
+            // pic_AddCustomer
+            // 
+            this.pic_AddCustomer.Image = ((System.Drawing.Image)(resources.GetObject("pic_AddCustomer.Image")));
+            this.pic_AddCustomer.ImageRotate = 0F;
+            this.pic_AddCustomer.Location = new System.Drawing.Point(469, 70);
+            this.pic_AddCustomer.Name = "pic_AddCustomer";
+            this.pic_AddCustomer.Size = new System.Drawing.Size(36, 36);
+            this.pic_AddCustomer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_AddCustomer.TabIndex = 95;
+            this.pic_AddCustomer.TabStop = false;
+            this.pic_AddCustomer.Click += new System.EventHandler(this.pic_AddCustomer_Click);
+            // 
+            // btn_Refresh
+            // 
+            this.btn_Refresh.AutoRoundedCorners = true;
+            this.btn_Refresh.BorderRadius = 25;
+            this.btn_Refresh.BorderThickness = 1;
+            this.btn_Refresh.DefaultAutoSize = true;
+            this.btn_Refresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Refresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Refresh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Refresh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Refresh.FillColor = System.Drawing.Color.White;
+            this.btn_Refresh.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Refresh.ForeColor = System.Drawing.Color.Black;
+            this.btn_Refresh.Location = new System.Drawing.Point(854, 238);
+            this.btn_Refresh.Name = "btn_Refresh";
+            this.btn_Refresh.Size = new System.Drawing.Size(157, 53);
+            this.btn_Refresh.TabIndex = 98;
+            this.btn_Refresh.Text = "Refresh";
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
+            // 
+            // cbo_Customer
+            // 
+            this.cbo_Customer.BackColor = System.Drawing.Color.Transparent;
+            this.cbo_Customer.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbo_Customer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_Customer.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbo_Customer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbo_Customer.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbo_Customer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbo_Customer.ItemHeight = 30;
+            this.cbo_Customer.Location = new System.Drawing.Point(10, 70);
+            this.cbo_Customer.Name = "cbo_Customer";
+            this.cbo_Customer.Size = new System.Drawing.Size(453, 36);
+            this.cbo_Customer.TabIndex = 94;
+            // 
+            // txt_ProductName
+            // 
+            this.txt_ProductName.AutoRoundedCorners = true;
+            this.txt_ProductName.BorderColor = System.Drawing.Color.Black;
+            this.txt_ProductName.BorderRadius = 26;
+            this.txt_ProductName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_ProductName.DefaultText = "";
+            this.txt_ProductName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_ProductName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_ProductName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_ProductName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_ProductName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_ProductName.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
+            this.txt_ProductName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_ProductName.Location = new System.Drawing.Point(10, 175);
+            this.txt_ProductName.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_ProductName.Name = "txt_ProductName";
+            this.txt_ProductName.PasswordChar = '\0';
+            this.txt_ProductName.PlaceholderText = "Select In Product List";
+            this.txt_ProductName.ReadOnly = true;
+            this.txt_ProductName.SelectedText = "";
+            this.txt_ProductName.Size = new System.Drawing.Size(496, 55);
+            this.txt_ProductName.TabIndex = 93;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(3, 130);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(234, 40);
+            this.label1.TabIndex = 92;
+            this.label1.Text = "Product Name";
             // 
             // txt_Quantily
             // 
@@ -129,15 +225,14 @@ namespace HikaruOff
             this.txt_Quantily.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Quantily.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
             this.txt_Quantily.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Quantily.Location = new System.Drawing.Point(515, 175);
+            this.txt_Quantily.Location = new System.Drawing.Point(515, 70);
             this.txt_Quantily.Margin = new System.Windows.Forms.Padding(5);
             this.txt_Quantily.Name = "txt_Quantily";
             this.txt_Quantily.PasswordChar = '\0';
-            this.txt_Quantily.PlaceholderText = "Value";
+            this.txt_Quantily.PlaceholderText = "Enter Number";
             this.txt_Quantily.SelectedText = "";
-            this.txt_Quantily.Size = new System.Drawing.Size(500, 55);
+            this.txt_Quantily.Size = new System.Drawing.Size(496, 55);
             this.txt_Quantily.TabIndex = 91;
-            this.txt_Quantily.TextChanged += new System.EventHandler(this.txt_Quantily_TextChanged);
             // 
             // txt_Price
             // 
@@ -153,75 +248,37 @@ namespace HikaruOff
             this.txt_Price.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Price.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
             this.txt_Price.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Price.Location = new System.Drawing.Point(515, 70);
+            this.txt_Price.Location = new System.Drawing.Point(515, 175);
             this.txt_Price.Margin = new System.Windows.Forms.Padding(5);
             this.txt_Price.Name = "txt_Price";
             this.txt_Price.PasswordChar = '\0';
-            this.txt_Price.PlaceholderText = "Enter Number";
+            this.txt_Price.PlaceholderText = "Select In Product List";
+            this.txt_Price.ReadOnly = true;
             this.txt_Price.SelectedText = "";
-            this.txt_Price.Size = new System.Drawing.Size(500, 55);
+            this.txt_Price.Size = new System.Drawing.Size(496, 55);
             this.txt_Price.TabIndex = 90;
-            this.txt_Price.TextChanged += new System.EventHandler(this.txt_Price_TextChanged);
-            // 
-            // txt_Customer
-            // 
-            this.txt_Customer.AutoRoundedCorners = true;
-            this.txt_Customer.BorderColor = System.Drawing.Color.Black;
-            this.txt_Customer.BorderRadius = 26;
-            this.txt_Customer.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Customer.DefaultText = "";
-            this.txt_Customer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_Customer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_Customer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Customer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Customer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Customer.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
-            this.txt_Customer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Customer.Location = new System.Drawing.Point(5, 70);
-            this.txt_Customer.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_Customer.Name = "txt_Customer";
-            this.txt_Customer.PasswordChar = '\0';
-            this.txt_Customer.PlaceholderText = "Enter Text";
-            this.txt_Customer.SelectedText = "";
-            this.txt_Customer.Size = new System.Drawing.Size(500, 55);
-            this.txt_Customer.TabIndex = 89;
-            this.txt_Customer.TextChanged += new System.EventHandler(this.txt_Customer_TextChanged);
-            // 
-            // lbl_Date
-            // 
-            this.lbl_Date.AutoSize = true;
-            this.lbl_Date.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Date.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Date.Location = new System.Drawing.Point(3, 130);
-            this.lbl_Date.Name = "lbl_Date";
-            this.lbl_Date.Size = new System.Drawing.Size(88, 40);
-            this.lbl_Date.TabIndex = 88;
-            this.lbl_Date.Text = "Date";
-            this.lbl_Date.Click += new System.EventHandler(this.lbl_Date_Click);
             // 
             // lbl_Price
             // 
             this.lbl_Price.AutoSize = true;
             this.lbl_Price.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Price.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Price.Location = new System.Drawing.Point(508, 25);
+            this.lbl_Price.Location = new System.Drawing.Point(508, 130);
             this.lbl_Price.Name = "lbl_Price";
             this.lbl_Price.Size = new System.Drawing.Size(96, 40);
             this.lbl_Price.TabIndex = 87;
             this.lbl_Price.Text = "Price";
-            this.lbl_Price.Click += new System.EventHandler(this.lbl_Price_Click);
             // 
             // lbl_Quantily
             // 
             this.lbl_Quantily.AutoSize = true;
             this.lbl_Quantily.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Quantily.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Quantily.Location = new System.Drawing.Point(508, 130);
+            this.lbl_Quantily.Location = new System.Drawing.Point(508, 25);
             this.lbl_Quantily.Name = "lbl_Quantily";
             this.lbl_Quantily.Size = new System.Drawing.Size(148, 40);
             this.lbl_Quantily.TabIndex = 86;
             this.lbl_Quantily.Text = "Quantily";
-            this.lbl_Quantily.Click += new System.EventHandler(this.lbl_Quantily_Click);
             // 
             // lbl_Customer2
             // 
@@ -233,102 +290,212 @@ namespace HikaruOff
             this.lbl_Customer2.Size = new System.Drawing.Size(164, 40);
             this.lbl_Customer2.TabIndex = 85;
             this.lbl_Customer2.Text = "Customer";
-            this.lbl_Customer2.Click += new System.EventHandler(this.lbl_Customer2_Click);
             // 
             // pnl_ClientBill
             // 
+            this.pnl_ClientBill.Controls.Add(this.label2);
+            this.pnl_ClientBill.Controls.Add(this.lbl_GrdTotal);
+            this.pnl_ClientBill.Controls.Add(this.dgv_ManageItems);
+            this.pnl_ClientBill.Controls.Add(this.btn_Search);
+            this.pnl_ClientBill.Controls.Add(this.txt_Search);
             this.pnl_ClientBill.Controls.Add(this.lbl_ClientBill);
             this.pnl_ClientBill.Controls.Add(this.dgv_ClientBill);
-            this.pnl_ClientBill.Location = new System.Drawing.Point(3, 250);
+            this.pnl_ClientBill.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_ClientBill.Location = new System.Drawing.Point(0, 297);
             this.pnl_ClientBill.Name = "pnl_ClientBill";
-            this.pnl_ClientBill.Size = new System.Drawing.Size(334, 703);
+            this.pnl_ClientBill.Size = new System.Drawing.Size(1023, 715);
             this.pnl_ClientBill.TabIndex = 3;
-            this.pnl_ClientBill.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
-            // lbl_ClientBill
+            // label2
             // 
-            this.lbl_ClientBill.AutoSize = true;
-            this.lbl_ClientBill.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ClientBill.ForeColor = System.Drawing.Color.Black;
-            this.lbl_ClientBill.Location = new System.Drawing.Point(3, 23);
-            this.lbl_ClientBill.Name = "lbl_ClientBill";
-            this.lbl_ClientBill.Size = new System.Drawing.Size(167, 40);
-            this.lbl_ClientBill.TabIndex = 93;
-            this.lbl_ClientBill.Text = "Client Bill";
-            this.lbl_ClientBill.Click += new System.EventHandler(this.label1_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(3, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(206, 40);
+            this.label2.TabIndex = 130;
+            this.label2.Text = "Product List";
             // 
-            // dgv_ClientBill
+            // lbl_GrdTotal
             // 
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
-            this.dgv_ClientBill.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
-            this.dgv_ClientBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_ClientBill.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_ClientBill.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_ClientBill.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgv_ClientBill.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_ClientBill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
-            this.dgv_ClientBill.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_ClientBill.DefaultCellStyle = dataGridViewCellStyle21;
-            this.dgv_ClientBill.EnableHeadersVisualStyles = false;
-            this.dgv_ClientBill.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_ClientBill.Location = new System.Drawing.Point(3, 71);
-            this.dgv_ClientBill.Name = "dgv_ClientBill";
-            this.dgv_ClientBill.RowHeadersVisible = false;
-            this.dgv_ClientBill.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_ClientBill.Size = new System.Drawing.Size(328, 629);
-            this.dgv_ClientBill.TabIndex = 4;
-            this.dgv_ClientBill.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgv_ClientBill.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgv_ClientBill.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgv_ClientBill.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgv_ClientBill.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgv_ClientBill.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgv_ClientBill.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_ClientBill.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dgv_ClientBill.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgv_ClientBill.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv_ClientBill.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgv_ClientBill.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgv_ClientBill.ThemeStyle.HeaderStyle.Height = 4;
-            this.dgv_ClientBill.ThemeStyle.ReadOnly = false;
-            this.dgv_ClientBill.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgv_ClientBill.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgv_ClientBill.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv_ClientBill.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgv_ClientBill.ThemeStyle.RowsStyle.Height = 22;
-            this.dgv_ClientBill.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_ClientBill.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgv_ClientBill.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView2_CellContentClick);
+            this.lbl_GrdTotal.AutoSize = true;
+            this.lbl_GrdTotal.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_GrdTotal.ForeColor = System.Drawing.Color.Black;
+            this.lbl_GrdTotal.Location = new System.Drawing.Point(3, 619);
+            this.lbl_GrdTotal.Name = "lbl_GrdTotal";
+            this.lbl_GrdTotal.Size = new System.Drawing.Size(220, 40);
+            this.lbl_GrdTotal.TabIndex = 100;
+            this.lbl_GrdTotal.Text = "Total: 0 VND";
             // 
-            // ele_UC_Billing
+            // dgv_ManageItems
             // 
-            this.ele_UC_Billing.BorderRadius = 26;
-            this.ele_UC_Billing.TargetControl = this;
+            this.dgv_ManageItems.AllowUserToAddRows = false;
+            this.dgv_ManageItems.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(239)))), ((int)(((byte)(212)))));
+            this.dgv_ManageItems.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgv_ManageItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgv_ManageItems.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_ManageItems.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_ManageItems.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv_ManageItems.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_ManageItems.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgv_ManageItems.ColumnHeadersHeight = 35;
+            this.dgv_ManageItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ItemId,
+            this.ItemName,
+            this.CategoryName,
+            this.ItemQuantily,
+            this.ItemBuyPrice,
+            this.ItemSellPrice,
+            this.ItemProfit,
+            this.ItemDetails,
+            this.ItemAddDate,
+            this.CategoryId,
+            this.ItemCategory});
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(244)))), ((int)(((byte)(226)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_ManageItems.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dgv_ManageItems.EnableHeadersVisualStyles = false;
+            this.dgv_ManageItems.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(238)))), ((int)(((byte)(208)))));
+            this.dgv_ManageItems.Location = new System.Drawing.Point(10, 71);
+            this.dgv_ManageItems.Name = "dgv_ManageItems";
+            this.dgv_ManageItems.ReadOnly = true;
+            this.dgv_ManageItems.RowHeadersVisible = false;
+            this.dgv_ManageItems.RowHeadersWidth = 45;
+            this.dgv_ManageItems.RowTemplate.Height = 30;
+            this.dgv_ManageItems.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.dgv_ManageItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_ManageItems.Size = new System.Drawing.Size(1001, 244);
+            this.dgv_ManageItems.TabIndex = 129;
+            this.dgv_ManageItems.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Emerald;
+            this.dgv_ManageItems.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(239)))), ((int)(((byte)(212)))));
+            this.dgv_ManageItems.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgv_ManageItems.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgv_ManageItems.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgv_ManageItems.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgv_ManageItems.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgv_ManageItems.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(238)))), ((int)(((byte)(208)))));
+            this.dgv_ManageItems.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            this.dgv_ManageItems.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgv_ManageItems.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_ManageItems.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgv_ManageItems.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgv_ManageItems.ThemeStyle.HeaderStyle.Height = 35;
+            this.dgv_ManageItems.ThemeStyle.ReadOnly = true;
+            this.dgv_ManageItems.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(244)))), ((int)(((byte)(226)))));
+            this.dgv_ManageItems.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv_ManageItems.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_ManageItems.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgv_ManageItems.ThemeStyle.RowsStyle.Height = 30;
+            this.dgv_ManageItems.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.dgv_ManageItems.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgv_ManageItems.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ManageItems_CellContentClick);
             // 
-            // guna2Panel2
+            // ItemId
             // 
-            this.guna2Panel2.Controls.Add(this.btn_Search);
-            this.guna2Panel2.Controls.Add(this.txt_Search);
-            this.guna2Panel2.Controls.Add(this.dgv_DataList);
-            this.guna2Panel2.Location = new System.Drawing.Point(683, 250);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(334, 703);
-            this.guna2Panel2.TabIndex = 95;
-            this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
+            this.ItemId.DataPropertyName = "ItemId";
+            this.ItemId.HeaderText = "ID";
+            this.ItemId.Name = "ItemId";
+            this.ItemId.ReadOnly = true;
+            this.ItemId.Visible = false;
+            this.ItemId.Width = 80;
+            // 
+            // ItemName
+            // 
+            this.ItemName.DataPropertyName = "ItemName";
+            this.ItemName.HeaderText = "Name";
+            this.ItemName.Name = "ItemName";
+            this.ItemName.ReadOnly = true;
+            this.ItemName.Width = 106;
+            // 
+            // CategoryName
+            // 
+            this.CategoryName.DataPropertyName = "CategoryName";
+            this.CategoryName.HeaderText = "Category";
+            this.CategoryName.Name = "CategoryName";
+            this.CategoryName.ReadOnly = true;
+            this.CategoryName.Width = 145;
+            // 
+            // ItemQuantily
+            // 
+            this.ItemQuantily.DataPropertyName = "ItemQuantily";
+            this.ItemQuantily.HeaderText = "Quantily";
+            this.ItemQuantily.Name = "ItemQuantily";
+            this.ItemQuantily.ReadOnly = true;
+            this.ItemQuantily.Width = 141;
+            // 
+            // ItemBuyPrice
+            // 
+            this.ItemBuyPrice.DataPropertyName = "ItemBuyPrice";
+            this.ItemBuyPrice.HeaderText = "Buy Price";
+            this.ItemBuyPrice.Name = "ItemBuyPrice";
+            this.ItemBuyPrice.ReadOnly = true;
+            this.ItemBuyPrice.Visible = false;
+            this.ItemBuyPrice.Width = 189;
+            // 
+            // ItemSellPrice
+            // 
+            this.ItemSellPrice.DataPropertyName = "ItemSellPrice";
+            this.ItemSellPrice.HeaderText = "Sell Price";
+            this.ItemSellPrice.Name = "ItemSellPrice";
+            this.ItemSellPrice.ReadOnly = true;
+            this.ItemSellPrice.Width = 149;
+            // 
+            // ItemProfit
+            // 
+            this.ItemProfit.DataPropertyName = "ItemProfit";
+            this.ItemProfit.HeaderText = "Profit";
+            this.ItemProfit.Name = "ItemProfit";
+            this.ItemProfit.ReadOnly = true;
+            this.ItemProfit.Width = 107;
+            // 
+            // ItemDetails
+            // 
+            this.ItemDetails.DataPropertyName = "ItemDetails";
+            this.ItemDetails.HeaderText = "Details";
+            this.ItemDetails.Name = "ItemDetails";
+            this.ItemDetails.ReadOnly = true;
+            this.ItemDetails.Width = 120;
+            // 
+            // ItemAddDate
+            // 
+            this.ItemAddDate.DataPropertyName = "ItemAddDate";
+            this.ItemAddDate.HeaderText = "Add Date";
+            this.ItemAddDate.Name = "ItemAddDate";
+            this.ItemAddDate.ReadOnly = true;
+            this.ItemAddDate.Visible = false;
+            this.ItemAddDate.Width = 184;
+            // 
+            // CategoryId
+            // 
+            this.CategoryId.DataPropertyName = "CategoryId";
+            this.CategoryId.HeaderText = "Category ID";
+            this.CategoryId.Name = "CategoryId";
+            this.CategoryId.ReadOnly = true;
+            this.CategoryId.Visible = false;
+            this.CategoryId.Width = 229;
+            // 
+            // ItemCategory
+            // 
+            this.ItemCategory.DataPropertyName = "ItemCategory";
+            this.ItemCategory.HeaderText = "Item Cat  ID";
+            this.ItemCategory.Name = "ItemCategory";
+            this.ItemCategory.ReadOnly = true;
+            this.ItemCategory.Visible = false;
+            this.ItemCategory.Width = 231;
             // 
             // btn_Search
             // 
@@ -342,11 +509,10 @@ namespace HikaruOff
             this.btn_Search.ForeColor = System.Drawing.Color.White;
             this.btn_Search.Image = ((System.Drawing.Image)(resources.GetObject("btn_Search.Image")));
             this.btn_Search.ImageSize = new System.Drawing.Size(50, 50);
-            this.btn_Search.Location = new System.Drawing.Point(279, 8);
+            this.btn_Search.Location = new System.Drawing.Point(957, 8);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(54, 55);
-            this.btn_Search.TabIndex = 97;
-            this.btn_Search.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.btn_Search.TabIndex = 100;
             // 
             // txt_Search
             // 
@@ -362,75 +528,104 @@ namespace HikaruOff
             this.txt_Search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Search.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
             this.txt_Search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Search.Location = new System.Drawing.Point(5, 8);
+            this.txt_Search.Location = new System.Drawing.Point(515, 8);
             this.txt_Search.Margin = new System.Windows.Forms.Padding(5);
             this.txt_Search.Name = "txt_Search";
             this.txt_Search.PasswordChar = '\0';
             this.txt_Search.PlaceholderText = "Enter Text";
             this.txt_Search.SelectedText = "";
-            this.txt_Search.Size = new System.Drawing.Size(266, 55);
-            this.txt_Search.TabIndex = 93;
-            this.txt_Search.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
+            this.txt_Search.Size = new System.Drawing.Size(434, 55);
+            this.txt_Search.TabIndex = 98;
             // 
-            // dgv_DataList
+            // lbl_ClientBill
             // 
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.White;
-            this.dgv_DataList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
-            this.dgv_DataList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_DataList.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_DataList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_DataList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgv_DataList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_DataList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
-            this.dgv_DataList.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_DataList.DefaultCellStyle = dataGridViewCellStyle24;
-            this.dgv_DataList.EnableHeadersVisualStyles = false;
-            this.dgv_DataList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_DataList.Location = new System.Drawing.Point(3, 71);
-            this.dgv_DataList.Name = "dgv_DataList";
-            this.dgv_DataList.RowHeadersVisible = false;
-            this.dgv_DataList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_DataList.Size = new System.Drawing.Size(328, 629);
-            this.dgv_DataList.TabIndex = 96;
-            this.dgv_DataList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgv_DataList.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgv_DataList.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgv_DataList.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgv_DataList.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgv_DataList.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgv_DataList.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_DataList.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dgv_DataList.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgv_DataList.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv_DataList.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgv_DataList.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgv_DataList.ThemeStyle.HeaderStyle.Height = 4;
-            this.dgv_DataList.ThemeStyle.ReadOnly = false;
-            this.dgv_DataList.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgv_DataList.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgv_DataList.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv_DataList.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgv_DataList.ThemeStyle.RowsStyle.Height = 22;
-            this.dgv_DataList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_DataList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgv_DataList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView3_CellContentClick);
+            this.lbl_ClientBill.AutoSize = true;
+            this.lbl_ClientBill.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ClientBill.ForeColor = System.Drawing.Color.Black;
+            this.lbl_ClientBill.Location = new System.Drawing.Point(3, 318);
+            this.lbl_ClientBill.Name = "lbl_ClientBill";
+            this.lbl_ClientBill.Size = new System.Drawing.Size(167, 40);
+            this.lbl_ClientBill.TabIndex = 93;
+            this.lbl_ClientBill.Text = "Client Bill";
+            // 
+            // dgv_ClientBill
+            // 
+            this.dgv_ClientBill.AllowUserToAddRows = false;
+            this.dgv_ClientBill.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(239)))), ((int)(((byte)(212)))));
+            this.dgv_ClientBill.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgv_ClientBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgv_ClientBill.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_ClientBill.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_ClientBill.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv_ClientBill.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_ClientBill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.dgv_ClientBill.ColumnHeadersHeight = 35;
+            this.dgv_ClientBill.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Num,
+            this.NameProduct,
+            this.Price,
+            this.Quantily,
+            this.Total,
+            this.IdProduct});
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(244)))), ((int)(((byte)(226)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(221)))), ((int)(((byte)(160)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_ClientBill.DefaultCellStyle = dataGridViewCellStyle12;
+            this.dgv_ClientBill.EnableHeadersVisualStyles = false;
+            this.dgv_ClientBill.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(238)))), ((int)(((byte)(208)))));
+            this.dgv_ClientBill.Location = new System.Drawing.Point(10, 361);
+            this.dgv_ClientBill.Name = "dgv_ClientBill";
+            this.dgv_ClientBill.ReadOnly = true;
+            this.dgv_ClientBill.RowHeadersVisible = false;
+            this.dgv_ClientBill.RowHeadersWidth = 45;
+            this.dgv_ClientBill.RowTemplate.Height = 30;
+            this.dgv_ClientBill.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.dgv_ClientBill.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_ClientBill.Size = new System.Drawing.Size(1001, 255);
+            this.dgv_ClientBill.TabIndex = 4;
+            this.dgv_ClientBill.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Emerald;
+            this.dgv_ClientBill.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(239)))), ((int)(((byte)(212)))));
+            this.dgv_ClientBill.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgv_ClientBill.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgv_ClientBill.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgv_ClientBill.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgv_ClientBill.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgv_ClientBill.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(238)))), ((int)(((byte)(208)))));
+            this.dgv_ClientBill.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            this.dgv_ClientBill.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgv_ClientBill.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_ClientBill.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgv_ClientBill.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgv_ClientBill.ThemeStyle.HeaderStyle.Height = 35;
+            this.dgv_ClientBill.ThemeStyle.ReadOnly = true;
+            this.dgv_ClientBill.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(244)))), ((int)(((byte)(226)))));
+            this.dgv_ClientBill.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv_ClientBill.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_ClientBill.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgv_ClientBill.ThemeStyle.RowsStyle.Height = 30;
+            this.dgv_ClientBill.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(221)))), ((int)(((byte)(160)))));
+            this.dgv_ClientBill.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            // 
+            // ele_UC_Billing
+            // 
+            this.ele_UC_Billing.BorderRadius = 26;
+            this.ele_UC_Billing.TargetControl = this;
             // 
             // pnl_ButtonList
             // 
+            this.pnl_ButtonList.Controls.Add(this.btn_SalesList);
             this.pnl_ButtonList.Controls.Add(this.btn_Print);
             this.pnl_ButtonList.Controls.Add(this.btn_Renew);
             this.pnl_ButtonList.Controls.Add(this.btn_Complete);
@@ -439,7 +634,25 @@ namespace HikaruOff
             this.pnl_ButtonList.Name = "pnl_ButtonList";
             this.pnl_ButtonList.Size = new System.Drawing.Size(1023, 65);
             this.pnl_ButtonList.TabIndex = 96;
-            this.pnl_ButtonList.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel3_Paint);
+            // 
+            // btn_SalesList
+            // 
+            this.btn_SalesList.AutoRoundedCorners = true;
+            this.btn_SalesList.BorderRadius = 25;
+            this.btn_SalesList.BorderThickness = 1;
+            this.btn_SalesList.DefaultAutoSize = true;
+            this.btn_SalesList.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_SalesList.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_SalesList.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_SalesList.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_SalesList.FillColor = System.Drawing.Color.White;
+            this.btn_SalesList.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
+            this.btn_SalesList.ForeColor = System.Drawing.Color.Black;
+            this.btn_SalesList.Location = new System.Drawing.Point(10, 6);
+            this.btn_SalesList.Name = "btn_SalesList";
+            this.btn_SalesList.Size = new System.Drawing.Size(184, 53);
+            this.btn_SalesList.TabIndex = 98;
+            this.btn_SalesList.Text = "Sales List";
             // 
             // btn_Print
             // 
@@ -454,7 +667,7 @@ namespace HikaruOff
             this.btn_Print.FillColor = System.Drawing.Color.White;
             this.btn_Print.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
             this.btn_Print.ForeColor = System.Drawing.Color.Black;
-            this.btn_Print.Location = new System.Drawing.Point(898, 9);
+            this.btn_Print.Location = new System.Drawing.Point(747, 6);
             this.btn_Print.Name = "btn_Print";
             this.btn_Print.Size = new System.Drawing.Size(117, 53);
             this.btn_Print.TabIndex = 97;
@@ -474,7 +687,7 @@ namespace HikaruOff
             this.btn_Renew.FillColor = System.Drawing.Color.White;
             this.btn_Renew.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
             this.btn_Renew.ForeColor = System.Drawing.Color.Black;
-            this.btn_Renew.Location = new System.Drawing.Point(751, 9);
+            this.btn_Renew.Location = new System.Drawing.Point(870, 6);
             this.btn_Renew.Name = "btn_Renew";
             this.btn_Renew.Size = new System.Drawing.Size(141, 53);
             this.btn_Renew.TabIndex = 96;
@@ -494,99 +707,61 @@ namespace HikaruOff
             this.btn_Complete.FillColor = System.Drawing.Color.White;
             this.btn_Complete.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
             this.btn_Complete.ForeColor = System.Drawing.Color.Black;
-            this.btn_Complete.Location = new System.Drawing.Point(560, 9);
+            this.btn_Complete.Location = new System.Drawing.Point(556, 6);
             this.btn_Complete.Name = "btn_Complete";
             this.btn_Complete.Size = new System.Drawing.Size(185, 53);
             this.btn_Complete.TabIndex = 95;
             this.btn_Complete.Text = "Complete";
             this.btn_Complete.Click += new System.EventHandler(this.btn_Complete_Click);
             // 
-            // pnl_SalesList
+            // Num
             // 
-            this.pnl_SalesList.Controls.Add(this.lbl_SalesList);
-            this.pnl_SalesList.Controls.Add(this.dgv_SalesList);
-            this.pnl_SalesList.Location = new System.Drawing.Point(343, 250);
-            this.pnl_SalesList.Name = "pnl_SalesList";
-            this.pnl_SalesList.Size = new System.Drawing.Size(334, 703);
-            this.pnl_SalesList.TabIndex = 97;
-            this.pnl_SalesList.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel4_Paint);
+            this.Num.HeaderText = "Num";
+            this.Num.Name = "Num";
+            this.Num.ReadOnly = true;
+            this.Num.Width = 95;
             // 
-            // lbl_SalesList
+            // NameProduct
             // 
-            this.lbl_SalesList.AutoSize = true;
-            this.lbl_SalesList.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_SalesList.ForeColor = System.Drawing.Color.Black;
-            this.lbl_SalesList.Location = new System.Drawing.Point(3, 23);
-            this.lbl_SalesList.Name = "lbl_SalesList";
-            this.lbl_SalesList.Size = new System.Drawing.Size(160, 40);
-            this.lbl_SalesList.TabIndex = 94;
-            this.lbl_SalesList.Text = "Sales List";
-            this.lbl_SalesList.Click += new System.EventHandler(this.label2_Click);
+            this.NameProduct.HeaderText = "Product";
+            this.NameProduct.Name = "NameProduct";
+            this.NameProduct.ReadOnly = true;
+            this.NameProduct.Width = 132;
             // 
-            // dgv_SalesList
+            // Price
             // 
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.White;
-            this.dgv_SalesList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
-            this.dgv_SalesList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_SalesList.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_SalesList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_SalesList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgv_SalesList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_SalesList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
-            this.dgv_SalesList.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_SalesList.DefaultCellStyle = dataGridViewCellStyle27;
-            this.dgv_SalesList.EnableHeadersVisualStyles = false;
-            this.dgv_SalesList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_SalesList.Location = new System.Drawing.Point(3, 71);
-            this.dgv_SalesList.Name = "dgv_SalesList";
-            this.dgv_SalesList.RowHeadersVisible = false;
-            this.dgv_SalesList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_SalesList.Size = new System.Drawing.Size(328, 629);
-            this.dgv_SalesList.TabIndex = 94;
-            this.dgv_SalesList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgv_SalesList.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgv_SalesList.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgv_SalesList.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgv_SalesList.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgv_SalesList.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgv_SalesList.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_SalesList.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dgv_SalesList.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgv_SalesList.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv_SalesList.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgv_SalesList.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgv_SalesList.ThemeStyle.HeaderStyle.Height = 4;
-            this.dgv_SalesList.ThemeStyle.ReadOnly = false;
-            this.dgv_SalesList.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgv_SalesList.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgv_SalesList.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv_SalesList.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgv_SalesList.ThemeStyle.RowsStyle.Height = 22;
-            this.dgv_SalesList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_SalesList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgv_SalesList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellContentClick);
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            this.Price.Width = 99;
+            // 
+            // Quantily
+            // 
+            this.Quantily.HeaderText = "Quantily";
+            this.Quantily.Name = "Quantily";
+            this.Quantily.ReadOnly = true;
+            this.Quantily.Width = 141;
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            this.Total.Width = 101;
+            // 
+            // IdProduct
+            // 
+            this.IdProduct.HeaderText = "IdProduct";
+            this.IdProduct.Name = "IdProduct";
+            this.IdProduct.ReadOnly = true;
+            this.IdProduct.Visible = false;
+            this.IdProduct.Width = 157;
             // 
             // UC_Billing
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.Controls.Add(this.pnl_SalesList);
             this.Controls.Add(this.pnl_ButtonList);
-            this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.pnl_ClientBill);
             this.Controls.Add(this.pnl_Billing);
             this.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -594,16 +769,13 @@ namespace HikaruOff
             this.Size = new System.Drawing.Size(1023, 1024);
             this.pnl_Billing.ResumeLayout(false);
             this.pnl_Billing.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_AddCustomer)).EndInit();
             this.pnl_ClientBill.ResumeLayout(false);
             this.pnl_ClientBill.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ManageItems)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ClientBill)).EndInit();
-            this.guna2Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_DataList)).EndInit();
             this.pnl_ButtonList.ResumeLayout(false);
             this.pnl_ButtonList.PerformLayout();
-            this.pnl_SalesList.ResumeLayout(false);
-            this.pnl_SalesList.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_SalesList)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -611,11 +783,8 @@ namespace HikaruOff
         #endregion
 
         private System.Windows.Forms.Panel pnl_Billing;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtm_Date;
         private Guna.UI2.WinForms.Guna2TextBox txt_Quantily;
         private Guna.UI2.WinForms.Guna2TextBox txt_Price;
-        private Guna.UI2.WinForms.Guna2TextBox txt_Customer;
-        private System.Windows.Forms.Label lbl_Date;
         private System.Windows.Forms.Label lbl_Price;
         private System.Windows.Forms.Label lbl_Quantily;
         private System.Windows.Forms.Label lbl_Customer2;
@@ -623,16 +792,38 @@ namespace HikaruOff
         private System.Windows.Forms.Label lbl_ClientBill;
         private Guna.UI2.WinForms.Guna2DataGridView dgv_ClientBill;
         private Guna.UI2.WinForms.Guna2Elipse ele_UC_Billing;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2Button btn_Search;
-        private Guna.UI2.WinForms.Guna2TextBox txt_Search;
-        private Guna.UI2.WinForms.Guna2DataGridView dgv_DataList;
-        private Guna.UI2.WinForms.Guna2Panel pnl_SalesList;
         private Guna.UI2.WinForms.Guna2Panel pnl_ButtonList;
-        private System.Windows.Forms.Label lbl_SalesList;
-        private Guna.UI2.WinForms.Guna2DataGridView dgv_SalesList;
         private Guna.UI2.WinForms.Guna2Button btn_Print;
         private Guna.UI2.WinForms.Guna2Button btn_Renew;
         private Guna.UI2.WinForms.Guna2Button btn_Complete;
+        private Guna.UI2.WinForms.Guna2Button btn_AddToBill;
+        private Guna.UI2.WinForms.Guna2Button btn_Refresh;
+        private Guna.UI2.WinForms.Guna2Button btn_Search;
+        private Guna.UI2.WinForms.Guna2TextBox txt_Search;
+        private Guna.UI2.WinForms.Guna2DataGridView dgv_ManageItems;
+        private Guna.UI2.WinForms.Guna2TextBox txt_ProductName;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbo_Customer;
+        private Guna.UI2.WinForms.Guna2PictureBox pic_AddCustomer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CategoryName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemQuantily;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemBuyPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemSellPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemProfit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemDetails;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemAddDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CategoryId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemCategory;
+        private System.Windows.Forms.Label lbl_GrdTotal;
+        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2Button btn_SalesList;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Num;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameProduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantily;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdProduct;
     }
 }

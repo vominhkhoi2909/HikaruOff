@@ -48,6 +48,11 @@ namespace HikaruOff
                 UC_Billing uC = new UC_Billing();
                 changeuUC(uC);
             }
+            else if (btn_Sale.Checked == true)
+            {
+                UC_Sale uC = new UC_Sale();
+                changeuUC(uC);
+            }
             else if (btn_Item.Checked == true)
             {
                 UC_Item uC = new UC_Item();

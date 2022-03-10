@@ -164,40 +164,18 @@
     <Compile Include="Controller\CategoryCtrl.cs" />
     <Compile Include="Controller\CustomerCtrl.cs" />
     <Compile Include="Controller\ItemCtrl.cs" />
+    <Compile Include="Controller\SaleCtrl.cs" />
     <Compile Include="Controller\UserCtrl.cs" />
     <Compile Include="DataLayer\CategoryData.cs" />
     <Compile Include="DataLayer\CustomerData.cs" />
     <Compile Include="DataLayer\ItemData.cs" />
+    <Compile Include="DataLayer\SaleData.cs" />
     <Compile Include="DataLayer\UserData.cs" />
-    <Compile Include="Form\Form_Khong_Xai\Frm_Customer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\Form_Khong_Xai\Frm_Customer.Designer.cs">
-      <DependentUpon>Frm_Customer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\Form_Khong_Xai\Frm_Dashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\Form_Khong_Xai\Frm_Dashboard.Designer.cs">
-      <DependentUpon>Frm_Dashboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\Frm_Category.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\Frm_Category.Designer.cs">
       <DependentUpon>Frm_Category.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\Form_Khong_Xai\Frm_Billing.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\Form_Khong_Xai\Frm_Billing.Designer.cs">
-      <DependentUpon>Frm_Billing.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\Form_Khong_Xai\Frm_Items.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\Form_Khong_Xai\Frm_Items.Designer.cs">
-      <DependentUpon>Frm_Items.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\Frm_Index.cs">
       <SubType>Form</SubType>
@@ -217,20 +195,14 @@
     <Compile Include="Form\Frm_LoginAdmin.Designer.cs">
       <DependentUpon>Frm_LoginAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\Frm_CustomerLite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Frm_CustomerLite.Designer.cs">
+      <DependentUpon>Frm_CustomerLite.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Form\Form_Khong_Xai\Frm_Users.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\Form_Khong_Xai\Frm_Users.Designer.cs">
-      <DependentUpon>Frm_Users.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\Form_Khong_Xai\Frm_Setting.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\Form_Khong_Xai\Frm_Setting.Designer.cs">
-      <DependentUpon>Frm_Setting.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\UC_Billing.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -267,26 +239,20 @@
     <Compile Include="Form\UC_Setting.Designer.cs">
       <DependentUpon>UC_Setting.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form\Form_Khong_Xai\Frm_Customer.resx">
-      <DependentUpon>Frm_Customer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\Form_Khong_Xai\Frm_Dashboard.resx">
-      <DependentUpon>Frm_Dashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\Form_Khong_Xai\Frm_Billing.resx">
-      <DependentUpon>Frm_Billing.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="Form\UC_Sale.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\UC_Sale.Designer.cs">
+      <DependentUpon>UC_Sale.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form\Frm_Category.resx">
       <DependentUpon>Frm_Category.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Form_Khong_Xai\Frm_Items.resx">
-      <DependentUpon>Frm_Items.cs</DependentUpon>
+    <EmbeddedResource Include="Form\Frm_CustomerLite.resx">
+      <DependentUpon>Frm_CustomerLite.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Frm_Index.resx">
       <DependentUpon>Frm_Index.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\Form_Khong_Xai\Frm_Setting.resx">
-      <DependentUpon>Frm_Setting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
@@ -297,6 +263,9 @@
     <EmbeddedResource Include="Form\Frm_LoginAdmin.resx">
       <DependentUpon>Frm_LoginAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\UC_Sale.resx">
+      <DependentUpon>UC_Sale.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -306,9 +275,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form\Form_Khong_Xai\Frm_Users.resx">
-      <DependentUpon>Frm_Users.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form\UC_Dashboard.resx">
       <DependentUpon>UC_Dashboard.cs</DependentUpon>
     </EmbeddedResource>

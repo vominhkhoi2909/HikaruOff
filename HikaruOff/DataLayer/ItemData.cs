@@ -96,6 +96,20 @@ namespace HikaruOff.DataLayer
             return cls.CapNhatDL(cmd);
         }
 
+        //Cap nhat ton kho.
+        public int UpdateStockItem(int iId,  int iQuantily)
+        {
+            string update = "UPDATE ItemTbl ",
+                set = "SET ItemQuantily = @iQuantily ",
+                where = "WHERE ItemId = @iId";
+            SqlCommand cmd = new SqlCommand(update + set + where);
+
+            cmd.Parameters.Add("iId", SqlDbType.Int).Value = iId;
+            cmd.Parameters.Add("iQuantily", SqlDbType.Int).Value = iQuantily;
+
+            return cls.CapNhatDL(cmd);
+        }
+
         //Hàm xử lý tìm kiếm.
         public DataSet SearchItem(string key)
         {

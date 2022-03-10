@@ -45,6 +45,7 @@ namespace HikaruOff
             this.btn_Account = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Minimize = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Information = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Sale = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_LogoShop)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,7 +117,7 @@ namespace HikaruOff
             this.btn_User.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_User.ImageOffset = new System.Drawing.Point(5, 0);
             this.btn_User.ImageSize = new System.Drawing.Size(50, 50);
-            this.btn_User.Location = new System.Drawing.Point(12, 394);
+            this.btn_User.Location = new System.Drawing.Point(12, 450);
             this.btn_User.Name = "btn_User";
             this.btn_User.Size = new System.Drawing.Size(239, 50);
             this.btn_User.TabIndex = 115;
@@ -144,7 +145,7 @@ namespace HikaruOff
             this.btn_Item.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_Item.ImageOffset = new System.Drawing.Point(5, 0);
             this.btn_Item.ImageSize = new System.Drawing.Size(50, 50);
-            this.btn_Item.Location = new System.Drawing.Point(12, 338);
+            this.btn_Item.Location = new System.Drawing.Point(12, 394);
             this.btn_Item.Name = "btn_Item";
             this.btn_Item.Size = new System.Drawing.Size(239, 50);
             this.btn_Item.TabIndex = 116;
@@ -171,7 +172,7 @@ namespace HikaruOff
             this.btn_Category.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_Category.ImageOffset = new System.Drawing.Point(5, 0);
             this.btn_Category.ImageSize = new System.Drawing.Size(50, 50);
-            this.btn_Category.Location = new System.Drawing.Point(12, 282);
+            this.btn_Category.Location = new System.Drawing.Point(12, 338);
             this.btn_Category.Name = "btn_Category";
             this.btn_Category.Size = new System.Drawing.Size(239, 50);
             this.btn_Category.TabIndex = 117;
@@ -199,7 +200,7 @@ namespace HikaruOff
             this.btn_Customer.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_Customer.ImageOffset = new System.Drawing.Point(5, 0);
             this.btn_Customer.ImageSize = new System.Drawing.Size(50, 50);
-            this.btn_Customer.Location = new System.Drawing.Point(12, 450);
+            this.btn_Customer.Location = new System.Drawing.Point(12, 506);
             this.btn_Customer.Name = "btn_Customer";
             this.btn_Customer.Size = new System.Drawing.Size(239, 50);
             this.btn_Customer.TabIndex = 119;
@@ -227,7 +228,7 @@ namespace HikaruOff
             this.btn_Dashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_Dashboard.ImageOffset = new System.Drawing.Point(5, 0);
             this.btn_Dashboard.ImageSize = new System.Drawing.Size(50, 50);
-            this.btn_Dashboard.Location = new System.Drawing.Point(12, 506);
+            this.btn_Dashboard.Location = new System.Drawing.Point(12, 562);
             this.btn_Dashboard.Name = "btn_Dashboard";
             this.btn_Dashboard.Size = new System.Drawing.Size(239, 50);
             this.btn_Dashboard.TabIndex = 118;
@@ -255,7 +256,7 @@ namespace HikaruOff
             this.btn_Setting.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_Setting.ImageOffset = new System.Drawing.Point(5, 0);
             this.btn_Setting.ImageSize = new System.Drawing.Size(50, 50);
-            this.btn_Setting.Location = new System.Drawing.Point(12, 562);
+            this.btn_Setting.Location = new System.Drawing.Point(12, 618);
             this.btn_Setting.Name = "btn_Setting";
             this.btn_Setting.Size = new System.Drawing.Size(239, 50);
             this.btn_Setting.TabIndex = 120;
@@ -302,7 +303,7 @@ namespace HikaruOff
             this.btn_Account.CheckedState.BorderColor = System.Drawing.Color.Black;
             this.btn_Account.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_Account.CheckedState.ForeColor = System.Drawing.Color.Black;
-            this.btn_Account.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image10")));
+            this.btn_Account.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image11")));
             this.btn_Account.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_Account.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_Account.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -329,7 +330,7 @@ namespace HikaruOff
             this.btn_Minimize.CheckedState.BorderColor = System.Drawing.Color.Black;
             this.btn_Minimize.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btn_Minimize.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btn_Minimize.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image9")));
+            this.btn_Minimize.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image10")));
             this.btn_Minimize.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_Minimize.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_Minimize.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -356,7 +357,7 @@ namespace HikaruOff
             this.btn_Information.CheckedState.BorderColor = System.Drawing.Color.Black;
             this.btn_Information.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_Information.CheckedState.ForeColor = System.Drawing.Color.Black;
-            this.btn_Information.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image8")));
+            this.btn_Information.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image9")));
             this.btn_Information.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_Information.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_Information.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -376,12 +377,40 @@ namespace HikaruOff
             this.btn_Information.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_Information.Click += new System.EventHandler(this.btn_Information_Click);
             // 
+            // btn_Sale
+            // 
+            this.btn_Sale.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Sale.BorderRadius = 22;
+            this.btn_Sale.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btn_Sale.CheckedState.BorderColor = System.Drawing.Color.Black;
+            this.btn_Sale.CheckedState.FillColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_Sale.CheckedState.ForeColor = System.Drawing.Color.Black;
+            this.btn_Sale.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image8")));
+            this.btn_Sale.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Sale.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Sale.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Sale.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Sale.FillColor = System.Drawing.Color.SeaShell;
+            this.btn_Sale.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Sale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_Sale.Image = ((System.Drawing.Image)(resources.GetObject("btn_Sale.Image")));
+            this.btn_Sale.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_Sale.ImageOffset = new System.Drawing.Point(5, 0);
+            this.btn_Sale.ImageSize = new System.Drawing.Size(50, 45);
+            this.btn_Sale.Location = new System.Drawing.Point(12, 282);
+            this.btn_Sale.Name = "btn_Sale";
+            this.btn_Sale.Size = new System.Drawing.Size(239, 50);
+            this.btn_Sale.TabIndex = 127;
+            this.btn_Sale.Text = "Sale";
+            this.btn_Sale.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // frm_Index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGreen;
             this.ClientSize = new System.Drawing.Size(1280, 1024);
+            this.Controls.Add(this.btn_Sale);
             this.Controls.Add(this.btn_Information);
             this.Controls.Add(this.btn_Minimize);
             this.Controls.Add(this.btn_Account);
@@ -420,6 +449,7 @@ namespace HikaruOff
         private Guna.UI2.WinForms.Guna2Button btn_Minimize;
         private Guna.UI2.WinForms.Guna2Button btn_Account;
         private Guna.UI2.WinForms.Guna2Button btn_Information;
+        private Guna.UI2.WinForms.Guna2Button btn_Sale;
     }
 }
 

@@ -53,6 +53,12 @@ namespace HikaruOff.Controller
             return itemData.UpdateItem(iId, iName, iDetails, iCategory, iQuantily, iBuyPrice, iSellPrice, iProfit);
         }
 
+        //Hàm xử lý cập nhật.
+        public int Update(int iId,  int iQuantily)
+        {
+            return itemData.UpdateStockItem(iId, iQuantily);
+        }
+
         //Hàm xử lý tìm kiếm.
         public void Search(DataGridView dgv, string key)
         {

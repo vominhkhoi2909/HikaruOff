@@ -21,6 +21,13 @@ namespace HikaruOff
             refresh();
         }
 
+        public UC_User(LoginBUS log)
+        {
+            InitializeComponent();
+            login = new LoginBUS(log);
+            refresh();
+        }
+
         //Hàm hỗ trợ.
         //Refresh form.
         void refresh()
@@ -135,9 +142,9 @@ namespace HikaruOff
         {
             if(cbo_Office.Text == "Master")
             {
-                MessageBox.Show("Can't delete master user.", "Delete User", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Can't Delete Master User.", "Delete User", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if(cbo_Office.Text == "Master" || cbo_Office.Text == "Admin")
+            else if((cbo_Office.Text != "Master" || cbo_Office.Text != "Admin") && (login.UserOffice == "Master" || login.UserOffice == "Admin"))
             {
                 var res = MessageBox.Show("Are you sure you want to delete user?", "Delete User", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 

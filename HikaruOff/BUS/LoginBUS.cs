@@ -12,7 +12,7 @@ namespace HikaruOff.BUS
         int _userId;
         string _userName, _userEmail, _userOffice;
 
-        //Khởi tạo mặc định của class.
+        //Khởi tạo mặc định.
         public LoginBUS()
         {
             this.UserId = 1003;
@@ -34,14 +34,5 @@ namespace HikaruOff.BUS
         public string UserName { get => _userName; set => _userName = value; }
         public string UserEmail { get => _userEmail; set => _userEmail = value; }
         public string UserOffice { get => _userOffice; set => _userOffice = value; }
-
-        //Hàm gán giá trị user sau khi đăng xuất.
-        public void dangXuat()
-        {
-            this.UserId = -1;
-            this.UserEmail = "";
-            this.UserName = "";
-            this.UserOffice = "";
-        }
     }
 }
