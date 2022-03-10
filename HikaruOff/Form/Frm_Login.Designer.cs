@@ -83,7 +83,7 @@ namespace HikaruOff
             this.lbl_ContinueAsAdmin.AutoSize = true;
             this.lbl_ContinueAsAdmin.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_ContinueAsAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lbl_ContinueAsAdmin.Location = new System.Drawing.Point(117, 342);
+            this.lbl_ContinueAsAdmin.Location = new System.Drawing.Point(117, 366);
             this.lbl_ContinueAsAdmin.Name = "lbl_ContinueAsAdmin";
             this.lbl_ContinueAsAdmin.Size = new System.Drawing.Size(188, 24);
             this.lbl_ContinueAsAdmin.TabIndex = 95;
@@ -102,7 +102,7 @@ namespace HikaruOff
             this.btn_Login.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_Login.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
             this.btn_Login.ForeColor = System.Drawing.Color.White;
-            this.btn_Login.Location = new System.Drawing.Point(121, 286);
+            this.btn_Login.Location = new System.Drawing.Point(121, 310);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(510, 53);
             this.btn_Login.TabIndex = 94;
@@ -113,7 +113,7 @@ namespace HikaruOff
             // 
             this.txt_Password.AutoRoundedCorners = true;
             this.txt_Password.BorderColor = System.Drawing.Color.Black;
-            this.txt_Password.BorderRadius = 23;
+            this.txt_Password.BorderRadius = 29;
             this.txt_Password.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_Password.DefaultText = "";
             this.txt_Password.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -121,24 +121,25 @@ namespace HikaruOff
             this.txt_Password.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_Password.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_Password.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Password.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.txt_Password.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Password.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txt_Password.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Password.Location = new System.Drawing.Point(121, 230);
+            this.txt_Password.Location = new System.Drawing.Point(121, 242);
             this.txt_Password.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txt_Password.MaxLength = 20;
             this.txt_Password.Name = "txt_Password";
-            this.txt_Password.PasswordChar = '*';
+            this.txt_Password.PasswordChar = '●';
             this.txt_Password.PlaceholderText = "*********";
             this.txt_Password.SelectedText = "";
-            this.txt_Password.Size = new System.Drawing.Size(510, 48);
+            this.txt_Password.Size = new System.Drawing.Size(510, 60);
             this.txt_Password.TabIndex = 31;
+            this.txt_Password.UseSystemPasswordChar = true;
             // 
             // txt_Email
             // 
             this.txt_Email.AutoRoundedCorners = true;
             this.txt_Email.BorderColor = System.Drawing.Color.Black;
-            this.txt_Email.BorderRadius = 23;
+            this.txt_Email.BorderRadius = 29;
             this.txt_Email.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_Email.DefaultText = "";
             this.txt_Email.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -146,7 +147,7 @@ namespace HikaruOff
             this.txt_Email.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_Email.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_Email.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Email.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.txt_Email.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Email.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Email.Location = new System.Drawing.Point(121, 132);
             this.txt_Email.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
@@ -154,7 +155,7 @@ namespace HikaruOff
             this.txt_Email.PasswordChar = '\0';
             this.txt_Email.PlaceholderText = "Hikaru_Shop@gmail.com";
             this.txt_Email.SelectedText = "";
-            this.txt_Email.Size = new System.Drawing.Size(510, 48);
+            this.txt_Email.Size = new System.Drawing.Size(510, 60);
             this.txt_Email.TabIndex = 30;
             // 
             // lbl_Password
@@ -162,7 +163,7 @@ namespace HikaruOff
             this.lbl_Password.AutoSize = true;
             this.lbl_Password.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lbl_Password.Location = new System.Drawing.Point(114, 185);
+            this.lbl_Password.Location = new System.Drawing.Point(114, 197);
             this.lbl_Password.Name = "lbl_Password";
             this.lbl_Password.Size = new System.Drawing.Size(162, 40);
             this.lbl_Password.TabIndex = 29;

@@ -7,13 +7,17 @@ namespace HikaruOff
 {
     public partial class Frm_CustomerLite : Form
     {
+        //Khởi tạo các biến của form.
         CustomerCtrl customer = new CustomerCtrl();
 
+        //Hàm khởi tạo mặc định.
         public Frm_CustomerLite()
         {
             InitializeComponent();
         }
 
+        //Hàm hỗ trợ.
+        //Check action.
         bool checkAction()
         {
             if (txt_CustomerName.Text == "" || txt_Phone.Text == "")
@@ -35,6 +39,8 @@ namespace HikaruOff
             return true;
         }
 
+        //Hàm action.
+        //Add customer..
         private void btn_Add_Click(object sender, EventArgs e)
         {
             if (checkAction())
@@ -45,12 +51,14 @@ namespace HikaruOff
             }
         }
 
+        //Check chỉ cho nhập số vào ô txt.
         private void txt_Phone_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
         }
 
+        //Tắt form.
         private void pic_Exit_Click(object sender, EventArgs e)
         {
             if (txt_CustomerName.Text == "" && txt_Phone.Text == "")
@@ -68,6 +76,7 @@ namespace HikaruOff
             }
         }
 
+        //Ẩn form xuống taskbar.
         private void pic_Hide_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;

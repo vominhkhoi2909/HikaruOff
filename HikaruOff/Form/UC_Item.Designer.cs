@@ -58,6 +58,7 @@ namespace HikaruOff
             this.btn_Search = new Guna.UI2.WinForms.Guna2Button();
             this.txt_Search = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgv_Item = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.ele_UC_Item = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.ItemId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,7 +70,6 @@ namespace HikaruOff
             this.ItemAddDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoryId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ItemCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ele_UC_Item = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnl_ButtonList.SuspendLayout();
             this.pnl_Item.SuspendLayout();
             this.pnl_Data.SuspendLayout();
@@ -534,6 +534,11 @@ namespace HikaruOff
             this.dgv_Item.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgv_Item.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Item_CellContentClick);
             // 
+            // ele_UC_Item
+            // 
+            this.ele_UC_Item.BorderRadius = 26;
+            this.ele_UC_Item.TargetControl = this;
+            // 
             // ItemId
             // 
             this.ItemId.DataPropertyName = "ItemId";
@@ -569,10 +574,10 @@ namespace HikaruOff
             // ItemBuyPrice
             // 
             this.ItemBuyPrice.DataPropertyName = "ItemBuyPrice";
-            this.ItemBuyPrice.HeaderText = "Buy Price";
+            this.ItemBuyPrice.HeaderText = "Listed Price";
             this.ItemBuyPrice.Name = "ItemBuyPrice";
             this.ItemBuyPrice.ReadOnly = true;
-            this.ItemBuyPrice.Width = 189;
+            this.ItemBuyPrice.Width = 222;
             // 
             // ItemSellPrice
             // 
@@ -623,11 +628,6 @@ namespace HikaruOff
             this.ItemCategory.ReadOnly = true;
             this.ItemCategory.Visible = false;
             this.ItemCategory.Width = 231;
-            // 
-            // ele_UC_Item
-            // 
-            this.ele_UC_Item.BorderRadius = 26;
-            this.ele_UC_Item.TargetControl = this;
             // 
             // UC_Item
             // 

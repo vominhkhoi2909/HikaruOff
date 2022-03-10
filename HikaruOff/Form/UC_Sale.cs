@@ -9,6 +9,7 @@ namespace HikaruOff
         //Khởi tạo các biến của form.
         SaleCtrl sale = new SaleCtrl();
 
+        //Hàm khỏi tạo mặc định.
         public UC_Sale()
         {
             InitializeComponent();
@@ -25,11 +26,14 @@ namespace HikaruOff
             dgv_Sale.Refresh();
         }
 
+        //Hàm action.
+        //Làm mới lại form.
         private void btn_Renew_Click(object sender, EventArgs e)
         {
             refresh();
         }
 
+        //Search sale.
         private void btn_Search_Click(object sender, EventArgs e)
         {
             if (txt_Search.Text != "")

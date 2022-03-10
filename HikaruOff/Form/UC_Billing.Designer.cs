@@ -68,18 +68,17 @@ namespace HikaruOff
             this.txt_Search = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbl_ClientBill = new System.Windows.Forms.Label();
             this.dgv_ClientBill = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.ele_UC_Billing = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.pnl_ButtonList = new Guna.UI2.WinForms.Guna2Panel();
-            this.btn_SalesList = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_Print = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_Renew = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_Complete = new Guna.UI2.WinForms.Guna2Button();
             this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantily = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ele_UC_Billing = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.pnl_ButtonList = new Guna.UI2.WinForms.Guna2Panel();
+            this.btn_Print = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Renew = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Complete = new Guna.UI2.WinForms.Guna2Button();
             this.pnl_Billing.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_AddCustomer)).BeginInit();
             this.pnl_ClientBill.SuspendLayout();
@@ -227,12 +226,14 @@ namespace HikaruOff
             this.txt_Quantily.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Quantily.Location = new System.Drawing.Point(515, 70);
             this.txt_Quantily.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_Quantily.MaxLength = 4;
             this.txt_Quantily.Name = "txt_Quantily";
             this.txt_Quantily.PasswordChar = '\0';
             this.txt_Quantily.PlaceholderText = "Enter Number";
             this.txt_Quantily.SelectedText = "";
             this.txt_Quantily.Size = new System.Drawing.Size(496, 55);
             this.txt_Quantily.TabIndex = 91;
+            this.txt_Quantily.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Quantily_KeyPress);
             // 
             // txt_Price
             // 
@@ -411,7 +412,7 @@ namespace HikaruOff
             this.ItemId.Name = "ItemId";
             this.ItemId.ReadOnly = true;
             this.ItemId.Visible = false;
-            this.ItemId.Width = 80;
+            this.ItemId.Width = 68;
             // 
             // ItemName
             // 
@@ -444,7 +445,7 @@ namespace HikaruOff
             this.ItemBuyPrice.Name = "ItemBuyPrice";
             this.ItemBuyPrice.ReadOnly = true;
             this.ItemBuyPrice.Visible = false;
-            this.ItemBuyPrice.Width = 189;
+            this.ItemBuyPrice.Width = 152;
             // 
             // ItemSellPrice
             // 
@@ -477,7 +478,7 @@ namespace HikaruOff
             this.ItemAddDate.Name = "ItemAddDate";
             this.ItemAddDate.ReadOnly = true;
             this.ItemAddDate.Visible = false;
-            this.ItemAddDate.Width = 184;
+            this.ItemAddDate.Width = 149;
             // 
             // CategoryId
             // 
@@ -486,7 +487,7 @@ namespace HikaruOff
             this.CategoryId.Name = "CategoryId";
             this.CategoryId.ReadOnly = true;
             this.CategoryId.Visible = false;
-            this.CategoryId.Width = 229;
+            this.CategoryId.Width = 182;
             // 
             // ItemCategory
             // 
@@ -495,7 +496,7 @@ namespace HikaruOff
             this.ItemCategory.Name = "ItemCategory";
             this.ItemCategory.ReadOnly = true;
             this.ItemCategory.Visible = false;
-            this.ItemCategory.Width = 231;
+            this.ItemCategory.Width = 185;
             // 
             // btn_Search
             // 
@@ -530,6 +531,7 @@ namespace HikaruOff
             this.txt_Search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Search.Location = new System.Drawing.Point(515, 8);
             this.txt_Search.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_Search.MaxLength = 50;
             this.txt_Search.Name = "txt_Search";
             this.txt_Search.PasswordChar = '\0';
             this.txt_Search.PlaceholderText = "Enter Text";
@@ -618,6 +620,49 @@ namespace HikaruOff
             this.dgv_ClientBill.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(221)))), ((int)(((byte)(160)))));
             this.dgv_ClientBill.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
+            // Num
+            // 
+            this.Num.HeaderText = "Num";
+            this.Num.Name = "Num";
+            this.Num.ReadOnly = true;
+            this.Num.Width = 95;
+            // 
+            // NameProduct
+            // 
+            this.NameProduct.HeaderText = "Product";
+            this.NameProduct.Name = "NameProduct";
+            this.NameProduct.ReadOnly = true;
+            this.NameProduct.Width = 132;
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            this.Price.Width = 99;
+            // 
+            // Quantily
+            // 
+            this.Quantily.HeaderText = "Quantily";
+            this.Quantily.Name = "Quantily";
+            this.Quantily.ReadOnly = true;
+            this.Quantily.Width = 141;
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            this.Total.Width = 101;
+            // 
+            // IdProduct
+            // 
+            this.IdProduct.HeaderText = "IdProduct";
+            this.IdProduct.Name = "IdProduct";
+            this.IdProduct.ReadOnly = true;
+            this.IdProduct.Visible = false;
+            this.IdProduct.Width = 157;
+            // 
             // ele_UC_Billing
             // 
             this.ele_UC_Billing.BorderRadius = 26;
@@ -625,7 +670,6 @@ namespace HikaruOff
             // 
             // pnl_ButtonList
             // 
-            this.pnl_ButtonList.Controls.Add(this.btn_SalesList);
             this.pnl_ButtonList.Controls.Add(this.btn_Print);
             this.pnl_ButtonList.Controls.Add(this.btn_Renew);
             this.pnl_ButtonList.Controls.Add(this.btn_Complete);
@@ -634,25 +678,6 @@ namespace HikaruOff
             this.pnl_ButtonList.Name = "pnl_ButtonList";
             this.pnl_ButtonList.Size = new System.Drawing.Size(1023, 65);
             this.pnl_ButtonList.TabIndex = 96;
-            // 
-            // btn_SalesList
-            // 
-            this.btn_SalesList.AutoRoundedCorners = true;
-            this.btn_SalesList.BorderRadius = 25;
-            this.btn_SalesList.BorderThickness = 1;
-            this.btn_SalesList.DefaultAutoSize = true;
-            this.btn_SalesList.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_SalesList.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_SalesList.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_SalesList.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_SalesList.FillColor = System.Drawing.Color.White;
-            this.btn_SalesList.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold);
-            this.btn_SalesList.ForeColor = System.Drawing.Color.Black;
-            this.btn_SalesList.Location = new System.Drawing.Point(10, 6);
-            this.btn_SalesList.Name = "btn_SalesList";
-            this.btn_SalesList.Size = new System.Drawing.Size(184, 53);
-            this.btn_SalesList.TabIndex = 98;
-            this.btn_SalesList.Text = "Sales List";
             // 
             // btn_Print
             // 
@@ -713,49 +738,6 @@ namespace HikaruOff
             this.btn_Complete.TabIndex = 95;
             this.btn_Complete.Text = "Complete";
             this.btn_Complete.Click += new System.EventHandler(this.btn_Complete_Click);
-            // 
-            // Num
-            // 
-            this.Num.HeaderText = "Num";
-            this.Num.Name = "Num";
-            this.Num.ReadOnly = true;
-            this.Num.Width = 95;
-            // 
-            // NameProduct
-            // 
-            this.NameProduct.HeaderText = "Product";
-            this.NameProduct.Name = "NameProduct";
-            this.NameProduct.ReadOnly = true;
-            this.NameProduct.Width = 132;
-            // 
-            // Price
-            // 
-            this.Price.HeaderText = "Price";
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
-            this.Price.Width = 99;
-            // 
-            // Quantily
-            // 
-            this.Quantily.HeaderText = "Quantily";
-            this.Quantily.Name = "Quantily";
-            this.Quantily.ReadOnly = true;
-            this.Quantily.Width = 141;
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            this.Total.Width = 101;
-            // 
-            // IdProduct
-            // 
-            this.IdProduct.HeaderText = "IdProduct";
-            this.IdProduct.Name = "IdProduct";
-            this.IdProduct.ReadOnly = true;
-            this.IdProduct.Visible = false;
-            this.IdProduct.Width = 157;
             // 
             // UC_Billing
             // 
@@ -818,7 +800,6 @@ namespace HikaruOff
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemCategory;
         private System.Windows.Forms.Label lbl_GrdTotal;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2Button btn_SalesList;
         private System.Windows.Forms.DataGridViewTextBoxColumn Num;
         private System.Windows.Forms.DataGridViewTextBoxColumn NameProduct;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;

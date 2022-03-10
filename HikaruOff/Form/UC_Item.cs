@@ -1,6 +1,7 @@
 ﻿using System;
 using HikaruOff.Controller;
 using System.Windows.Forms;
+using HikaruOff.BUS;
 
 namespace HikaruOff
 {
@@ -9,12 +10,21 @@ namespace HikaruOff
         //Khởi tạo các biến của form.
         ItemCtrl item = new ItemCtrl();
         CategoryCtrl category = new CategoryCtrl();
+        LoginBUS login;
         int id = 0, iProfit;
 
         //Hàm khởi tạo mặc định.
         public UC_Item()
         {
             InitializeComponent();
+            login = new LoginBUS();
+            refresh();
+        }
+
+        public UC_Item(LoginBUS log)
+        {
+            InitializeComponent();
+            login = new LoginBUS(log);
             refresh();
         }
 
@@ -128,21 +138,21 @@ namespace HikaruOff
             btn_Delete.Enabled = true;
         }
 
-        //Chỉ cho phép nhập chữ số vào ô ton kho.
+        //Chỉ cho phép nhập chữ số vào ô tồn kho.
         private void txt_Quantily_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
         }
 
-        //Chỉ cho phép nhập chữ số vào ô gia ban.
+        //Chỉ cho phép nhập chữ số vào ô giá bán.
         private void txt_SellPrice_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
         }
 
-        //Chỉ cho phép nhập chữ số vào ô gia mua.
+        //Chỉ cho phép nhập chữ số vào ô giá gốc.
         private void txt_BuyPrice_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))

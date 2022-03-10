@@ -113,6 +113,12 @@ namespace HikaruOff
             refresh();
         }
 
+        private void txt_Quantily_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
         private void btn_Refresh_Click(object sender, EventArgs e)
         {
             item.ShowDgv(dgv_ManageItems);

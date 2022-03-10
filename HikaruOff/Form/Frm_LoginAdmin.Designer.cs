@@ -35,11 +35,11 @@ namespace HikaruOff
             this.pic_Exit = new System.Windows.Forms.PictureBox();
             this.pnl__Login = new Guna.UI2.WinForms.Guna2Panel();
             this.pic_LogoShop = new System.Windows.Forms.PictureBox();
+            this.lbl_ContinueAsAdmin = new System.Windows.Forms.Label();
             this.btn_Login = new Guna.UI2.WinForms.Guna2Button();
             this.txt_Password = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbl_Password = new System.Windows.Forms.Label();
             this.lbl_NameShop = new System.Windows.Forms.Label();
-            this.lbl_ContinueAsAdmin = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Information)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Hide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Exit)).BeginInit();
@@ -105,6 +105,18 @@ namespace HikaruOff
             this.pic_LogoShop.TabIndex = 97;
             this.pic_LogoShop.TabStop = false;
             // 
+            // lbl_ContinueAsAdmin
+            // 
+            this.lbl_ContinueAsAdmin.AutoSize = true;
+            this.lbl_ContinueAsAdmin.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ContinueAsAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lbl_ContinueAsAdmin.Location = new System.Drawing.Point(117, 342);
+            this.lbl_ContinueAsAdmin.Name = "lbl_ContinueAsAdmin";
+            this.lbl_ContinueAsAdmin.Size = new System.Drawing.Size(204, 24);
+            this.lbl_ContinueAsAdmin.TabIndex = 95;
+            this.lbl_ContinueAsAdmin.Text = "Continue As Account.";
+            this.lbl_ContinueAsAdmin.Click += new System.EventHandler(this.lbl_ContinueAsAdmin_Click);
+            // 
             // btn_Login
             // 
             this.btn_Login.AutoRoundedCorners = true;
@@ -128,7 +140,7 @@ namespace HikaruOff
             // 
             this.txt_Password.AutoRoundedCorners = true;
             this.txt_Password.BorderColor = System.Drawing.Color.Black;
-            this.txt_Password.BorderRadius = 23;
+            this.txt_Password.BorderRadius = 29;
             this.txt_Password.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_Password.DefaultText = "";
             this.txt_Password.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -136,18 +148,19 @@ namespace HikaruOff
             this.txt_Password.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_Password.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_Password.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Password.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.txt_Password.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Password.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txt_Password.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Password.Location = new System.Drawing.Point(121, 186);
             this.txt_Password.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txt_Password.MaxLength = 20;
             this.txt_Password.Name = "txt_Password";
-            this.txt_Password.PasswordChar = '*';
+            this.txt_Password.PasswordChar = '●';
             this.txt_Password.PlaceholderText = "*********";
             this.txt_Password.SelectedText = "";
-            this.txt_Password.Size = new System.Drawing.Size(510, 48);
+            this.txt_Password.Size = new System.Drawing.Size(510, 60);
             this.txt_Password.TabIndex = 31;
+            this.txt_Password.UseSystemPasswordChar = true;
             // 
             // lbl_Password
             // 
@@ -171,18 +184,6 @@ namespace HikaruOff
             this.lbl_NameShop.TabIndex = 0;
             this.lbl_NameShop.Text = "Hikaru Shop";
             this.lbl_NameShop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_ContinueAsAdmin
-            // 
-            this.lbl_ContinueAsAdmin.AutoSize = true;
-            this.lbl_ContinueAsAdmin.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ContinueAsAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lbl_ContinueAsAdmin.Location = new System.Drawing.Point(117, 342);
-            this.lbl_ContinueAsAdmin.Name = "lbl_ContinueAsAdmin";
-            this.lbl_ContinueAsAdmin.Size = new System.Drawing.Size(204, 24);
-            this.lbl_ContinueAsAdmin.TabIndex = 95;
-            this.lbl_ContinueAsAdmin.Text = "Continue As Account.";
-            this.lbl_ContinueAsAdmin.Click += new System.EventHandler(this.lbl_ContinueAsAdmin_Click);
             // 
             // Frm_LoginAdmin
             // 
