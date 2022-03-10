@@ -126,7 +126,6 @@ namespace HikaruOff
             //Cập nhật trạng thái button.
             btn_Save.Enabled = true;
             btn_Delete.Enabled = true;
-            btn_Add.Enabled = false;
         }
 
         //Chỉ cho phép nhập chữ số vào ô ton kho.

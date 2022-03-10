@@ -320,6 +320,7 @@ namespace HikaruOff
             this.btn_Account.TabIndex = 124;
             this.btn_Account.Text = "Account";
             this.btn_Account.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_Account.Click += new System.EventHandler(this.btn_Account_Click);
             // 
             // btn_Minimize
             // 

@@ -49,17 +49,17 @@ namespace HikaruOff
                 MessageBox.Show("Customer Email Already Exists.", "Action Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            if (!this.txt_Email.Text.Contains('@') || !this.txt_Email.Text.Contains('.'))
+            if ((!this.txt_Email.Text.Contains('@') || !this.txt_Email.Text.Contains('.')) && txt_Email.Text != "")
             {
-                MessageBox.Show("Invalid phone email.", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid Email.", "Action Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            else if (txt_Phone.TextLength != 10)
+            if (txt_Phone.TextLength != 10)
             {
-                MessageBox.Show("Invalid phone number.", "Action Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid Phone Number.", "Action Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            else if(customer.CheckPhone(txt_Phone.Text) == true && btn_Add.Checked == true)
+            if(customer.CheckPhone(txt_Phone.Text) == true && btn_Add.Checked == true)
             {
                 MessageBox.Show("Customer Phone Already Exists.", "Action Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;

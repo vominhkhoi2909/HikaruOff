@@ -19,19 +19,21 @@ namespace HikaruOff.Class
         {
             string select = "SELECT * ",
                 from = "FROM UserTbl ",
-                where = "WHERE UserEmail = @uEmail and UserPassword = @uPassword";
+                where = "WHERE UserEmail = @uEmail AND UserPassword = @uPassword";
             SqlCommand cmd = new SqlCommand(select + from + where);
 
             cmd.Parameters.Add("uEmail", SqlDbType.VarChar).Value = email;
             cmd.Parameters.Add("uPassword", SqlDbType.VarChar).Value = password;
 
             DataSet ds = cls.LayDuLieu(cmd);
+
             if (ds.Tables[0].Rows.Count > 0)
             {
                 log.UserId = Convert.ToInt32(ds.Tables[0].Rows[0]["UserId"]);
                 log.UserName = ds.Tables[0].Rows[0]["UserName"].ToString();
                 log.UserEmail = ds.Tables[0].Rows[0]["UserEmail"].ToString();
                 log.UserOffice = ds.Tables[0].Rows[0]["UserOffice"].ToString();
+
                 return true;
             }
 

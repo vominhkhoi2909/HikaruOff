@@ -157,6 +157,7 @@
     <Compile Include="BUS\Item.cs" />
     <Compile Include="BUS\LoginBUS.cs" />
     <Compile Include="BUS\Sale.cs" />
+    <Compile Include="BUS\Setting.cs" />
     <Compile Include="BUS\User.cs" />
     <Compile Include="Class\DataProvider.cs" />
     <Compile Include="Class\Login.cs" />
@@ -209,6 +210,12 @@
     </Compile>
     <Compile Include="Form\Frm_Login.Designer.cs">
       <DependentUpon>Frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Frm_LoginAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Frm_LoginAdmin.Designer.cs">
+      <DependentUpon>Frm_LoginAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -286,6 +293,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\UC_Billing.resx">
       <DependentUpon>UC_Billing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Frm_LoginAdmin.resx">
+      <DependentUpon>Frm_LoginAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HikaruOff.BUS
 {
-    class LoginBUS
+    public class LoginBUS
     {
         //Khởi tạo các biến giá trị.
         int _userId;
@@ -15,9 +15,9 @@ namespace HikaruOff.BUS
         //Khởi tạo mặc định của class.
         public LoginBUS()
         {
-            this.UserId = 0;
-            this.UserEmail = "vmkhoi@gmail.com";
-            this.UserName = "Vo Minh Khoi";
+            this.UserId = 1003;
+            this.UserEmail = "hikaru_shop@gmail.com";
+            this.UserName = "Võ Minh Khôi";
             this.UserOffice = "Master";
         }
 
