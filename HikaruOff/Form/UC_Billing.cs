@@ -119,6 +119,15 @@ namespace HikaruOff
                 e.Handled = true;
         }
 
+        //Search item
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            if (txt_Search.Text != "")
+                item.Search(dgv_ManageItems, txt_Search.Text);
+            dgv_ManageItems.Update();
+            dgv_ManageItems.Refresh();
+        }
+
         private void btn_Refresh_Click(object sender, EventArgs e)
         {
             item.ShowDgv(dgv_ManageItems);

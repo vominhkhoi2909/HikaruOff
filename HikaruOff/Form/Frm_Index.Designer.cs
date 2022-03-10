@@ -52,6 +52,7 @@ namespace HikaruOff
             // pnl_Index
             // 
             this.pnl_Index.BackColor = System.Drawing.Color.Transparent;
+            this.pnl_Index.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_Index.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnl_Index.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnl_Index.Location = new System.Drawing.Point(257, 0);
