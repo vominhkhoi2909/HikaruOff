@@ -48,7 +48,7 @@ namespace HikaruOff.Class
             return sqlcmd.ExecuteNonQuery();
         }
 
-        //Hàm lấy ra ID lớn nhất.
+        //Hàm lấy ra 1 giá trị ở cột đầu dữ liệu được truy vấn.
         public int GetID(SqlCommand sqlcmd)
         {
             int id = 1;

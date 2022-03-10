@@ -54,15 +54,8 @@ namespace HikaruOff
         {
             for (int i = 0; i < dgv_ClientBill.Rows.Count; i++)
             {
-                for (int j = 0; j < dgv_ManageItems.Rows.Count; j++)
-                {
-                    if (Convert.ToInt32(dgv_ClientBill.Rows[i].Cells["IdProduct"].Value) == Convert.ToInt32(dgv_ManageItems.Rows[j].Cells["ItemId"].Value))
-                    {
-                        stock = Convert.ToInt32(dgv_ManageItems.Rows[i].Cells["ItemQuantily"].Value);
-                    }
-                }
-
                 id = Convert.ToInt32(dgv_ClientBill.Rows[i].Cells["IdProduct"].Value);
+                stock = item.GetStock(id);
                 int newStock = stock - Convert.ToInt32(dgv_ClientBill.Rows[i].Cells["Quantily"].Value);
 
                 item.Update(id, newStock);
