@@ -12,20 +12,24 @@ namespace HikaruOff.Class
 {
     class DataProvider
     {
+        //Lấy thông tin kết nối csdl.
         SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\BV\Documents\HikaruOff_Db.mdf;Integrated Security=True;Connect Timeout=30");
 
+        //Hàm khơi tạo mặc định.
         public DataProvider()
         {
             Connection();
         }
 
+        //Hàm thực hiện kết nối.
         void Connection()
         {
             if (conn.State == ConnectionState.Closed)
                 conn.Open();
         }
 
-        public DataSet LayDuLieu(SqlCommand sqlcmd)
+        //Truy vấn lấy ds dữ liệu.
+        public DataSet PullData(SqlCommand sqlcmd)
         {
             DataSet ds = new DataSet();
             sqlcmd.Connection = conn;
@@ -36,13 +40,15 @@ namespace HikaruOff.Class
             return ds;
         }
 
-        public int CapNhatDL(SqlCommand sqlcmd)
+        //Thực hiện không truy vấn.
+        public int UpdateData(SqlCommand sqlcmd)
         {
             sqlcmd.Connection = conn;
 
             return sqlcmd.ExecuteNonQuery();
         }
 
+        //Hàm lấy ra ID lớn nhất.
         public int GetID(SqlCommand sqlcmd)
         {
             int id = 1;
@@ -59,7 +65,8 @@ namespace HikaruOff.Class
             return id;
         }
 
-        public bool KiemTra(SqlCommand sqlcmd)
+        //Hàm kiểm tra dữ liệu đã tộn tại chưa.
+        public bool CheckInfo(SqlCommand sqlcmd)
         {
             bool kTra = false;
             SqlCommand cmd = sqlcmd;

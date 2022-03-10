@@ -31,7 +31,7 @@ namespace HikaruOff.DataLayer
 
             SqlCommand cmd = new SqlCommand(select + from + where);
 
-            return cls.LayDuLieu(cmd);
+            return cls.PullData(cmd);
         }
 
         //Hàm xử lý thêm mới.
@@ -46,7 +46,7 @@ namespace HikaruOff.DataLayer
             cmd.Parameters.Add("sAmount", SqlDbType.Int).Value = sAmount;
             cmd.Parameters.Add("sDate", SqlDbType.DateTime).Value = sDate;
 
-            return cls.CapNhatDL(cmd);
+            return cls.UpdateData(cmd);
         }
 
         //Hàm xử lý tìm kiếm.
@@ -58,7 +58,7 @@ namespace HikaruOff.DataLayer
 
             SqlCommand cmd = new SqlCommand(select + from + where);
 
-            return cls.LayDuLieu(cmd);
+            return cls.PullData(cmd);
         }
     }
 }

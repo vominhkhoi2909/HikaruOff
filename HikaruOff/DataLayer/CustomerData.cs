@@ -30,7 +30,7 @@ namespace HikaruOff.DataLayer
 
             SqlCommand cmd = new SqlCommand(select + from);
 
-            return cls.LayDuLieu(cmd);
+            return cls.PullData(cmd);
         }
 
         //Hàm kiểm tra tên đã tồn tại chưa.
@@ -41,7 +41,7 @@ namespace HikaruOff.DataLayer
                 where = "WHERE CustomerName = N'" + cusName + "'";
             SqlCommand cmd = new SqlCommand(select + from + where);
 
-            return cls.KiemTra(cmd);
+            return cls.CheckInfo(cmd);
         }
 
         //Hàm kiểm tra email đã tồn tại chưa.
@@ -52,7 +52,7 @@ namespace HikaruOff.DataLayer
                 where = "WHERE CustomerName = N'" + cusEmail + "'";
             SqlCommand cmd = new SqlCommand(select + from + where);
 
-            return cls.KiemTra(cmd);
+            return cls.CheckInfo(cmd);
         }
 
         //Hàm kiểm tra sdt đã tồn tại chưa.
@@ -63,7 +63,7 @@ namespace HikaruOff.DataLayer
                 where = "WHERE CustomerName = N'" + cusPhone + "'";
             SqlCommand cmd = new SqlCommand(select + from + where);
 
-            return cls.KiemTra(cmd);
+            return cls.CheckInfo(cmd);
         }
 
         //Hàm xử lý thêm mới.
@@ -80,7 +80,7 @@ namespace HikaruOff.DataLayer
             cmd.Parameters.Add("cusPhone", SqlDbType.VarChar).Value = cusPhone;
             cmd.Parameters.Add("cusNotes", SqlDbType.NVarChar).Value = cusNotes;
 
-            return cls.CapNhatDL(cmd);
+            return cls.UpdateData(cmd);
         }
 
         //Hàm xử lý xóa.
@@ -92,7 +92,7 @@ namespace HikaruOff.DataLayer
 
             cmd.Parameters.Add("cusId", SqlDbType.Int).Value = cusId;
 
-            return cls.CapNhatDL(cmd);
+            return cls.UpdateData(cmd);
         }
 
         //Hàm xử lý cập nhật.
@@ -111,7 +111,7 @@ namespace HikaruOff.DataLayer
             cmd.Parameters.Add("cusPhone", SqlDbType.VarChar).Value = cusPhone;
             cmd.Parameters.Add("cusNotes", SqlDbType.NVarChar).Value = cusNotes;
 
-            return cls.CapNhatDL(cmd);
+            return cls.UpdateData(cmd);
         }
 
         //Hàm xử lý tìm kiếm.
@@ -123,7 +123,7 @@ namespace HikaruOff.DataLayer
 
             SqlCommand cmd = new SqlCommand(select + from + where);
 
-            return cls.LayDuLieu(cmd);
+            return cls.PullData(cmd);
         }
     }
 }

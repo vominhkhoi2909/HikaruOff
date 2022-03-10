@@ -33,7 +33,7 @@ namespace HikaruOff
                 MessageBox.Show("Information Login Missing.", "Login Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            else if (login.DangNhap(user, pass, log) == false)
+            else if (login.LoginAccount(user, pass, log) == false)
             {
                 MessageBox.Show("Wrong Login Information.", "Login Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;

@@ -14,8 +14,8 @@ namespace HikaruOff.Class
         //Khởi tạo các biến lưu trữ và kết nối.
         DataProvider cls = new DataProvider();
 
-        //Hàm xử lý đăng nhập và lưu giá trị
-        public bool DangNhap(string email, string password, LoginBUS log)
+        //Hàm xử lý đăng nhập và lưu giá trị.
+        public bool LoginAccount(string email, string password, LoginBUS log)
         {
             string select = "SELECT * ",
                 from = "FROM UserTbl ",
@@ -25,7 +25,7 @@ namespace HikaruOff.Class
             cmd.Parameters.Add("uEmail", SqlDbType.VarChar).Value = email;
             cmd.Parameters.Add("uPassword", SqlDbType.VarChar).Value = password;
 
-            DataSet ds = cls.LayDuLieu(cmd);
+            DataSet ds = cls.PullData(cmd);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -40,7 +40,8 @@ namespace HikaruOff.Class
             return false;
         }
 
-        public int DoiMatKhau(string password, string email)
+        //Hàm xử lý cập nhật lại mật khẩu.
+        public int ChangePassword(string password, string email)
         {
             string update = "UPDATE UserTbl ",
                 set = "SET UserPassword = @uPassword ",
@@ -50,10 +51,11 @@ namespace HikaruOff.Class
             cmd.Parameters.Add("uEmail", SqlDbType.VarChar).Value = email;
             cmd.Parameters.Add("uPassword", SqlDbType.VarChar).Value = password;
 
-            return cls.CapNhatDL(cmd);
+            return cls.UpdateData(cmd);
         }
 
-        public bool XacThuc(int phone, string email)
+        //Hàm xử lý xác thực thông tin tài khoản dùng cho quên mật khẩu.
+        public bool Accuracy(int phone, string email)
         {
 
             string select = "SELECT * ",
@@ -64,7 +66,7 @@ namespace HikaruOff.Class
             cmd.Parameters.Add("uEmail", SqlDbType.VarChar).Value = email;
             cmd.Parameters.Add("uPhone", SqlDbType.Int).Value = phone;
 
-            return cls.KiemTra(cmd);
+            return cls.CheckInfo(cmd);
         }
     }
 }

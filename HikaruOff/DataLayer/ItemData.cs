@@ -31,7 +31,7 @@ namespace HikaruOff.DataLayer
 
             SqlCommand cmd = new SqlCommand(select + from + where);
 
-            return cls.LayDuLieu(cmd);
+            return cls.PullData(cmd);
         }
 
         //Hàm kiểm tra tên đã tồn tại chưa.
@@ -42,7 +42,7 @@ namespace HikaruOff.DataLayer
                 where = "WHERE ItemName = N'" + iName + "'";
             SqlCommand cmd = new SqlCommand(select + from + where);
 
-            return cls.KiemTra(cmd);
+            return cls.CheckInfo(cmd);
         }
 
         //Hàm xử lý thêm mới.
@@ -61,7 +61,7 @@ namespace HikaruOff.DataLayer
             cmd.Parameters.Add("iDetails", SqlDbType.NVarChar).Value = iDetails;
             cmd.Parameters.Add("iAddDate", SqlDbType.DateTime).Value = iAddDate;
 
-            return cls.CapNhatDL(cmd);
+            return cls.UpdateData(cmd);
         }
         
         //Hàm xử lý xóa.
@@ -73,7 +73,7 @@ namespace HikaruOff.DataLayer
 
             cmd.Parameters.Add("iId", SqlDbType.Int).Value = iId;
 
-            return cls.CapNhatDL(cmd);
+            return cls.UpdateData(cmd);
         }
 
         //Hàm xử lý cập nhật.
@@ -93,10 +93,10 @@ namespace HikaruOff.DataLayer
             cmd.Parameters.Add("iProfit", SqlDbType.Int).Value = iProfit;
             cmd.Parameters.Add("iDetails", SqlDbType.NVarChar).Value = iDetails;
 
-            return cls.CapNhatDL(cmd);
+            return cls.UpdateData(cmd);
         }
 
-        //Cap nhat ton kho.
+        //Cập nhập tồn kho.
         public int UpdateStockItem(int iId,  int iQuantily)
         {
             string update = "UPDATE ItemTbl ",
@@ -107,7 +107,7 @@ namespace HikaruOff.DataLayer
             cmd.Parameters.Add("iId", SqlDbType.Int).Value = iId;
             cmd.Parameters.Add("iQuantily", SqlDbType.Int).Value = iQuantily;
 
-            return cls.CapNhatDL(cmd);
+            return cls.UpdateData(cmd);
         }
 
         //Hàm xử lý tìm kiếm.
@@ -119,7 +119,7 @@ namespace HikaruOff.DataLayer
 
             SqlCommand cmd = new SqlCommand(select + from + where);
 
-            return cls.LayDuLieu(cmd);
+            return cls.PullData(cmd);
         }
     }
 }

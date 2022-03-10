@@ -32,7 +32,7 @@ namespace HikaruOff
             {
                 MessageBox.Show("Password Missing.", "Login Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if(login.DangNhap("hikaru_shop@gmail.com", txt_Password.Text, log))
+            else if(login.LoginAccount("hikaru_shop@gmail.com", txt_Password.Text, log))
             {
                 frm_Index index = new frm_Index(log);
                 this.Hide();
