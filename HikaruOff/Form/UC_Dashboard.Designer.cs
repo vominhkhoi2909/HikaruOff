@@ -30,10 +30,10 @@ namespace HikaruOff
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Dashboard));
             this.ele_UC_Dashboard = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.cht_Dashboard = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -77,25 +77,25 @@ namespace HikaruOff
             // 
             // cht_Dashboard
             // 
-            chartArea4.Name = "ChartArea1";
-            this.cht_Dashboard.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.cht_Dashboard.Legends.Add(legend4);
+            chartArea1.Name = "ChartArea1";
+            this.cht_Dashboard.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.cht_Dashboard.Legends.Add(legend1);
             this.cht_Dashboard.Location = new System.Drawing.Point(10, 330);
             this.cht_Dashboard.Name = "cht_Dashboard";
             this.cht_Dashboard.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "SaleDate";
-            series4.YValuesPerPoint = 2;
-            this.cht_Dashboard.Series.Add(series4);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "SaleDate";
+            series1.YValuesPerPoint = 2;
+            this.cht_Dashboard.Series.Add(series1);
             this.cht_Dashboard.Size = new System.Drawing.Size(1001, 677);
             this.cht_Dashboard.TabIndex = 0;
             this.cht_Dashboard.Text = "chart1";
-            title4.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title4.Name = "title_Sale";
-            title4.Text = "Sale Curve";
-            this.cht_Dashboard.Titles.Add(title4);
+            title1.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.Name = "title_Sale";
+            title1.Text = "Sale Curve";
+            this.cht_Dashboard.Titles.Add(title1);
             // 
             // pnl_Product
             // 
@@ -366,6 +366,7 @@ namespace HikaruOff
             this.btn_Day.Size = new System.Drawing.Size(99, 53);
             this.btn_Day.TabIndex = 140;
             this.btn_Day.Text = "Day";
+            this.btn_Day.Click += new System.EventHandler(this.btn_Day_Click);
             // 
             // lbl_GoTo
             // 

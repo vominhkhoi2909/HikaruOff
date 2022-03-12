@@ -36,6 +36,8 @@ namespace HikaruOff
             refresh();
         }
 
+        //Hàm hỗ trợ.
+        //Làm mới lại form.
         void refresh()
         {
             txt_Price.Text = "";
@@ -53,6 +55,7 @@ namespace HikaruOff
             customer.ShowCbo(cbo_Customer);
         }
 
+        //Update lại tồn kho trong csdl
         void updateStock()
         {
             for (int i = 0; i < dgv_ClientBill.Rows.Count; i++)
@@ -65,6 +68,7 @@ namespace HikaruOff
             }
         }
 
+        //Kiểm tra các lỗi và điều kiện cơ bản để thực hiện action.
         bool checkAction()
         {
             if(txt_Quantily.Text == "")
@@ -81,12 +85,15 @@ namespace HikaruOff
             return true;
         }
 
+        //Hàm action.
+        //Add customer.
         private void pic_AddCustomer_Click(object sender, EventArgs e)
         {
             Frm_CustomerLite frm = new Frm_CustomerLite();
             frm.Show();
         }
 
+        //In bill.
         private void btn_Print_Click(object sender, EventArgs e)
         {
             try
@@ -104,6 +111,7 @@ namespace HikaruOff
             }
         }
 
+        //Hoàn tất bill.
         private void btn_Complete_Click(object sender, EventArgs e)
         {
             if(grdTotal != 0)
@@ -116,18 +124,20 @@ namespace HikaruOff
             }
         }
 
+        //Refresh lại form.
         private void btn_Renew_Click(object sender, EventArgs e)
         {
             refresh();
         }
 
+        //Kiểm tra nhập từ bàn phím chỉ cho nhập số.
         private void txt_Quantily_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
         }
 
-        //Search item
+        //Search item.
         private void btn_Search_Click(object sender, EventArgs e)
         {
             if (txt_Search.Text != "")
@@ -136,6 +146,7 @@ namespace HikaruOff
             dgv_ManageItems.Refresh();
         }
 
+        //Vẽ dữ liệu lên giấy
         private void pdcm_Bill_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             int pID, pQuantily, pPrice, ptotal, pos = 60;
@@ -166,6 +177,7 @@ namespace HikaruOff
             pos = 100;
         }
 
+        //Làm mới trạng thái combobox + dgv.
         private void btn_Refresh_Click(object sender, EventArgs e)
         {
             item.ShowDgv(dgv_ManageItems);
@@ -178,6 +190,7 @@ namespace HikaruOff
 
         }
 
+        //Chuyển dữ liệu từ txt sang dgv client bill.
         private void btn_AddToBill_Click(object sender, EventArgs e)
         {
             if (checkAction())
@@ -200,6 +213,7 @@ namespace HikaruOff
             }
         }
 
+        //Đẩy giá trị các item dc chọn lên các ô thông tin.
         private void dgv_ManageItems_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //Lưu thông tin item của dòng đã chọn trên dgv.

@@ -95,14 +95,22 @@ namespace HikaruOff
         //Delete item.
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-            var res = MessageBox.Show("Are you sure you want to delete item?", "Delete Item", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (res == DialogResult.Yes)
+            if (login.UserOffice == "Intern")
             {
-                item.Delete(id);
-                MessageBox.Show("Item Deleted!!!", "Delete Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                refresh();
+                MessageBox.Show("You are not authorized.", "Delete Item", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            else
+            {
+                var res = MessageBox.Show("Are you sure you want to delete item?", "Delete Item", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (res == DialogResult.Yes)
+                {
+                    item.Delete(id);
+                    MessageBox.Show("Item Deleted!!!", "Delete Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    refresh();
+                }
+            }
+
         }
 
         //Search item.
