@@ -70,5 +70,11 @@ namespace HikaruOff.Controller
         {
             dgv.DataSource = customerData.SearchCustomer(key).Tables[0];
         }
+
+        //Hàm xử lý đếm dữ liệu.
+        public int Count()
+        {
+            return customerData.CountCustomer();
+        }
     }
 }

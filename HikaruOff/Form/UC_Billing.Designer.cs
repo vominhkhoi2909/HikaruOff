@@ -79,6 +79,8 @@ namespace HikaruOff
             this.btn_Print = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Renew = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Complete = new Guna.UI2.WinForms.Guna2Button();
+            this.ppvd_Bill = new System.Windows.Forms.PrintPreviewDialog();
+            this.pdcm_Bill = new System.Drawing.Printing.PrintDocument();
             this.pnl_Billing.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_AddCustomer)).BeginInit();
             this.pnl_ClientBill.SuspendLayout();
@@ -740,6 +742,21 @@ namespace HikaruOff
             this.btn_Complete.Text = "Complete";
             this.btn_Complete.Click += new System.EventHandler(this.btn_Complete_Click);
             // 
+            // ppvd_Bill
+            // 
+            this.ppvd_Bill.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.ppvd_Bill.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.ppvd_Bill.ClientSize = new System.Drawing.Size(400, 300);
+            this.ppvd_Bill.Document = this.pdcm_Bill;
+            this.ppvd_Bill.Enabled = true;
+            this.ppvd_Bill.Icon = ((System.Drawing.Icon)(resources.GetObject("ppvd_Bill.Icon")));
+            this.ppvd_Bill.Name = "ppvd_Bill";
+            this.ppvd_Bill.Visible = false;
+            // 
+            // pdcm_Bill
+            // 
+            this.pdcm_Bill.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.pdcm_Bill_PrintPage);
+            // 
             // UC_Billing
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -807,5 +824,7 @@ namespace HikaruOff
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantily;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdProduct;
+        private System.Windows.Forms.PrintPreviewDialog ppvd_Bill;
+        private System.Drawing.Printing.PrintDocument pdcm_Bill;
     }
 }

@@ -28,7 +28,7 @@ namespace HikaruOff.Class
                 conn.Open();
         }
 
-        //Truy vấn lấy ds dữ liệu.
+        //Truy vấn lấy ds dữ liệu dạng dataset.
         public DataSet PullData(SqlCommand sqlcmd)
         {
             DataSet ds = new DataSet();
@@ -38,6 +38,18 @@ namespace HikaruOff.Class
             da.Fill(ds);
 
             return ds;
+        }
+
+        //Truy vấn lấy ds dữ liệu dạng datatable.
+        public DataTable PullDataDt(SqlCommand sqlcmd)
+        {
+            DataTable dt = new DataTable();
+            sqlcmd.Connection = conn;
+            SqlDataAdapter da = new SqlDataAdapter(sqlcmd);
+
+            da.Fill(dt);
+
+            return dt;
         }
 
         //Thực hiện không truy vấn.

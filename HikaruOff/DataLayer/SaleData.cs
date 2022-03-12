@@ -22,7 +22,7 @@ namespace HikaruOff.DataLayer
             return cls.GetID(cmd);
         }
 
-        //Hàm lấy danh sách.
+        //Hàm lấy danh sách dạng dataset.
         public DataSet PullListSale()
         {
             string select = "SELECT SaleNum, SaleAmount, SaleDate, CustomerName, UserName ",
@@ -32,6 +32,17 @@ namespace HikaruOff.DataLayer
             SqlCommand cmd = new SqlCommand(select + from + where);
 
             return cls.PullData(cmd);
+        }
+
+        //Hàm lấy danh sách Sale dạng datatable.
+        public DataTable PullListSaleDt()
+        {
+            string select = "SELECT * ",
+                from = "FROM SaleTbl";
+
+            SqlCommand cmd = new SqlCommand(select + from);
+
+            return cls.PullDataDt(cmd);
         }
 
         //Hàm xử lý thêm mới.
@@ -59,6 +70,28 @@ namespace HikaruOff.DataLayer
             SqlCommand cmd = new SqlCommand(select + from + where);
 
             return cls.PullData(cmd);
+        }
+
+        //Hàm xử lý đếm sale.
+        public int CountSale()
+        {
+            string select = "SELECT count(*) ",
+                from = "FROM SaleTbl ";
+
+            SqlCommand cmd = new SqlCommand(select + from);
+
+            return cls.GetID(cmd);
+        }
+
+        //Hàm xử lý tính tổng doanh thu.
+        public int SumSale()
+        {
+            string select = "SELECT sum(SaleAmount) ",
+                from = "FROM SaleTbl ";
+
+            SqlCommand cmd = new SqlCommand(select + from);
+
+            return cls.GetID(cmd);
         }
     }
 }

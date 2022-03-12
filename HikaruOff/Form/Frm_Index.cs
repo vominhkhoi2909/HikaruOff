@@ -75,8 +75,11 @@ namespace HikaruOff
             }
             else if (btn_Setting.Checked == true)
             {
+                MessageBox.Show("The Function Is Not Yet Supported.", "Action Fail", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                /*
                 UC_Setting uC = new UC_Setting();
                 changeuUC(uC);
+                */
             }
         }
 

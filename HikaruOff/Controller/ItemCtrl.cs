@@ -65,10 +65,16 @@ namespace HikaruOff.Controller
             dgv.DataSource = itemData.SearchItem(key).Tables[0];
         }
 
-        //Hàm xử lý tìm kiếm.
+        //Hàm xử lý lấy tồn kho của 1 sản phẩm theo id.
         public int GetStock(int id)
         {
             return itemData.GetStock(id);
+        }
+
+        //Hàm xử lý đếm dữ liệu.
+        public int Count()
+        {
+            return itemData.CountItem();
         }
     }
 }

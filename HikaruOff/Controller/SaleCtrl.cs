@@ -1,5 +1,6 @@
 ﻿using HikaruOff.DataLayer;
 using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace HikaruOff.Controller
@@ -31,6 +32,24 @@ namespace HikaruOff.Controller
         public void Search(DataGridView dgv, string key)
         {
             dgv.DataSource = saleData.SearchSale(key).Tables[0];
+        }
+
+        //Hàm xử lý đếm dữ liệu.
+        public int Count()
+        {
+            return saleData.CountSale();
+        }
+
+        //Hàm xử lý tính tổng giá trị tất cả bill.
+        public int Sum()
+        {
+            return saleData.SumSale();
+        }
+
+        //Hàm lấy dữ liệu bảng dạng datatable.
+        public DataTable PullListDt()
+        {
+            return saleData.PullListSaleDt();
         }
     }
 }

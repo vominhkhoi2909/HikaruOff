@@ -42,7 +42,10 @@ namespace HikaruOff
             txt_Quantily.Text = "";
             txt_ProductName.Text = "";
             txt_Search.Text = "";
+            lbl_GrdTotal.Text = "Total 0 VND";
             stock = 0;
+            grdTotal = 0;
+            row = 0;
             id = 0;
             dgv_ClientBill.Rows.Clear();
             btn_Complete.Enabled = false;
@@ -86,7 +89,19 @@ namespace HikaruOff
 
         private void btn_Print_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("The Function Is Not Yet Supported.", "Action Fail", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            try
+            {
+                pdcm_Bill.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 600);
+
+                if (ppvd_Bill.ShowDialog() == DialogResult.OK)
+                {
+                    pdcm_Bill.Print();
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Print Bill", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btn_Complete_Click(object sender, EventArgs e)
@@ -97,7 +112,7 @@ namespace HikaruOff
                 updateStock();
                 refresh();
 
-                MessageBox.Show("Completed Bill", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Completed Bill.", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -119,6 +134,36 @@ namespace HikaruOff
                 item.Search(dgv_ManageItems, txt_Search.Text);
             dgv_ManageItems.Update();
             dgv_ManageItems.Refresh();
+        }
+
+        private void pdcm_Bill_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            int pID, pQuantily, pPrice, ptotal, pos = 60;
+            string pName;
+
+            e.Graphics.DrawString("Hikaru Shop", new Font("Times News Roman", 12, FontStyle.Bold), Brushes.Red, new Point(80));
+            e.Graphics.DrawString("NUM PRODUCT PRICE QUANTILY TOTAL", new Font("Times News Roman", 10, FontStyle.Bold), Brushes.Red, new Point(26, 40));
+            
+            foreach(DataGridViewRow pRow in dgv_ClientBill.Rows)
+            {
+                pID = Convert.ToInt32(pRow.Cells["Num"].Value);
+                pName = pRow.Cells["NameProduct"].Value.ToString();
+                pQuantily = Convert.ToInt32(pRow.Cells["Quantily"].Value);
+                pPrice = Convert.ToInt32(pRow.Cells["Price"].Value);
+                ptotal = Convert.ToInt32(pRow.Cells["Total"].Value);
+                
+                e.Graphics.DrawString("" + pID, new Font("Times News Roman", 8), Brushes.Blue, new Point(26, pos));
+                e.Graphics.DrawString("" + pName, new Font("Times News Roman", 8), Brushes.Blue, new Point(45, pos));
+                e.Graphics.DrawString("" + pPrice, new Font("Times News Roman", 8), Brushes.Blue, new Point(120, pos)); 
+                e.Graphics.DrawString("" + pQuantily, new Font("Times News Roman", 8), Brushes.Blue, new Point(170, pos));
+                e.Graphics.DrawString("" + ptotal, new Font("Times News Roman", 8), Brushes.Blue, new Point(235, pos));
+                
+                pos += 20;
+            }
+            e.Graphics.DrawString("Grand Total: " + grdTotal + "đ", new Font("Times News Roman", 12, FontStyle.Bold), Brushes.Crimson, new Point(50, pos + 50));
+            e.Graphics.DrawString("----- Thank you very much!!! -----", new Font("Times News Roman", 12, FontStyle.Bold), Brushes.Crimson, new Point(10, pos + 85));
+
+            pos = 100;
         }
 
         private void btn_Refresh_Click(object sender, EventArgs e)

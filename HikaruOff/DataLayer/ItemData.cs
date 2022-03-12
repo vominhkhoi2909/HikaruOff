@@ -122,7 +122,7 @@ namespace HikaruOff.DataLayer
             return cls.PullData(cmd);
         }
 
-        //Hàm xử lý lấy tồn kho.
+        //Hàm xử lý lấy tồn kho của sản phẩm theo id.
         public int GetStock(int id)
         {
             string select = "SELECT ItemQuantily ",
@@ -130,6 +130,17 @@ namespace HikaruOff.DataLayer
                 where = "WHERE ItemId = '" + id + "'";
 
             SqlCommand cmd = new SqlCommand(select + from + where);
+
+            return cls.GetID(cmd);
+        }
+
+        //Hàm xử lý đếm sản phẩm.
+        public int CountItem()
+        {
+            string select = "SELECT count(*) ",
+                from = "FROM ItemTbl ";
+
+            SqlCommand cmd = new SqlCommand(select + from);
 
             return cls.GetID(cmd);
         }

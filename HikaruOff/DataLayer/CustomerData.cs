@@ -125,5 +125,16 @@ namespace HikaruOff.DataLayer
 
             return cls.PullData(cmd);
         }
+
+        //Hàm xử lý đếm khách hàng.
+        public int CountCustomer()
+        {
+            string select = "SELECT count(*) ",
+                from = "FROM CustomerTbl ";
+
+            SqlCommand cmd = new SqlCommand(select + from);
+
+            return cls.GetID(cmd);
+        }
     }
 }
