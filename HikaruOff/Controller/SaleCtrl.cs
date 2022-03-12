@@ -47,9 +47,9 @@ namespace HikaruOff.Controller
         }
 
         //Hàm lấy dữ liệu bảng dạng datatable.
-        public DataTable PullListDt()
+        public DataTable PullListDt(int style, DateTime frm, DateTime to)
         {
-            return saleData.PullListSaleDt();
+            return saleData.PullListSaleDt(style, frm, to);
         }
     }
 }

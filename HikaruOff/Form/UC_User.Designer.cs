@@ -63,6 +63,15 @@ namespace HikaruOff
             this.lbl_Email = new System.Windows.Forms.Label();
             this.lbl_Name = new System.Windows.Forms.Label();
             this.ele_UC_User = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.UserId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserBirthDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserOffice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserNotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnl_ButtonList.SuspendLayout();
             this.pnl_Data.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_User)).BeginInit();
@@ -226,7 +235,7 @@ namespace HikaruOff
             this.dgv_User.BackgroundColor = System.Drawing.Color.White;
             this.dgv_User.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_User.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgv_User.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_User.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -236,6 +245,16 @@ namespace HikaruOff
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_User.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_User.ColumnHeadersHeight = 50;
+            this.dgv_User.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.UserId,
+            this.UserName,
+            this.UserEmail,
+            this.UserBirthDay,
+            this.UserGender,
+            this.UserPhone,
+            this.UserPassword,
+            this.UserOffice,
+            this.UserNotes});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(244)))), ((int)(((byte)(226)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -263,7 +282,7 @@ namespace HikaruOff
             this.dgv_User.ThemeStyle.BackColor = System.Drawing.Color.White;
             this.dgv_User.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(238)))), ((int)(((byte)(208)))));
             this.dgv_User.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
-            this.dgv_User.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_User.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgv_User.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgv_User.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgv_User.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
@@ -587,6 +606,79 @@ namespace HikaruOff
             this.ele_UC_User.BorderRadius = 26;
             this.ele_UC_User.TargetControl = this;
             // 
+            // UserId
+            // 
+            this.UserId.DataPropertyName = "UserId";
+            this.UserId.HeaderText = "ID";
+            this.UserId.Name = "UserId";
+            this.UserId.ReadOnly = true;
+            this.UserId.Width = 79;
+            // 
+            // UserName
+            // 
+            this.UserName.DataPropertyName = "UserName";
+            this.UserName.HeaderText = "Name";
+            this.UserName.Name = "UserName";
+            this.UserName.ReadOnly = true;
+            this.UserName.Width = 126;
+            // 
+            // UserEmail
+            // 
+            this.UserEmail.DataPropertyName = "UserEmail";
+            this.UserEmail.HeaderText = "Email";
+            this.UserEmail.Name = "UserEmail";
+            this.UserEmail.ReadOnly = true;
+            this.UserEmail.Width = 126;
+            // 
+            // UserBirthDay
+            // 
+            this.UserBirthDay.DataPropertyName = "UserBirthDay";
+            this.UserBirthDay.HeaderText = "Birth Day";
+            this.UserBirthDay.Name = "UserBirthDay";
+            this.UserBirthDay.ReadOnly = true;
+            this.UserBirthDay.Width = 189;
+            // 
+            // UserGender
+            // 
+            this.UserGender.DataPropertyName = "UserGender";
+            this.UserGender.HeaderText = "Gender";
+            this.UserGender.Name = "UserGender";
+            this.UserGender.ReadOnly = true;
+            this.UserGender.Width = 153;
+            // 
+            // UserPhone
+            // 
+            this.UserPhone.DataPropertyName = "UserPhone";
+            this.UserPhone.HeaderText = "Phone";
+            this.UserPhone.Name = "UserPhone";
+            this.UserPhone.ReadOnly = true;
+            this.UserPhone.Width = 134;
+            // 
+            // UserPassword
+            // 
+            this.UserPassword.DataPropertyName = "UserPassword";
+            this.UserPassword.HeaderText = "Password";
+            this.UserPassword.Name = "UserPassword";
+            this.UserPassword.ReadOnly = true;
+            this.UserPassword.Visible = false;
+            this.UserPassword.Width = 185;
+            // 
+            // UserOffice
+            // 
+            this.UserOffice.DataPropertyName = "UserOffice";
+            this.UserOffice.HeaderText = "Office";
+            this.UserOffice.Name = "UserOffice";
+            this.UserOffice.ReadOnly = true;
+            this.UserOffice.Width = 130;
+            // 
+            // UserNotes
+            // 
+            this.UserNotes.DataPropertyName = "UserNotes";
+            this.UserNotes.HeaderText = "Notes";
+            this.UserNotes.Name = "UserNotes";
+            this.UserNotes.ReadOnly = true;
+            this.UserNotes.Width = 125;
+            // 
             // UC_User
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -639,5 +731,14 @@ namespace HikaruOff
         private Guna.UI2.WinForms.Guna2Elipse ele_UC_User;
         private Guna.UI2.WinForms.Guna2PictureBox pic_PasswordHide;
         private Guna.UI2.WinForms.Guna2PictureBox pic_PasswordShow;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserEmail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserBirthDay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserGender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserPhone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserPassword;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserOffice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserNotes;
     }
 }

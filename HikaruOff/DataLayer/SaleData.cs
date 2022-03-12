@@ -35,12 +35,41 @@ namespace HikaruOff.DataLayer
         }
 
         //Hàm lấy danh sách Sale dạng datatable.
-        public DataTable PullListSaleDt()
+        public DataTable PullListSaleDt(int style, DateTime frm, DateTime to)
         {
-            string select = "SELECT * ",
-                from = "FROM SaleTbl";
+            string select = "", from = "", where = "";
+            switch (style)
+            {
+                //Dashboard theo day.
+                case 1:
+                    select = "SELECT DAY(SaleDate) as date, SUM(SaleAmount) as total ";
+                    from = "FROM SaleTbl ";
+                    where += "GROUP BY SaleDate ORDER BY date ASC";
+                    break;
+                //Dashboard theo month.
+                case 2:
+                    select = "SELECT MONTH(SaleDate) as date, sum(SaleAmount) as total ";
+                    from = "FROM SaleTbl ";
+                    where += "GROUP BY SaleDate ORDER BY date ASC";
+                    break;
+                //Dashboard theo year.
+                case 3:
+                    select = "SELECT (year(SaleDate)) as date ,sum(SaleAmount) as total ";
+                    from = "FROM SaleTbl ";
+                    where += "GROUP BY SaleDate ORDER BY date ASC";
+                    break;
+                //Dashboard theo from date to date.
+                case 4:
+                    select = "SELECT (day(SaleDate)) as date, sum(SaleAmount) as total ";
+                    from = "FROM SaleTbl ";
+                    where = "WHERE SaleDate between '" + frm + "' and '" + to + "' ";
+                    where += "GROUP BY SaleDate ORDER BY date ASC";
+                    break;
+                default:
+                    break;
+            }
 
-            SqlCommand cmd = new SqlCommand(select + from);
+            SqlCommand cmd = new SqlCommand(select + from + where);
 
             return cls.PullDataDt(cmd);
         }

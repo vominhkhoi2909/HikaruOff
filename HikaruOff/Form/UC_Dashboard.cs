@@ -32,21 +32,34 @@ namespace HikaruOff
             lbl_NumCustomer.Text = customer.Count().ToString() + " People";
             lbl_NumSale.Text = sale.Count().ToString() + " Bill";
             lbl_SaleTotal.Text = sale.Sum().ToString() + "đ";
-            showChart();
+            showChart(1, DateTime.Now, DateTime.Now);
         }
 
-        private void showChart()
+        private void showChart(int style, DateTime from, DateTime to)
         {
             DataTable dt = new DataTable();
-            dt = sale.PullListDt();
+            dt = sale.PullListDt(style, from, to);
             List<double> data = new List<double>();
             List<string> label = new List<string>();
-            foreach(DataRow dr in dt.Rows)
+            foreach (DataRow dr in dt.Rows)
             {
-                //MessageBox.Show(dr["SaleDate"].ToString() + dr["SaleAmount"].ToString());
-                cht_Dashboard.Series["SaleCurve"].Points.AddXY(dr["SaleDate"].ToString(), dr["SaleAmount"]);
+                cht_Dashboard.Series["SaleDate"].Points.AddXY(dr["date"].ToString(), dr["total"]);
             }
         }
 
+        private void btn_Month_Click(object sender, EventArgs e)
+        {
+            showChart(2, DateTime.Now, DateTime.Now);
+        }
+
+        private void btn_Year_Click(object sender, EventArgs e)
+        {
+            showChart(3, DateTime.Now, DateTime.Now);
+        }
+
+        private void btn_Fill_Click(object sender, EventArgs e)
+        {
+            showChart(4, dtm_From.Value, dtm_To.Value);
+        }
     }
 }
