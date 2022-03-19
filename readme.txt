@@ -10,5 +10,8 @@ Các chức năng cơ bản đang hoạt động:
 	Thống kê (Dashboard).
 Chức năng chưa hoàn thiện:
 	Cài đặt (Setting).
+	
+Login admin
+password: hikaruteam
 
 Phiên bản 1.0 - Cập nhật gần nhất 13/03/2022.
